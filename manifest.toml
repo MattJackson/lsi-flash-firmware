@@ -725,6 +725,66 @@ vendor = "lsi"
 tier = "alternative"
 source = "Broadcom docs.broadcom.com doc-id 12351284 (SAS9211-4i_P5.zip)"
 
+# Round 9 (2026-05-18): P5 IT firmware recovered. The 9211 family P4/P5 packages shipped
+# IR firmware only — the IT personality binary is found in the 9200-8e/9200-16e packages
+# (target-only cards using the same SAS2008 chip). The 9211-8i-flavored variants of P4 IR
+# and P5 IR were also harvested (different NVDATA from the 9211-4i variants we already had).
+# P4 IT and P6 IT firmware confirmed NEVER publicly released (P6 was an internal-only
+# engineering phase — referenced in P7 release notes' bug-fix changelog but no public binary
+# ever shipped). See lsi-flash-notes/07-firmware-archive/round-9-p456-it-sweep.md.
+
+[firmware.sas2008-lsi-9200-8e-p05-00-13-00-it]
+display = "LSI SAS2008 (9200-8e) IT firmware Phase 05.00.13.00 — first publicly-archived P5 IT binary"
+file = "sas2008-lsi-9200-8e-p05-00-13-00.it"
+size = 574508
+sha256 = "295eac047d9d894cef000452b89f5ab42d63ff050b2f7c0b7d44fdb6717f060c"
+chip = "SAS2008"
+mode = "IT"
+phase = "05.00.13.00"
+vendor = "lsi"
+model = "9200-8e"
+tier = "archive"
+source = "Broadcom docs.broadcom.com doc-id 12351280 (SAS9200_8e_P5.zip, FW/2008et.bin). MPTFW-05.00.13.00-IT signature confirmed via strings."
+
+[firmware.sas2008-lsi-9200-16e-p05-00-13-00-it]
+display = "LSI SAS2008 (9200-16e) IT firmware Phase 05.00.13.00"
+file = "sas2008-lsi-9200-16e-p05-00-13-00.it"
+size = 576220
+sha256 = "ecc300ae4391764ec2a04fc1be94bd1b0bf694b254d3ab940bc603268b6cdff6"
+chip = "SAS2008"
+mode = "IT"
+phase = "05.00.13.00"
+vendor = "lsi"
+model = "9200-16e"
+tier = "archive"
+source = "Broadcom docs.broadcom.com doc-id 12351281 (SAS9200-16e_P5.zip, FW/20016et.bin). MPTFW-05.00.13.00-IT signature confirmed via strings."
+
+[firmware.sas2008-lsi-9211-8i-p04-00-00-00-ir]
+display = "LSI SAS2008 (9211-8i) IR firmware Phase 04.00.00.00 — 8i NVDATA variant"
+file = "sas2008-lsi-9211-8i-p04-00-00-00.ir"
+size = 764204
+sha256 = "6277bf16c611ac458dfde9bb648d9468a0b9192cebc432b03e903353f4d514f8"
+chip = "SAS2008"
+mode = "IR"
+phase = "04.00.00.00"
+vendor = "lsi"
+model = "9211-8i"
+tier = "archive"
+source = "Broadcom docs.broadcom.com doc-id 12351285 (SAS9211-8i_P4.zip, FW/2118ir.bin). Differs from 9211-4i P4 IR (sas2008-lsi-p04-00-00-00.ir) in NVDATA only."
+
+[firmware.sas2008-lsi-9211-8i-p05-00-13-00-ir]
+display = "LSI SAS2008 (9211-8i) IR firmware Phase 05.00.13.00 — 8i NVDATA variant"
+file = "sas2008-lsi-9211-8i-p05-00-13-00.ir"
+size = 822472
+sha256 = "ab252c7ce898a554d48f2ae6ecac6fb1c4f6f0ec6d5a3977a1f8c2e107638a35"
+chip = "SAS2008"
+mode = "IR"
+phase = "05.00.13.00"
+vendor = "lsi"
+model = "9211-8i"
+tier = "archive"
+source = "Broadcom docs.broadcom.com doc-id 12351286 (SAS9211-8i_P5.zip, FW/2118ir.bin). Differs from 9211-4i P5 IR (sas2008-lsi-p05-00-13-00.ir) in NVDATA only."
+
 [firmware.sas2008-lsi-p07-00-00-00-ir]
 display = "LSI SAS2008 IR firmware Phase 07.00.00.00"
 file = "sas2008-lsi-p07-00-00-00.ir"
