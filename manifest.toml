@@ -1,0 +1,4766 @@
+manifest_version = 2
+last_updated = "2026-05-17"
+base_url = "https://raw.githubusercontent.com/MattJackson/lsi-flash-firmware/main"
+
+# Round 4 mega-commit: 158 unique firmware blobs covering SAS2008 silicon
+# Stock LSI Phase 4 → Phase 20.00.07.00 (IT/IR/BIOS/UEFI), Dell PERC H200 family
+# (Adapter/Integrated/Modular/Embedded/ITA/6Gbps) A00→A11, Dell PERC H310 family
+# (Adapter/Mini-Blade/Mini-Mono) IMR composites, Intel RS2WC080 IMR, IBM M1015,
+# Fujitsu D2607, plus SBR templates.
+
+# Schema:
+#   [firmware.<id>] for chip firmware / BIOS / UEFI
+#   [sbr.<id>] for SBR templates
+#   tier: primary (default) / alternative / legacy
+
+# ============================================================================
+# FIRMWARE
+# ============================================================================
+
+[firmware.sas2008-dell-6gbps-a04-ir]
+display = "Dell PERC 6GBPS firmware A04 (MPT 07.15.04.00)"
+file = "sas2008-dell-6gbps-a04.ir"
+size = 884016
+sha256 = "281c206c9448b3bcc7652fb0f0f212ee2c9d6009962049ef14c240b5ff4bcc21"
+chip = "SAS2008"
+mode = "IR"
+phase = "07.15.04.00"
+vendor = "dell"
+model = "6GBPS"
+oem_rev = "A04"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): 6GBPSAS.FW"
+
+[firmware.sas2008-dell-6gbps-a11-ir]
+display = "Dell PERC 6GBPS firmware A11 (MPT 07.15.08.00)"
+file = "sas2008-dell-6gbps-a11.ir"
+size = 885404
+sha256 = "93d349159b8a1a18ccb9bfc05335a4f88be46178baa9acc55b7d1e60e31f12c5"
+chip = "SAS2008"
+mode = "IR"
+phase = "07.15.08.00"
+vendor = "dell"
+model = "6GBPS"
+oem_rev = "A11"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): 6GBPSAS.FW"
+
+[firmware.sas2008-dell-h200a-a00-ir]
+display = "Dell PERC H200A firmware A00 (MPT 02.15.57.00)"
+file = "sas2008-dell-h200a-a00.ir"
+size = 699492
+sha256 = "46f7e3467faeed03465c38bb35cd6ab5a75517389f49d016117c7d322309b1e6"
+chip = "SAS2008"
+mode = "IR"
+phase = "02.15.57.00"
+vendor = "dell"
+model = "H200A"
+oem_rev = "A00"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): H200A.FW"
+
+[firmware.sas2008-dell-h200a-a03-ir]
+display = "Dell PERC H200A firmware A03 (MPT 02.15.63.00)"
+file = "sas2008-dell-h200a-a03.ir"
+size = 700764
+sha256 = "5c76d5d76f77e4b68927d8fdf663846f3279d7fb52df202343a48278e5a15630"
+chip = "SAS2008"
+mode = "IR"
+phase = "02.15.63.00"
+vendor = "dell"
+model = "H200A"
+oem_rev = "A03"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): H200A.FW"
+
+[firmware.sas2008-dell-h200a-a04-ir]
+display = "Dell PERC H200A firmware A04 (MPT 07.15.04.00)"
+file = "sas2008-dell-h200a-a04.ir"
+size = 884016
+sha256 = "7efa765ae72ad3c44e9140f00c60f2cca35a8485f7c28b8c13bae56496592d1e"
+chip = "SAS2008"
+mode = "IR"
+phase = "07.15.04.00"
+vendor = "dell"
+model = "H200A"
+oem_rev = "A04"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): H200A.FW"
+
+[firmware.sas2008-dell-h200a-a09-ir]
+display = "Dell PERC H200A firmware A09 (MPT 07.15.08.00)"
+file = "sas2008-dell-h200a-a09.ir"
+size = 885404
+sha256 = "bbace1c0b0ef6c6158aba843bc82facc4e93fbe40f04954b8eeb3e17d0281d4e"
+chip = "SAS2008"
+mode = "IR"
+phase = "07.15.08.00"
+vendor = "dell"
+model = "H200A"
+oem_rev = "A09"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): H200A.FW"
+
+[firmware.sas2008-dell-h200e-a02-ir]
+display = "Dell PERC H200E firmware A02 (MPT 02.15.63.00)"
+file = "sas2008-dell-h200e-a02.ir"
+size = 700764
+sha256 = "580370b01c43f1afa1d3b4e04737590ef25fcb238b30eef5c8722f048a7d6c9b"
+chip = "SAS2008"
+mode = "IR"
+phase = "02.15.63.00"
+vendor = "dell"
+model = "H200E"
+oem_rev = "A02"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): H200E.FW"
+
+[firmware.sas2008-dell-h200e-a03-ir]
+display = "Dell PERC H200E firmware A03 (MPT 07.15.04.00)"
+file = "sas2008-dell-h200e-a03.ir"
+size = 884016
+sha256 = "24ce0ca1614db079ddc0344f3b3a359111f08fa18c636dce110a6fd03ec8f672"
+chip = "SAS2008"
+mode = "IR"
+phase = "07.15.04.00"
+vendor = "dell"
+model = "H200E"
+oem_rev = "A03"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): H200E.FW"
+
+[firmware.sas2008-dell-h200e-a07-ir]
+display = "Dell PERC H200E firmware A07 (MPT 07.15.08.00)"
+file = "sas2008-dell-h200e-a07.ir"
+size = 885404
+sha256 = "18afffb5cff82258dc98f6eea38d5915c869140d800932f500419510f9b0dd71"
+chip = "SAS2008"
+mode = "IR"
+phase = "07.15.08.00"
+vendor = "dell"
+model = "H200E"
+oem_rev = "A07"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): H200E.FW"
+
+[firmware.sas2008-dell-h200e-a08-ir]
+display = "Dell PERC H200E firmware A08 (MPT 07.15.08.00)"
+file = "sas2008-dell-h200e-a08.ir"
+size = 885404
+sha256 = "44a15131698f82234c6e85f522d8c0321e278a71a4ead66c6c2f7a452eb7a8d7"
+chip = "SAS2008"
+mode = "IR"
+phase = "07.15.08.00"
+vendor = "dell"
+model = "H200E"
+oem_rev = "A08"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): H200E.FW"
+
+[firmware.sas2008-dell-h200i-a03-ir]
+display = "Dell PERC H200I firmware A03 (MPT 02.15.63.00)"
+file = "sas2008-dell-h200i-a03.ir"
+size = 700764
+sha256 = "534104eaf2f5cc84c3a3ed9623479ea6803d2adb62cfa85bd597e401359b660a"
+chip = "SAS2008"
+mode = "IR"
+phase = "02.15.63.00"
+vendor = "dell"
+model = "H200I"
+oem_rev = "A03"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): H200I.FW"
+
+[firmware.sas2008-dell-h200i-a04-ir]
+display = "Dell PERC H200I firmware A04 (MPT 07.15.04.00)"
+file = "sas2008-dell-h200i-a04.ir"
+size = 884016
+sha256 = "9826d94dda29ed04bd99bd0109240b1674d21c7317cd89314a859521400b8e8d"
+chip = "SAS2008"
+mode = "IR"
+phase = "07.15.04.00"
+vendor = "dell"
+model = "H200I"
+oem_rev = "A04"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): H200I.FW"
+
+[firmware.sas2008-dell-h200i-a05-ir]
+display = "Dell PERC H200I firmware A05 (MPT 07.15.04.00)"
+file = "sas2008-dell-h200i-a05.ir"
+size = 884016
+sha256 = "7bba8f302f5c973f40dae9d28be3a7745e2c3dfbf2cc83891d55e5a0cd239e75"
+chip = "SAS2008"
+mode = "IR"
+phase = "07.15.04.00"
+vendor = "dell"
+model = "H200I"
+oem_rev = "A05"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): H200I.FW"
+
+[firmware.sas2008-dell-h200i-a10-ir]
+display = "Dell PERC H200I firmware A10 (MPT 07.15.08.00)"
+file = "sas2008-dell-h200i-a10.ir"
+size = 885404
+sha256 = "5de31176edeba99adce88042c3783a1355b7855fbe8fdd034051304b3915ff52"
+chip = "SAS2008"
+mode = "IR"
+phase = "07.15.08.00"
+vendor = "dell"
+model = "H200I"
+oem_rev = "A10"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): H200I.FW"
+
+[firmware.sas2008-dell-h200m-a00-ir]
+display = "Dell PERC H200M firmware A00 (MPT 02.15.57.00)"
+file = "sas2008-dell-h200m-a00.ir"
+size = 699492
+sha256 = "b351095d7a4b48f71563c87f1914625e34cf63cde61424e8a164447d51e69fc5"
+chip = "SAS2008"
+mode = "IR"
+phase = "02.15.57.00"
+vendor = "dell"
+model = "H200M"
+oem_rev = "A00"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): H200M.FW"
+
+[firmware.sas2008-dell-h200m-a04-ir]
+display = "Dell PERC H200M firmware A04 (MPT 07.15.04.00)"
+file = "sas2008-dell-h200m-a04.ir"
+size = 884016
+sha256 = "01c02215d6e0ffe7ae09db58e9b3f50fe92075ea20e27cff3a5c380760b13bd4"
+chip = "SAS2008"
+mode = "IR"
+phase = "07.15.04.00"
+vendor = "dell"
+model = "H200M"
+oem_rev = "A04"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): H200M.FW"
+
+[firmware.sas2008-dell-h200m-a08-ir]
+display = "Dell PERC H200M firmware A08 (MPT 07.15.08.00)"
+file = "sas2008-dell-h200m-a08.ir"
+size = 885404
+sha256 = "b92708ee4e4a27f9410f9cb3b5c2d6dd284b7509a759d2b53e8da0292a072b16"
+chip = "SAS2008"
+mode = "IR"
+phase = "07.15.08.00"
+vendor = "dell"
+model = "H200M"
+oem_rev = "A08"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): H200M.FW"
+
+[firmware.sas2008-dell-h200m-a09-ir]
+display = "Dell PERC H200M firmware A09 (MPT 07.15.08.00)"
+file = "sas2008-dell-h200m-a09.ir"
+size = 885404
+sha256 = "8a75ac5b71b92849b38b39832402075e9c40c9d8dc35142140b40d34cbd93264"
+chip = "SAS2008"
+mode = "IR"
+phase = "07.15.08.00"
+vendor = "dell"
+model = "H200M"
+oem_rev = "A09"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): H200M.FW"
+
+[firmware.sas2008-dell-h310-a00-imr]
+display = "Dell PERC H310 IMR firmware A00"
+file = "sas2008-dell-h310-a00.imr"
+size = 4456448
+sha256 = "cd54d0e69fd7519f6b32b23d23a74b2ce1a18a36b54f467f4ee622f1ef65888c"
+chip = "SAS2008"
+mode = "IMR"
+phase = "a00"
+vendor = "dell"
+model = "H310"
+oem_rev = "A00"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): H310PWS.rom"
+
+[firmware.sas2008-dell-h310-a02-imr]
+display = "Dell PERC H310 IMR firmware A02"
+file = "sas2008-dell-h310-a02.imr"
+size = 4456448
+sha256 = "e976a7da94bd6b221fae1851a51bc4ff441957bfacc311355937ee615dde0e08"
+chip = "SAS2008"
+mode = "IMR"
+phase = "a02"
+vendor = "dell"
+model = "H310"
+oem_rev = "A02"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): FW2086PA.rom"
+
+[firmware.sas2008-dell-h310-a05-imr-acc0ad]
+display = "Dell PERC H310 IMR firmware A05"
+file = "sas2008-dell-h310-a05-acc0ad.imr"
+size = 4456448
+sha256 = "acc0ad177d00a604d92848d9a86f6c009deb9ec94039f2c59165abb08db6e8e2"
+chip = "SAS2008"
+mode = "IMR"
+phase = "a05"
+vendor = "dell"
+model = "H310"
+oem_rev = "A05"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): FW1730A.rom"
+
+[firmware.sas2008-dell-h310-a05-imr]
+display = "Dell PERC H310 IMR firmware A05"
+file = "sas2008-dell-h310-a05.imr"
+size = 4456448
+sha256 = "892d9d2c8a33e20da671c877a1288dba0970093faf9bb16cd184473dab27741e"
+chip = "SAS2008"
+mode = "IMR"
+phase = "a05"
+vendor = "dell"
+model = "H310"
+oem_rev = "A05"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): FW1730MM.rom"
+
+[firmware.sas2008-dell-h310-a06-imr]
+display = "Dell PERC H310 IMR firmware A06"
+file = "sas2008-dell-h310-a06.imr"
+size = 4456448
+sha256 = "d02fbf0fafc69b6f300e5e8c46c84c6bd6d2a77a8f3ef706fe0ed35193e50571"
+chip = "SAS2008"
+mode = "IMR"
+phase = "a06"
+vendor = "dell"
+model = "H310"
+oem_rev = "A06"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): FW2138MM.rom"
+
+[firmware.sas2008-dell-h310-a09-imr]
+display = "Dell PERC H310 IMR firmware A09"
+file = "sas2008-dell-h310-a09.imr"
+size = 4456448
+sha256 = "dd8b908824ccc96ce6944823b0bfd79831e5d3d4a5e4e340b4c5c6686fb396b2"
+chip = "SAS2008"
+mode = "IMR"
+phase = "a09"
+vendor = "dell"
+model = "H310"
+oem_rev = "A09"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): FW3811MM.rom"
+
+[firmware.sas2008-dell-h310-a11-imr-1a8f90]
+display = "Dell PERC H310 IMR firmware A11"
+file = "sas2008-dell-h310-a11-1a8f90.imr"
+size = 4456448
+sha256 = "1a8f902c24a3f2e8345237789ab0b9a8e6b0fa77dd56d3e9712961a592551a5e"
+chip = "SAS2008"
+mode = "IMR"
+phase = "a11"
+vendor = "dell"
+model = "H310"
+oem_rev = "A11"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): FW6325MB.rom"
+
+[firmware.sas2008-dell-h310-a11-imr-ac6181]
+display = "Dell PERC H310 IMR firmware A11"
+file = "sas2008-dell-h310-a11-ac6181.imr"
+size = 4456448
+sha256 = "ac6181ed877aace4778650f1f5e020c5c77086fe43503aa04a9d91b73013eb8a"
+chip = "SAS2008"
+mode = "IMR"
+phase = "a11"
+vendor = "dell"
+model = "H310"
+oem_rev = "A11"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): FW6325A.rom"
+
+[firmware.sas2008-dell-h310-a11-imr]
+display = "Dell PERC H310 IMR firmware A11"
+file = "sas2008-dell-h310-a11.imr"
+size = 4456448
+sha256 = "19c338a11ef5cd66f8a2b907ea4d04b39ce2ccfcd8a9bd04521738a44e4e9f70"
+chip = "SAS2008"
+mode = "IMR"
+phase = "a11"
+vendor = "dell"
+model = "H310"
+oem_rev = "A11"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): FW6325E.rom"
+
+[firmware.sas2008-dell-h310mb-a04-imr]
+display = "Dell PERC H310MB IMR firmware A04"
+file = "sas2008-dell-h310mb-a04.imr"
+size = 4456448
+sha256 = "23441ef3117edf8faac9487332caf3052dd93c196cefeebba8c8d4971ea917bd"
+chip = "SAS2008"
+mode = "IMR"
+phase = "a04"
+vendor = "dell"
+model = "H310MB"
+oem_rev = "A04"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): FW1504MB.rom"
+
+[firmware.sas2008-dell-h310mb-a05-imr]
+display = "Dell PERC H310MB IMR firmware A05"
+file = "sas2008-dell-h310mb-a05.imr"
+size = 4456448
+sha256 = "1e051018c24e3aef1e7b9414b42ce5aea7373246b4b5ac61c4c3e36692c2a5e7"
+chip = "SAS2008"
+mode = "IMR"
+phase = "a05"
+vendor = "dell"
+model = "H310MB"
+oem_rev = "A05"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): FW1730MB.rom"
+
+[firmware.sas2008-dell-h310mb-a06-imr]
+display = "Dell PERC H310MB IMR firmware A06"
+file = "sas2008-dell-h310mb-a06.imr"
+size = 4456448
+sha256 = "fa1ffbdfbe76c8000d2dc0e69cf707ef61a1d66598d4da9eaceb6b65d5cf41b8"
+chip = "SAS2008"
+mode = "IMR"
+phase = "a06"
+vendor = "dell"
+model = "H310MB"
+oem_rev = "A06"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): FW2138MB.rom"
+
+[firmware.sas2008-dell-h310mb-a07-imr]
+display = "Dell PERC H310MB IMR firmware A07"
+file = "sas2008-dell-h310mb-a07.imr"
+size = 4456448
+sha256 = "cd3f34f648aeba3c5280353f142f99a0d09ccc09df6c2712b2b362d2f4676cde"
+chip = "SAS2008"
+mode = "IMR"
+phase = "a07"
+vendor = "dell"
+model = "H310MB"
+oem_rev = "A07"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): FW2657MB.rom"
+
+[firmware.sas2008-dell-h310mb-a08-imr]
+display = "Dell PERC H310MB IMR firmware A08"
+file = "sas2008-dell-h310mb-a08.imr"
+size = 4456448
+sha256 = "cdfda7206e11c24c935e1de95f3e3f1ba08644ca6e8699e95436d1a962255a2b"
+chip = "SAS2008"
+mode = "IMR"
+phase = "a08"
+vendor = "dell"
+model = "H310MB"
+oem_rev = "A08"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): FW3416MB.rom"
+
+[firmware.sas2008-dell-h310mb-a10-imr]
+display = "Dell PERC H310MB IMR firmware A10"
+file = "sas2008-dell-h310mb-a10.imr"
+size = 4456448
+sha256 = "1edb7af22d432bc5a2db13d0b1a7c3a422f182dc9e99c4e8268fb7f5208af5e3"
+chip = "SAS2008"
+mode = "IMR"
+phase = "a10"
+vendor = "dell"
+model = "H310MB"
+oem_rev = "A10"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): FW6099MB.rom"
+
+[firmware.sas2008-dell-h310mm-a11-imr]
+display = "Dell PERC H310MM IMR firmware A11"
+file = "sas2008-dell-h310mm-a11.imr"
+size = 4456448
+sha256 = "97f70b741822b59a90c1a84cc46aad0c684121af5635398280d1d9440c0fbd2b"
+chip = "SAS2008"
+mode = "IMR"
+phase = "a11"
+vendor = "dell"
+model = "H310MM"
+oem_rev = "A11"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): FW6325MM.rom"
+
+[firmware.sas2008-dell-ita-a04-it]
+display = "Dell Internal Tape Adapter (ITA) A04 IT firmware (MPT 07.15.08.00)"
+file = "sas2008-dell-ita-a04.it"
+size = 885404
+sha256 = "48e89775cdd1e1caac0ee7cd2117e6bd109b15932007e0fea374791053cb7517"
+chip = "SAS2008"
+mode = "IT"
+phase = "07.15.08.00"
+vendor = "dell"
+model = "ITA"
+oem_rev = "A04"
+tier = "alternative"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): ITA.FW"
+
+[firmware.sas2008-dell-p7-01-04-00-bios]
+display = "Dell SAS2008 BIOS option-ROM MPT2BIOS-7.01.04.00"
+file = "sas2008-dell-p7-01-04-00.bios"
+size = 184832
+sha256 = "335d75294d74a05f73516664467bdd534f843b530b8888b194b05fe44ff6b875"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.01.04.00"
+vendor = "dell"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): mptsas2.rom"
+
+[firmware.sas2008-dell-p7-01-09-00-bios]
+display = "Dell SAS2008 BIOS option-ROM MPT2BIOS-7.01.09.00"
+file = "sas2008-dell-p7-01-09-00.bios"
+size = 185344
+sha256 = "7568a094b3da319c015d778dfad4108a8b86322ca1d41cb704bfe9acf5638310"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.01.09.00"
+vendor = "dell"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): mptsas2.rom"
+
+[firmware.sas2008-dell-p7-11-01-00-bios]
+display = "Dell SAS2008 BIOS option-ROM MPT2BIOS-7.11.01.00"
+file = "sas2008-dell-p7-11-01-00.bios"
+size = 189440
+sha256 = "4a5092d5e29db14e24a8719f6cb70274c1d215ac1726ddb851dcc2d3f3403d57"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.11.01.00"
+vendor = "dell"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): mptsas2.rom"
+
+[firmware.sas2008-dell-p7-11-10-00-bios]
+display = "Dell SAS2008 BIOS option-ROM MPT2BIOS-7.11.10.00"
+file = "sas2008-dell-p7-11-10-00.bios"
+size = 190464
+sha256 = "e73991743b2a921fea425148e5d422c26cab5e65541e250f517eca3d08a6e1ae"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.11.10.00"
+vendor = "dell"
+tier = "primary"
+source = "Wayback Machine LSI vendor CDN: DELL_mptsas2.rom"
+
+[firmware.sas2008-dell-unknown-uefi-uefi-348063]
+display = "Dell SAS2008 UEFI BSD HII driver MPT-UEFI- (x64 uefi)"
+file = "sas2008-dell-unknown-348063.uefi"
+size = 65024
+sha256 = "3480630746258b5ce24dfe2cc859ff6c044efbe09486ece1314faab4416ae53b"
+chip = "SAS2008"
+mode = "UEFI"
+vendor = "dell"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): x64sas2.rom"
+
+[firmware.sas2008-dell-unknown-uefi-uefi-444116]
+display = "Dell SAS2008 UEFI BSD HII driver MPT-UEFI- (x64 uefi)"
+file = "sas2008-dell-unknown-444116.uefi"
+size = 64000
+sha256 = "4441164def405d242dabd629512b99189731335fb1ba890fc6996d8d3a727711"
+chip = "SAS2008"
+mode = "UEFI"
+vendor = "dell"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): x64sas2.rom"
+
+[firmware.sas2008-dell-unknown-uefi-uefi-56ebf0]
+display = "Dell SAS2008 UEFI BSD HII driver MPT-UEFI- (x64 uefi)"
+file = "sas2008-dell-unknown-56ebf0.uefi"
+size = 64000
+sha256 = "56ebf01a637a16c869e70a39a182d4122861a15c4e207e7635eef55c61510d78"
+chip = "SAS2008"
+mode = "UEFI"
+vendor = "dell"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): x64sas2.rom"
+
+[firmware.sas2008-dell-unknown-uefi-uefi-897bf4]
+display = "Dell SAS2008 UEFI BSD HII driver MPT-UEFI- (x64 uefi)"
+file = "sas2008-dell-unknown-897bf4.uefi"
+size = 65024
+sha256 = "897bf4efe98a282e7c61bbd2273864e1f58b7f75281c1aabf25e187ad743ea77"
+chip = "SAS2008"
+mode = "UEFI"
+vendor = "dell"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): x64sas2.rom"
+
+[firmware.sas2008-dell-unknown-uefi-uefi-d1d8b2]
+display = "Dell SAS2008 UEFI BSD HII driver MPT-UEFI- (x64 uefi)"
+file = "sas2008-dell-unknown-d1d8b2.uefi"
+size = 65024
+sha256 = "d1d8b20e475366dca25dda1ae9d8d0c999c4b6317af992659970acc5c7a28562"
+chip = "SAS2008"
+mode = "UEFI"
+vendor = "dell"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): x64sas2.rom"
+
+[firmware.sas2008-dell-unknown-uefi-uefi-f4b397]
+display = "Dell SAS2008 UEFI BSD HII driver MPT-UEFI- (x64 uefi)"
+file = "sas2008-dell-unknown-f4b397.uefi"
+size = 64512
+sha256 = "f4b3974ef4e0ddf28d1ea294fc27cb1c07e750f752e65458a6f012e418d9547d"
+chip = "SAS2008"
+mode = "UEFI"
+vendor = "dell"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): x64sas2.rom"
+
+[firmware.sas2008-dell-unknown-unknown-ir-52434b]
+display = "Dell PERC UNKNOWN firmware UNKNOWN (MPT 07.15.08.00)"
+file = "sas2008-dell-unknown-unknown-52434b.ir"
+size = 885404
+sha256 = "52434bc80d30531f1f99559133ce58a6d6105238481d4ea37432c8fb6e9d241f"
+chip = "SAS2008"
+mode = "IR"
+phase = "07.15.08.00"
+vendor = "dell"
+model = "UNKNOWN"
+oem_rev = "UNKNOWN"
+tier = "primary"
+source = "Wayback Machine LSI vendor CDN: DELL_6GBPSAS.FW"
+
+[firmware.sas2008-dell-unknown-unknown-imr]
+display = "Dell PERC UNKNOWN IMR firmware UNKNOWN"
+file = "sas2008-dell-unknown-unknown.imr"
+size = 4456448
+sha256 = "07e247d601ccaae39a969778fc93d9fc96693ccb3742db7eac3f1339dc8b52f1"
+chip = "SAS2008"
+mode = "IMR"
+phase = "unknown"
+vendor = "dell"
+model = "UNKNOWN"
+oem_rev = "UNKNOWN"
+tier = "primary"
+source = "Archive.org deep-dive: ir3_2008SASHWR_FWPKG-v20.12.1-0168.zip"
+
+[firmware.sas2008-dell-unknown-unknown-ir]
+display = "Dell PERC UNKNOWN firmware UNKNOWN (MPT 07.15.08.00)"
+file = "sas2008-dell-unknown-unknown.ir"
+size = 885404
+sha256 = "84c661aed6871e62eab5587016c8d68d5e2bce6ca4ee8742c4c0eaf72659e64f"
+chip = "SAS2008"
+mode = "IR"
+phase = "07.15.08.00"
+vendor = "dell"
+model = "UNKNOWN"
+oem_rev = "UNKNOWN"
+tier = "primary"
+source = "Archive.org Round 1: sas2008.zip"
+
+[firmware.sas2008-dell-unknown-uefi-uefi]
+display = "Dell SAS2008 UEFI BSD HII driver MPT-UEFI- (x64 uefi)"
+file = "sas2008-dell-unknown.uefi"
+size = 64000
+sha256 = "598c74b0f4e91782362d31d450f2d278a625e0981855daccef0df5ff5b31a3ef"
+chip = "SAS2008"
+mode = "UEFI"
+vendor = "dell"
+tier = "primary"
+source = "Dell support / Wayback Dell catalog (extracted via 7z): x64sas2.rom"
+
+[firmware.sas2008-ibm-m1015-ir]
+display = "IBM ServeRAID M1015 OEM IR firmware (restoration image)"
+file = "sas2008-ibm-m1015.ir"
+size = 256
+sha256 = "969188abcdf33c315ad5febf35a185418491d8634b4619793c684b6bd0e0f097"
+chip = "SAS2008"
+mode = "IR"
+phase = "unknown"
+vendor = "ibm"
+tier = "legacy"
+source = "Archive.org Round 1: sas2008.zip"
+
+[firmware.sas2008-lsi-None-uefi-efi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase  (x64 efi)"
+file = "sas2008-lsi-None.efi"
+size = 789504
+sha256 = "0f13bcf27e331e7751babf8eea71b111203e85860734b2be9fc046e02e46c233"
+chip = "SAS2008"
+mode = "UEFI"
+vendor = "lsi"
+tier = "primary"
+source = "Archive.org Round 1: sas2008.zip"
+
+[firmware.sas2008-lsi-None-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase  (x64 uefi)"
+file = "sas2008-lsi-None.uefi"
+size = 221184
+sha256 = "7a5c1cabe61ace85f0a571e47d1e7637b19a4793528e708ef84899c3963d559b"
+chip = "SAS2008"
+mode = "UEFI"
+vendor = "lsi"
+tier = "primary"
+source = "Archive.org Round 1: sas2008.zip"
+
+[firmware.sas2008-lsi-p04-00-00-00-ir]
+display = "LSI SAS2008 IR firmware Phase 04.00.00.00"
+file = "sas2008-lsi-p04-00-00-00.ir"
+size = 764204
+sha256 = "138a6444b85312517a5c49a1e25eaae81314ede29f87fbda8525bfeae5a98bd2"
+chip = "SAS2008"
+mode = "IR"
+phase = "04.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12351283 (SAS9211-4i_P4.zip)"
+
+[firmware.sas2008-lsi-p05-00-13-00-ir]
+display = "LSI SAS2008 IR firmware Phase 05.00.13.00"
+file = "sas2008-lsi-p05-00-13-00.ir"
+size = 822472
+sha256 = "5ba4929888fc752965b4cde97a087dede9bc819a1a5174443dc31f53189ba883"
+chip = "SAS2008"
+mode = "IR"
+phase = "05.00.13.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12351284 (SAS9211-4i_P5.zip)"
+
+[firmware.sas2008-lsi-p07-00-00-00-ir]
+display = "LSI SAS2008 IR firmware Phase 07.00.00.00"
+file = "sas2008-lsi-p07-00-00-00.ir"
+size = 882808
+sha256 = "5ced565c65a7493c34b3d89487a2b86c1c4c257dc68b5d5ad0b2259286665dd9"
+chip = "SAS2008"
+mode = "IR"
+phase = "07.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350519 (9211_8i_P7_Firmware_BIOS_UEFI_FCODE.zip)"
+
+[firmware.sas2008-lsi-p07-00-00-00-it]
+display = "LSI SAS2008 IT firmware Phase 07.00.00.00"
+file = "sas2008-lsi-p07-00-00-00.it"
+size = 630960
+sha256 = "88741c46ce1334cce68c8907cae56609b0ce6e99ec31fe3a90adbe3ef803d398"
+chip = "SAS2008"
+mode = "IT"
+phase = "07.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350519 (9211_8i_P7_Firmware_BIOS_UEFI_FCODE.zip)"
+
+[firmware.sas2008-lsi-p07-27-04-00-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 07.27.04.00 (x64 uefi)"
+file = "sas2008-lsi-p07-27-04-00.uefi"
+size = 262144
+sha256 = "b2cd012a48939c4e2a0d9f22358181904ffa596e14fe2bf7e4b360f0f7efe910"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "07.27.04.00"
+vendor = "lsi"
+tier = "primary"
+source = "Archive.org deep-dive: m5110-firmware.zip"
+
+[firmware.sas2008-lsi-p08-00-00-00-ir]
+display = "LSI SAS2008 IR firmware Phase 08.00.00.00"
+file = "sas2008-lsi-p08-00-00-00.ir"
+size = 900692
+sha256 = "6ec1118a706ca9e32067dbd344b9b1f92715c4095b8b3d5b782025dfd742b2e8"
+chip = "SAS2008"
+mode = "IR"
+phase = "08.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350508 (9211_4i_Package_for_P8_Firmware_BIOS_Upgrade_on_MSDOS_and_Windows.zip)"
+
+[firmware.sas2008-lsi-p08-00-00-00-it]
+display = "LSI SAS2008 IT firmware Phase 08.00.00.00"
+file = "sas2008-lsi-p08-00-00-00.it"
+size = 647664
+sha256 = "28fc8e1e61d2c60df45a0b9db5a44d3ffd9610341703b2bac5d465ef9088e16f"
+chip = "SAS2008"
+mode = "IT"
+phase = "08.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350508 (9211_4i_Package_for_P8_Firmware_BIOS_Upgrade_on_MSDOS_and_Windows.zip)"
+
+[firmware.sas2008-lsi-p09-00-00-00-ir]
+display = "LSI SAS2008 IR firmware Phase 09.00.00.00"
+file = "sas2008-lsi-p09-00-00-00.ir"
+size = 905232
+sha256 = "cf9add7c766d2c45f655925e2988338b1ff632d90d4aedeec088b81cdfbdbe19"
+chip = "SAS2008"
+mode = "IR"
+phase = "09.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350509 (9211_4i_Package_for_P9_IR_IT_Firmware_BIOS_Upgrade_on_MSDOS_and_Windows.zip)"
+
+[firmware.sas2008-lsi-p09-00-00-00-it]
+display = "LSI SAS2008 IT firmware Phase 09.00.00.00"
+file = "sas2008-lsi-p09-00-00-00.it"
+size = 650020
+sha256 = "f94267913f31f917aa328fc6ab14a8f310f59d18c44cf233bf30c858f194c8d0"
+chip = "SAS2008"
+mode = "IT"
+phase = "09.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350509 (9211_4i_Package_for_P9_IR_IT_Firmware_BIOS_Upgrade_on_MSDOS_and_Windows.zip)"
+
+[firmware.sas2008-lsi-p10-00-02-00-ir]
+display = "LSI SAS2008 IR firmware Phase 10.00.02.00"
+file = "sas2008-lsi-p10-00-02-00.ir"
+size = 921840
+sha256 = "b80096e656766a3d261788db6addcb59b3a429579f7c92b030fc9f1ce279f2a4"
+chip = "SAS2008"
+mode = "IR"
+phase = "10.00.02.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350510 (9211_4i_Package_P10_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p10-00-02-00-it]
+display = "LSI SAS2008 IT firmware Phase 10.00.02.00"
+file = "sas2008-lsi-p10-00-02-00.it"
+size = 662368
+sha256 = "43df6f7767c011c6df99c954c9485127fb52b096ada089354aa441992c3d1f22"
+chip = "SAS2008"
+mode = "IT"
+phase = "10.00.02.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350510 (9211_4i_Package_P10_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p10-00-08-00-ir]
+display = "LSI SAS2008 IR firmware Phase 10.00.08.00"
+file = "sas2008-lsi-p10-00-08-00.ir"
+size = 922076
+sha256 = "a1a1c60b2c45740b0394257225c37c227221d3b717632bcb5c467aeeb171a62a"
+chip = "SAS2008"
+mode = "IR"
+phase = "10.00.08.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Archive.org Round 1: sas2008.zip"
+
+[firmware.sas2008-lsi-p10-00-08-00-it]
+display = "LSI SAS2008 IT firmware Phase 10.00.08.00"
+file = "sas2008-lsi-p10-00-08-00.it"
+size = 662532
+sha256 = "d6b0f703345b934a576ad5e57fed9f496fb6d372f76e57f5988d0df9e247b5c8"
+chip = "SAS2008"
+mode = "IT"
+phase = "10.00.08.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Archive.org Round 1: sas2008.zip"
+
+[firmware.sas2008-lsi-p10-lbf-bios]
+display = "LSI SAS2008 BIOS payload Phase 10 (LBF format)"
+file = "sas2008-lsi-p10-lbf.bios"
+size = 249164
+sha256 = "3dc707e6d1d54109c3b8ab2594fc35c3a9b71710ede8db420ab2f975f8a857d5"
+chip = "SAS2008"
+mode = "BIOS-LBF"
+phase = "10"
+vendor = "lsi"
+tier = "legacy"
+source = "Broadcom docs.broadcom.com doc-id 12350510 (9211_4i_Package_P10_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p11-00-00-00-ir]
+display = "LSI SAS2008 IR firmware Phase 11.00.00.00"
+file = "sas2008-lsi-p11-00-00-00.ir"
+size = 930076
+sha256 = "7e908b500dfd3f44aba035fa62b2f9a75a20f764d7f877a536bb5232153d8cb6"
+chip = "SAS2008"
+mode = "IR"
+phase = "11.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350511 (9211_4i_Package_P11_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p11-00-00-00-it]
+display = "LSI SAS2008 IT firmware Phase 11.00.00.00"
+file = "sas2008-lsi-p11-00-00-00.it"
+size = 669636
+sha256 = "e770af52395b3cb3138afc5c28602928d1276e80b2e3d2d729b11885bda300d9"
+chip = "SAS2008"
+mode = "IT"
+phase = "11.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350511 (9211_4i_Package_P11_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p12-00-00-00-ir]
+display = "LSI SAS2008 IR firmware Phase 12.00.00.00"
+file = "sas2008-lsi-p12-00-00-00.ir"
+size = 955628
+sha256 = "a806d4eb94f38a5d8ecaf7be3261fdc5a25bf3c96dfad97866b44e31ebadfe01"
+chip = "SAS2008"
+mode = "IR"
+phase = "12.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Wayback Machine LSI vendor CDN: 9211_8i_Package_P12_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip"
+
+[firmware.sas2008-lsi-p12-00-00-00-it]
+display = "LSI SAS2008 IT firmware Phase 12.00.00.00"
+file = "sas2008-lsi-p12-00-00-00.it"
+size = 696048
+sha256 = "02cf69fb848ddbfa646e6a43cccbfcc35bb870890218ddb255cfc2900716a114"
+chip = "SAS2008"
+mode = "IT"
+phase = "12.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Wayback Machine LSI vendor CDN: 9211_8i_Package_P12_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip"
+
+[firmware.sas2008-lsi-p13-00-01-00-ir]
+display = "LSI SAS2008 IR firmware Phase 13.00.01.00"
+file = "sas2008-lsi-p13-00-01-00.ir"
+size = 961484
+sha256 = "7c8be38e6bfcbcf174fd56f006d29e898eb7795ab3917329469891f975566cdd"
+chip = "SAS2008"
+mode = "IR"
+phase = "13.00.01.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350514 (9211_4i_Package_P13_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p13-00-01-00-it]
+display = "LSI SAS2008 IT firmware Phase 13.00.01.00"
+file = "sas2008-lsi-p13-00-01-00.it"
+size = 699552
+sha256 = "f1c00c33b82b158745d8a4118af2b53a184337cfc005125cbeca2a76dfe526dd"
+chip = "SAS2008"
+mode = "IT"
+phase = "13.00.01.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350514 (9211_4i_Package_P13_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p13-00-66-00-ir]
+display = "LSI SAS2008 IR firmware Phase 13.00.66.00"
+file = "sas2008-lsi-p13-00-66-00.ir"
+size = 972828
+sha256 = "102455571218debcc6fc153c386846d569b0463374e3c7d1450e5f767e355398"
+chip = "SAS2008"
+mode = "IR"
+phase = "13.00.66.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350513 (9211_4i_Package_P13-5_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p13-00-66-00-it]
+display = "LSI SAS2008 IT firmware Phase 13.00.66.00"
+file = "sas2008-lsi-p13-00-66-00.it"
+size = 711400
+sha256 = "ecb3aea7cd5bd98613a2b7b8c8d5251a70b21db1f0eb11aefc216366891480fe"
+chip = "SAS2008"
+mode = "IT"
+phase = "13.00.66.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350513 (9211_4i_Package_P13-5_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p13-5-lbf-bios]
+display = "LSI SAS2008 BIOS payload Phase 13-5 (LBF format)"
+file = "sas2008-lsi-p13-5-lbf.bios"
+size = 255796
+sha256 = "7913b9548487c67c0733e81c5bbcda86a2cd09db6382497e4cd95de785506529"
+chip = "SAS2008"
+mode = "BIOS-LBF"
+phase = "13-5"
+vendor = "lsi"
+tier = "legacy"
+source = "Broadcom docs.broadcom.com doc-id 12350571 (9217-8i_Package_P13-5_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p14-00-01-00-ir]
+display = "LSI SAS2008 IR firmware Phase 14.00.01.00"
+file = "sas2008-lsi-p14-00-01-00.ir"
+size = 966440
+sha256 = "e28b28e589d083f8c0fb9c6bf3edbe56b46822866e9d7a6a691bac2a2a94ab33"
+chip = "SAS2008"
+mode = "IR"
+phase = "14.00.01.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Wayback Machine LSI vendor CDN: 9211_8i_Package_P14_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip"
+
+[firmware.sas2008-lsi-p14-00-01-00-it]
+display = "LSI SAS2008 IT firmware Phase 14.00.01.00"
+file = "sas2008-lsi-p14-00-01-00.it"
+size = 704572
+sha256 = "abeb17442dd73b418742776c75c45b3c60ac045968e59ddbbb54d926249a306e"
+chip = "SAS2008"
+mode = "IT"
+phase = "14.00.01.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Wayback Machine LSI vendor CDN: 9211_8i_Package_P14_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip"
+
+[firmware.sas2008-lsi-p15-0-uefi-efi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 15.0 (x64 efi)"
+file = "sas2008-lsi-p15-0.efi"
+size = 976712
+sha256 = "9a344c899599013b12dbfdd84d57134588564a4dbadcc8e3ff5db0c84d92fea4"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "15.0"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P15.zip"
+
+[firmware.sas2008-lsi-p15-00-00-00-ir]
+display = "LSI SAS2008 IR firmware Phase 15.00.00.00"
+file = "sas2008-lsi-p15-00-00-00.ir"
+size = 974092
+sha256 = "219d16659cb76312a3570948afa362c70efdc7f5ef14f4d2822fbbf8983f18e0"
+chip = "SAS2008"
+mode = "IR"
+phase = "15.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350516 (9211_4i_Package_P15_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p15-00-00-00-it]
+display = "LSI SAS2008 IT firmware Phase 15.00.00.00"
+file = "sas2008-lsi-p15-00-00-00.it"
+size = 710748
+sha256 = "b7275efa898bbb48569a38faf1732d077d60e86a4745ae256162360c9e74ba1d"
+chip = "SAS2008"
+mode = "IT"
+phase = "15.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350516 (9211_4i_Package_P15_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p15-ebc-uefi-efi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 15 (EBC arch-neutral efi)"
+file = "sas2008-lsi-p15-ebc.efi"
+size = 945152
+sha256 = "c9a9b491b9210b0ed71f9748ac3648f14cb0d104ea4d21f1611d1b80dabd5d03"
+chip = "SAS2008"
+mode = "UEFI-EBC"
+phase = "15"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P15.zip"
+
+[firmware.sas2008-lsi-p15-ebc-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 15 (EBC arch-neutral uefi)"
+file = "sas2008-lsi-p15-ebc.uefi"
+size = 234496
+sha256 = "23482fcf2a3377a265326d61ab2389926919305e1d19e1b84d5c996e6570f826"
+chip = "SAS2008"
+mode = "UEFI-EBC"
+phase = "15"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P15.zip"
+
+[firmware.sas2008-lsi-p15-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 15 (x64 uefi)"
+file = "sas2008-lsi-p15.uefi"
+size = 230912
+sha256 = "baf37ca5ba88c3f9d05e71129b9cca61a3117040d411205f8338bf8fac9179f7"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "15"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P15.zip"
+
+[firmware.sas2008-lsi-p16-00-00-00-ir]
+display = "LSI SAS2008 IR firmware Phase 16.00.00.00"
+file = "sas2008-lsi-p16-00-00-00.ir"
+size = 977088
+sha256 = "fd3d62efa62182aa89c2886db310b2a20db0d3491832e500968bd96cf8c54f70"
+chip = "SAS2008"
+mode = "IR"
+phase = "16.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Wayback Machine LSI vendor CDN: 9211_8i_Package_P16_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip"
+
+[firmware.sas2008-lsi-p16-00-00-00-it]
+display = "LSI SAS2008 IT firmware Phase 16.00.00.00"
+file = "sas2008-lsi-p16-00-00-00.it"
+size = 713352
+sha256 = "3e14e08a1e18d941b8aeee5f992fb33349d650eed7e733cb8f30d52d302b002e"
+chip = "SAS2008"
+mode = "IT"
+phase = "16.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Wayback Machine LSI vendor CDN: 9211_8i_Package_P16_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip"
+
+[firmware.sas2008-lsi-p16-uefi-efi-19c6ce]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 16 (x64 efi)"
+file = "sas2008-lsi-p16-19c6ce.efi"
+size = 1041408
+sha256 = "19c6ce76c4fbd4c177e3c73832ddbc9956c1500f41f09b83cc8e28256a8514ab"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "16"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P16.zip"
+
+[firmware.sas2008-lsi-p16-uefi-uefi-30c17b]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 16 (x64 uefi)"
+file = "sas2008-lsi-p16-30c17b.uefi"
+size = 237056
+sha256 = "30c17b1bf004aa2b78e0c41d79c08d0e0b78b7b2dd6f2f46553f155a407b1e5a"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "16"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P16.zip"
+
+[firmware.sas2008-lsi-p16-ebc-uefi-efi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 16 (EBC arch-neutral efi)"
+file = "sas2008-lsi-p16-ebc.efi"
+size = 1034240
+sha256 = "eb9fcc6a52a711585242036bc10301665dac587221724a5f73eb9782bad165ec"
+chip = "SAS2008"
+mode = "UEFI-EBC"
+phase = "16"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P16.zip"
+
+[firmware.sas2008-lsi-p16-ebc-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 16 (EBC arch-neutral uefi)"
+file = "sas2008-lsi-p16-ebc.uefi"
+size = 256000
+sha256 = "2d0d1ebd7e4d87c09a6b03315139832bf35704ad13e478fe77d213137fef250f"
+chip = "SAS2008"
+mode = "UEFI-EBC"
+phase = "16"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P16.zip"
+
+[firmware.sas2008-lsi-p16-uefi-efi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 16 (x64 efi)"
+file = "sas2008-lsi-p16.efi"
+size = 1050008
+sha256 = "8f97a3207df025a7cbd6ca44ad7eec27d4eb47307ccd5fa23f107e47971846a7"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "16"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P16.zip"
+
+[firmware.sas2008-lsi-p16-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 16 (x64 uefi)"
+file = "sas2008-lsi-p16.uefi"
+size = 242688
+sha256 = "035a30b395dc86f0edfebe0f0b28266de45b370339871c5d9cdbf964b1706c5f"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "16"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P16.zip"
+
+[firmware.sas2008-lsi-p17-00-01-00-ir]
+display = "LSI SAS2008 IR firmware Phase 17.00.01.00"
+file = "sas2008-lsi-p17-00-01-00.ir"
+size = 979892
+sha256 = "f32ca05d75fe2475029dc49ef5c42b7ad6cf4582a9983cfbab2392ec8521befa"
+chip = "SAS2008"
+mode = "IR"
+phase = "17.00.01.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350534 (9211-4i_Package_P17_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p17-00-01-00-it]
+display = "LSI SAS2008 IT firmware Phase 17.00.01.00"
+file = "sas2008-lsi-p17-00-01-00.it"
+size = 715172
+sha256 = "610c242bbb1fbcf61e4182d0c493247b61a1fd8072e5a5fb54dbf63f6b61de04"
+chip = "SAS2008"
+mode = "IT"
+phase = "17.00.01.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350534 (9211-4i_Package_P17_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p17-uefi-efi-be2b67]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 17 (x64 efi)"
+file = "sas2008-lsi-p17-be2b67.efi"
+size = 1057792
+sha256 = "be2b67daf17095e9c02573922e13e1d4c859c9b6f6016bf03ea814d5361f6763"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "17"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P17.zip"
+
+[firmware.sas2008-lsi-p17-uefi-uefi-d3a64f]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 17 (x64 uefi)"
+file = "sas2008-lsi-p17-d3a64f.uefi"
+size = 240640
+sha256 = "d3a64fbb14c378d7189e74252c865e8bc6328b0f1712c0374bac6da79567be93"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "17"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P17.zip"
+
+[firmware.sas2008-lsi-p17-ebc-uefi-efi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 17 (EBC arch-neutral efi)"
+file = "sas2008-lsi-p17-ebc.efi"
+size = 1047040
+sha256 = "73f91653189398f000204377f17d2ba19805b9b8618f3a95f614d99f866a541d"
+chip = "SAS2008"
+mode = "UEFI-EBC"
+phase = "17"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P17.zip"
+
+[firmware.sas2008-lsi-p17-ebc-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 17 (EBC arch-neutral uefi)"
+file = "sas2008-lsi-p17-ebc.uefi"
+size = 259072
+sha256 = "afdc012cf5c261e38509fbe2179539d9ba0b25a5f177e58b6270bd8e01ffe61a"
+chip = "SAS2008"
+mode = "UEFI-EBC"
+phase = "17"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P17.zip"
+
+[firmware.sas2008-lsi-p17-uefi-efi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 17 (x64 efi)"
+file = "sas2008-lsi-p17.efi"
+size = 1066416
+sha256 = "f4b3a4775a0ed0a115443bc50ea7d42b4404701c45a0e13e924f03f6483d6fd9"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "17"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P17.zip"
+
+[firmware.sas2008-lsi-p17-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 17 (x64 uefi)"
+file = "sas2008-lsi-p17.uefi"
+size = 246272
+sha256 = "3e831e9635b9175a9b9943ef924b7906f100b9ec4b488cf6d4f23804f13c03fd"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "17"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P17.zip"
+
+[firmware.sas2008-lsi-p18-00-00-00-ir]
+display = "LSI SAS2008 IR firmware Phase 18.00.00.00"
+file = "sas2008-lsi-p18-00-00-00.ir"
+size = 981792
+sha256 = "427d83e67aff354a20644d56b3592bb85603c35238ce9f2c8df8aab4d5cc881c"
+chip = "SAS2008"
+mode = "IR"
+phase = "18.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350506 (9210-8i_Package_P18_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p18-00-00-00-it]
+display = "LSI SAS2008 IT firmware Phase 18.00.00.00"
+file = "sas2008-lsi-p18-00-00-00.it"
+size = 716452
+sha256 = "6afaf25109a0c7d82b0c1f02e7bcae86422a91a5e6295580b0f3d9cdfdba2e5e"
+chip = "SAS2008"
+mode = "IT"
+phase = "18.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350506 (9210-8i_Package_P18_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p19-00-00-00-ir]
+display = "LSI SAS2008 IR firmware Phase 19.00.00.00"
+file = "sas2008-lsi-p19-00-00-00.ir"
+size = 986364
+sha256 = "501fd812e25b820de1595d7dfb771b290260c3fd04fc94ccfd6f9f5b05fa8418"
+chip = "SAS2008"
+mode = "IR"
+phase = "19.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350536 (9211-4i_Package_P19_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p19-00-00-00-it]
+display = "LSI SAS2008 IT firmware Phase 19.00.00.00"
+file = "sas2008-lsi-p19-00-00-00.it"
+size = 721004
+sha256 = "733d092b9802ae653269bb7c56f5fe0ab65b37ac8be33654846c5ec16266cfa7"
+chip = "SAS2008"
+mode = "IT"
+phase = "19.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350536 (9211-4i_Package_P19_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p19-uefi-uefi-2eb735]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 19 (x64 uefi)"
+file = "sas2008-lsi-p19-2eb735.uefi"
+size = 252416
+sha256 = "2eb735868eedf23cbd10cbddda35579da64b06ed68c0c363b1f05ddd612f9d37"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "19"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P19.zip"
+
+[firmware.sas2008-lsi-p19-uefi-efi-db6939]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 19 (x64 efi)"
+file = "sas2008-lsi-p19-db6939.efi"
+size = 1108480
+sha256 = "db693942a6b1ea6a1c40622c404e8093736ca5665cda3d9fe1a9d5e988ffaf53"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "19"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P19.zip"
+
+[firmware.sas2008-lsi-p19-ebc-uefi-efi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 19 (EBC arch-neutral efi)"
+file = "sas2008-lsi-p19-ebc.efi"
+size = 1096704
+sha256 = "521fe42cf8c766f1c6384c4bf83a9267637c381d01bf8d7f15b61d92a714a844"
+chip = "SAS2008"
+mode = "UEFI-EBC"
+phase = "19"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P19.zip"
+
+[firmware.sas2008-lsi-p19-ebc-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 19 (EBC arch-neutral uefi)"
+file = "sas2008-lsi-p19-ebc.uefi"
+size = 270848
+sha256 = "316bfbb5d9b5982fb430b41b5eecbc539fbb05a2cd2fedca9ab048f21a434682"
+chip = "SAS2008"
+mode = "UEFI-EBC"
+phase = "19"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P19.zip"
+
+[firmware.sas2008-lsi-p19-uefi-efi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 19 (x64 efi)"
+file = "sas2008-lsi-p19.efi"
+size = 1117184
+sha256 = "4169f36595e2a0da0c808d81e9574b3a38db850b207b9ef291ad430338a157ca"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "19"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P19.zip"
+
+[firmware.sas2008-lsi-p19-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 19 (x64 uefi)"
+file = "sas2008-lsi-p19.uefi"
+size = 258048
+sha256 = "1ac502ab9cb9e789a3d0c8be9b79dcc448336b02699b260541e6ad7e431f5d70"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "19"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P19.zip"
+
+[firmware.sas2008-lsi-p20-00-02-00-ir]
+display = "LSI SAS2008 IR firmware Phase 20.00.02.00"
+file = "sas2008-lsi-p20-00-02-00.ir"
+size = 988008
+sha256 = "8bd2567c54123121aea90469b0b782720f5f272b84b86e41356cb90de3709b85"
+chip = "SAS2008"
+mode = "IR"
+phase = "20.00.02.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Wayback Machine LSI vendor CDN: 9211_8i_Package_P20_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip"
+
+[firmware.sas2008-lsi-p20-00-02-00-it]
+display = "LSI SAS2008 IT firmware Phase 20.00.02.00"
+file = "sas2008-lsi-p20-00-02-00.it"
+size = 722524
+sha256 = "a58113addd05d0a4482afc6f363e66f9530efaf0c75048270845ba0062d56f62"
+chip = "SAS2008"
+mode = "IT"
+phase = "20.00.02.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Wayback Machine LSI vendor CDN: 9211_8i_Package_P20_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip"
+
+[firmware.sas2008-lsi-p20-00-06-00-ir]
+display = "LSI SAS2008 IR firmware Phase 20.00.06.00"
+file = "sas2008-lsi-p20-00-06-00.ir"
+size = 988308
+sha256 = "73f5b4b3ba968f79f920cfbf563e6789a8e3f25941e8f91edbe3af49f6d781fc"
+chip = "SAS2008"
+mode = "IR"
+phase = "20.00.06.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Archive.org Round 1: 9211_8i_Package_P20_IR_IT_FW_BIOS_for_MSDOS_Windows_dedicated.zip"
+
+[firmware.sas2008-lsi-p20-00-06-00-it]
+display = "LSI SAS2008 IT firmware Phase 20.00.06.00"
+file = "sas2008-lsi-p20-00-06-00.it"
+size = 722644
+sha256 = "9e590ba4c73ee33d315d2c64472c08ccddd0d83cd6fce0f847071a2b50265706"
+chip = "SAS2008"
+mode = "IT"
+phase = "20.00.06.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Archive.org Round 1: 9211_8i_Package_P20_IR_IT_FW_BIOS_for_MSDOS_Windows_dedicated.zip"
+
+[firmware.sas2008-lsi-p20-00-07-00-ir]
+display = "LSI SAS2008 IR firmware Phase 20.00.07.00"
+file = "sas2008-lsi-p20-00-07-00.ir"
+size = 988376
+sha256 = "955403184b7df499804785c32335acbc5633322df11b08ef04db5c10441ec295"
+chip = "SAS2008"
+mode = "IR"
+phase = "20.00.07.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12350518 (9211-4i_Package_P20_IR_IT_FW_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p20-00-07-00-it]
+display = "LSI SAS2008 IT firmware Phase 20.00.07.00"
+file = "sas2008-lsi-p20-00-07-00.it"
+size = 722708
+sha256 = "a359f5ab81baf1bc188d91b38a1d9b6e570c9be3d39aa6d0fa99b1a2004ddbf6"
+chip = "SAS2008"
+mode = "IT"
+phase = "20.00.07.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12350518 (9211-4i_Package_P20_IR_IT_FW_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p20-uefi-efi-517e7c]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 20 (x64 efi)"
+file = "sas2008-lsi-p20-517e7c.efi"
+size = 1124352
+sha256 = "517e7cba9b6231fee079ff52aca31a96d1cedf7550e566381a14c90dac8d85fb"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "20"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P20.zip"
+
+[firmware.sas2008-lsi-p20-uefi-uefi-63c9d7]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 20 (x64 uefi)"
+file = "sas2008-lsi-p20-63c9d7.uefi"
+size = 256512
+sha256 = "63c9d73e3797ef59f10f072fbdb4a96a93e38a9b3d53529341975d8d23905971"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "20"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P20.zip"
+
+[firmware.sas2008-lsi-p20-ebc-uefi-efi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 20 (EBC arch-neutral efi)"
+file = "sas2008-lsi-p20-ebc.efi"
+size = 1113600
+sha256 = "935ec5dab827f89413664af06fdfd5f34539db660642fe2496e1aec26f347164"
+chip = "SAS2008"
+mode = "UEFI-EBC"
+phase = "20"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P20.zip"
+
+[firmware.sas2008-lsi-p20-ebc-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 20 (EBC arch-neutral uefi)"
+file = "sas2008-lsi-p20-ebc.uefi"
+size = 274944
+sha256 = "721708c892deb9c1f931b2424e96fafc51350ef921cc288b38ea55029eef89a8"
+chip = "SAS2008"
+mode = "UEFI-EBC"
+phase = "20"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P20.zip"
+
+[firmware.sas2008-lsi-p20-uefi-efi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 20 (x64 efi)"
+file = "sas2008-lsi-p20.efi"
+size = 1133032
+sha256 = "9f4e90129bc5d329d29c628042b8e36686ff5f04d1712b2f114ceaa651642ecf"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "20"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P20.zip"
+
+[firmware.sas2008-lsi-p20-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 20 (x64 uefi)"
+file = "sas2008-lsi-p20.uefi"
+size = 262144
+sha256 = "3cb75a72f861c4f55a06eb396fb2978c659c60c4045104654eab5271895070c1"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "20"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom CDN (sas_sata_6g_p*): UEFI_BSD_P20.zip"
+
+[firmware.sas2008-lsi-p4-ebc-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 4 (EBC arch-neutral uefi)"
+file = "sas2008-lsi-p4-ebc.uefi"
+size = 91136
+sha256 = "cc256d3009ce863b81ed1a41ac12bb94e9cb5b9acfb47db7524fd661e59ecd94"
+chip = "SAS2008"
+mode = "UEFI-EBC"
+phase = "4"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12351283 (SAS9211-4i_P4.zip)"
+
+[firmware.sas2008-lsi-p4-uefi-efi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 4 (x64 efi)"
+file = "sas2008-lsi-p4.efi"
+size = 196096
+sha256 = "e8676912c0c473b6c225d40299d4655b369436312016e6e1452ea918012b947f"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "4"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12351283 (SAS9211-4i_P4.zip)"
+
+[firmware.sas2008-lsi-p4-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 4 (x64 uefi)"
+file = "sas2008-lsi-p4.uefi"
+size = 65024
+sha256 = "912ebc5a88d83497b631506c530ad1d17711c0a329275ca3ece87ceed5fb040c"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "4"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12351283 (SAS9211-4i_P4.zip)"
+
+[firmware.sas2008-lsi-p5-ebc-uefi-efi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 5 (EBC arch-neutral efi)"
+file = "sas2008-lsi-p5-ebc.efi"
+size = 257024
+sha256 = "23e8204d847db0eda5a479dd61096d6b178196998d146680b08f6e90b5dee880"
+chip = "SAS2008"
+mode = "UEFI-EBC"
+phase = "5"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12351287 (SAS9212-4i4e_P5.zip)"
+
+[firmware.sas2008-lsi-p5-ebc-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 5 (EBC arch-neutral uefi)"
+file = "sas2008-lsi-p5-ebc.uefi"
+size = 93696
+sha256 = "b245509bbc0516381e974c4bbbb9cdd9846a5c262f7d3ffec480db3653af87ac"
+chip = "SAS2008"
+mode = "UEFI-EBC"
+phase = "5"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12351280 (SAS9200_8e_P5.zip)"
+
+[firmware.sas2008-lsi-p5-uefi-efi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 5 (x64 efi)"
+file = "sas2008-lsi-p5.efi"
+size = 207872
+sha256 = "8967b164e921926be80a63510ce4ecc31457af616cb89d2ddb304e381ce40215"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "5"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12351280 (SAS9200_8e_P5.zip)"
+
+[firmware.sas2008-lsi-p5-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 5 (x64 uefi)"
+file = "sas2008-lsi-p5.uefi"
+size = 68096
+sha256 = "1a49b8b18177dd86ec0a2b92ec9e6187d4aa5380b822e96b85a433ebbab6329c"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "5"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12351280 (SAS9200_8e_P5.zip)"
+
+[firmware.sas2008-lsi-p7-03-00-00-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM MPT2BIOS-7.03.00.00"
+file = "sas2008-lsi-p7-03-00-00.bios"
+size = 187904
+sha256 = "b37b69f9b40a7497c34404de0c053439bea8d6388dfaf8739cbc1b38aabe0817"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.03.00.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12351283 (SAS9211-4i_P4.zip)"
+
+[firmware.sas2008-lsi-p7-05-01-00-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM MPT2BIOS-7.05.01.00"
+file = "sas2008-lsi-p7-05-01-00.bios"
+size = 187904
+sha256 = "17c9559a5562c86934ce3eb32b5219bf39b58b155163a9d45b0c06632e755ed3"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.05.01.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12351280 (SAS9200_8e_P5.zip)"
+
+[firmware.sas2008-lsi-p7-11-00-00-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM MPT2BIOS-7.11.00.00"
+file = "sas2008-lsi-p7-11-00-00.bios"
+size = 189440
+sha256 = "f9651e105ce27a94c2db665410f003381353c03058915e70b469100803f0da5d"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.11.00.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12350402 (92008e_Package_For_P7_Firmware_BIOS_Upgrade_on_MSDOS_and_Windows.zip)"
+
+[firmware.sas2008-lsi-p7-15-00-00-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM MPT2BIOS-7.15.00.00"
+file = "sas2008-lsi-p7-15-00-00.bios"
+size = 191488
+sha256 = "694ad5e835416eef7da47f10465a6e8e5079aaa9e8f9e5606040ec87bc165920"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.15.00.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12350542 (9212_4i4e_Package_for_P8_Firmware_BIOS_Upgrade_on_MSDOS_and_Windows.zip)"
+
+[firmware.sas2008-lsi-p7-17-00-00-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM MPT2BIOS-7.17.00.00"
+file = "sas2008-lsi-p7-17-00-00.bios"
+size = 193536
+sha256 = "24f0e1b87b0b6254329ea6df3b12239c7b1a76be3a9ce3883c1caa49cb8b761b"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.17.00.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12350407 (9201_16e_Package_for_P9_IT_Firmware_BIOS_on_MSDOS_and_Windows.zip)"
+
+[firmware.sas2008-lsi-p7-18-04-03-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 7.18.04.03 (x64 uefi)"
+file = "sas2008-lsi-p7-18-04-03.uefi"
+size = 223744
+sha256 = "7a3b0180eeefaa4d4878dff066d8a350c6fd37d1af08f888d7a9c4e86e8c6251"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "7.18.04.03"
+vendor = "lsi"
+tier = "primary"
+source = "Archive.org Round 1: sas2008.zip"
+
+[firmware.sas2008-lsi-p7-19-00-00-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM MPT2BIOS-7.19.00.00"
+file = "sas2008-lsi-p7-19-00-00.bios"
+size = 193536
+sha256 = "3491fb06586330b3bb2c7c6337533658084604b2717d9c30b018534724b74f24"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.19.00.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12350510 (9211_4i_Package_P10_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p7-21-00-00-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM MPT2BIOS-7.21.00.00"
+file = "sas2008-lsi-p7-21-00-00.bios"
+size = 195584
+sha256 = "a8a8187e6a7568328241886cc7a4658ddde3d20e633db2f3bc60c9800b013a68"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.21.00.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12350450 (9205_8e_Package_P11_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p7-23-01-00-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM MPT2BIOS-7.23.01.00"
+file = "sas2008-lsi-p7-23-01-00.bios"
+size = 197632
+sha256 = "a7e54e505f08040bb1bb0584475c23e4df6ff5457fd908b23c701e74acf1c475"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.23.01.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12350451 (9205_8e_Package_P12_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p7-25-00-00-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM MPT2BIOS-7.25.00.00"
+file = "sas2008-lsi-p7-25-00-00.bios"
+size = 198144
+sha256 = "9209c6930be21d8810026838ce10e37aadffbbe619c6570af81ce52eaf4941a1"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.25.00.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12350571 (9217-8i_Package_P13-5_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p7-27-00-00-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM MPT2BIOS-7.27.00.00"
+file = "sas2008-lsi-p7-27-00-00.bios"
+size = 199168
+sha256 = "fb86ea6c5a59d19beb003c0aad0c7b9a0586cfb76070386f0a0bfec4f050495e"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.27.00.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12353005 (Phase13-5-13-00-57-00-9207-8e_A.zip)"
+
+[firmware.sas2008-lsi-p7-29-00-00-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM MPT2BIOS-7.29.00.00"
+file = "sas2008-lsi-p7-29-00-00.bios"
+size = 200192
+sha256 = "535fd8941ecb8012d8d12157d2d58be709a2328c31597f2d8944bd3874e6e8aa"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.29.00.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12350557 (9217_4i4e_Package_P15_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p7-31-00-00-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM MPT2BIOS-7.31.00.00"
+file = "sas2008-lsi-p7-31-00-00.bios"
+size = 200704
+sha256 = "3050fa08ec466db35ef78a2231badffc5dfe6dbc7d709f93fce7fa4daad80339"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.31.00.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12350456 (9205_8e_Package_P16_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p7-33-00-00-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM MPT2BIOS-7.33.00.00"
+file = "sas2008-lsi-p7-33-00-00.bios"
+size = 200704
+sha256 = "dfd3f99308dfa39848c355a1ee074455bfccbd1d7eb5919b14af8cb3f2cc548c"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.33.00.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12350553 (9212-4i4e_Package_P17_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p7-35-00-00-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM MPT2BIOS-7.35.00.00"
+file = "sas2008-lsi-p7-35-00-00.bios"
+size = 200704
+sha256 = "af0083e2ab70718dcd25155db5f2250bb5a136601c089e3cd408201c38ffabcc"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.35.00.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12350467 (9206-16e_Package_P18_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p7-37-00-00-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM MPT2BIOS-7.37.00.00"
+file = "sas2008-lsi-p7-37-00-00.bios"
+size = 201216
+sha256 = "8d5ddf167c5c77518f13ac070b6d5fe2cab7f8a373ef595583df6c7e0e174c74"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.37.00.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12350492 (9207_8i_Package_P19_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p7-39-00-00-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM MPT2BIOS-7.39.00.00"
+file = "sas2008-lsi-p7-39-00-00.bios"
+size = 202240
+sha256 = "76ed298f739b23755aa080e8346e9a29e979aeefb1c4cb4595eb2c5f05fca330"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.39.00.00"
+vendor = "lsi"
+tier = "primary"
+source = "Wayback Machine LSI vendor CDN: 9211_8i_Package_P20_IR_IT_Firmware_BIOS_for_MSDOS_Windows.zip"
+
+[firmware.sas2008-lsi-p7-39-02-00-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM MPT2BIOS-7.39.02.00"
+file = "sas2008-lsi-p7-39-02-00.bios"
+size = 202240
+sha256 = "745ea38fcabd8f233dd2233756501cae5e662845cfd352c3b52baf7aad0672df"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "7.39.02.00"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12350518 (9211-4i_Package_P20_IR_IT_FW_BIOS_for_MSDOS_Windows.zip)"
+
+[firmware.sas2008-lsi-p7-ebc-uefi-efi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 7 (EBC arch-neutral efi)"
+file = "sas2008-lsi-p7-ebc.efi"
+size = 577536
+sha256 = "61414a1569bd545821f9290449e6fe4ae24d3901555d501e8879053865cd3ab0"
+chip = "SAS2008"
+mode = "UEFI-EBC"
+phase = "7"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350519 (9211_8i_P7_Firmware_BIOS_UEFI_FCODE.zip)"
+
+[firmware.sas2008-lsi-p7-ebc-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 7 (EBC arch-neutral uefi)"
+file = "sas2008-lsi-p7-ebc.uefi"
+size = 160768
+sha256 = "a6aeac049976a7a6c0e0c00d30182adf6a632235753617507b8be351f6ce9510"
+chip = "SAS2008"
+mode = "UEFI-EBC"
+phase = "7"
+vendor = "lsi"
+tier = "alternative"
+source = "Broadcom docs.broadcom.com doc-id 12350519 (9211_8i_P7_Firmware_BIOS_UEFI_FCODE.zip)"
+
+[firmware.sas2008-lsi-p7-uefi-efi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 7 (x64 efi)"
+file = "sas2008-lsi-p7.efi"
+size = 575488
+sha256 = "32e18436d6976d06f358828d7dc7bdf88e95293568bd85506db537fb237dc960"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "7"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12350519 (9211_8i_P7_Firmware_BIOS_UEFI_FCODE.zip)"
+
+[firmware.sas2008-lsi-p7-uefi-uefi]
+display = "LSI SAS2008 UEFI BSD HII driver Phase 7 (x64 uefi)"
+file = "sas2008-lsi-p7.uefi"
+size = 143872
+sha256 = "e4b95c40fe0f8de644230a4794979d74e7e765602274a4151cea747122b16309"
+chip = "SAS2008"
+mode = "UEFI"
+phase = "7"
+vendor = "lsi"
+tier = "primary"
+source = "Broadcom docs.broadcom.com doc-id 12350519 (9211_8i_P7_Firmware_BIOS_UEFI_FCODE.zip)"
+
+# ============================================================================
+# SBR TEMPLATES
+# ============================================================================
+
+[sbr.sas2008-dell-h200-a11-sbr]
+display = "SBR template: Dell H200 A11"
+file = "sas2008-dell-h200-a11.sbr"
+size = 256
+sha256 = "705e878902c8d3d8143929f6fc1d87908391bb1aa666539d927a62ef4af236b0"
+chip = "SAS2008"
+vendor = "dell"
+tier = "primary"
+source = "Wayback Machine LSI vendor CDN: SBR-A11.bin"
+
+[sbr.sas2008-dell-h310-full-modded-sbr]
+display = "SBR template: Dell H310 Full Modded"
+file = "sas2008-dell-h310-full-modded.sbr"
+size = 256
+sha256 = "e808cb9e3ed7b9eca2ba8bcace3949389bfbf65bdebf981b02f5fd370c0c7da8"
+chip = "SAS2008"
+vendor = "dell"
+tier = "primary"
+source = "Wayback Machine LSI vendor CDN: H310-Full-Modded.sbr"
+
+[sbr.sas2008-dell-h310-mini-modded-sbr]
+display = "SBR template: Dell H310 Mini Modded"
+file = "sas2008-dell-h310-mini-modded.sbr"
+size = 256
+sha256 = "31b57e9e2effc9242255935beeb5faead453779891e570478cb4cfef523293f1"
+chip = "SAS2008"
+vendor = "dell"
+tier = "primary"
+source = "Wayback Machine LSI vendor CDN: H310-Mini-Modded.sbr"
+
+[sbr.sas2008-dell-h310-stock-sbr]
+display = "SBR template: Dell H310 Stock"
+file = "sas2008-dell-h310-stock.sbr"
+size = 256
+sha256 = "35206a877441685e641404329336d7e4de34cdcd8f4994f8b0896354e14bca05"
+chip = "SAS2008"
+vendor = "dell"
+tier = "primary"
+source = "Wayback Machine LSI vendor CDN: H310-Stock.sbr"
+
+[sbr.sas2008-empty-sbr]
+display = "SBR template: Empty"
+file = "sas2008-empty.sbr"
+size = 256
+sha256 = "3a2f41b1968d02b685ba6321498165d31b3b1e7040b16db418e327d46e7dfd92"
+chip = "SAS2008"
+vendor = "lsi"
+tier = "primary"
+source = "Archive.org deep-dive: H1110-firmware.zip"
+
+[sbr.sas2008-ibm-m5110-sbr]
+display = "SBR template: Ibm M5110"
+file = "sas2008-ibm-m5110.sbr"
+size = 512
+sha256 = "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560"
+chip = "SAS2008"
+vendor = "ibm"
+tier = "primary"
+source = "Archive.org deep-dive: m5110-firmware.zip"
+
+[sbr.sas2008-intel-imr-sbr]
+display = "SBR template: Intel Imr"
+file = "sas2008-intel-imr.sbr"
+size = 256
+sha256 = "b4cae276c99ec4179b343439d1941e7fffebecb57f5c9199b175ae16c24b97dc"
+chip = "SAS2008"
+vendor = "intel"
+tier = "primary"
+source = "Archive.org Round 1: sas2008.zip"
+
+[sbr.sas2008-intel-rs2wc080-ir-sbr]
+display = "SBR template: Intel Rs2Wc080 Ir"
+file = "sas2008-intel-rs2wc080-ir.sbr"
+size = 256
+sha256 = "1e4b316a3829bfd0f5c728a76ca162d3ddd09c822d29e19d4cd52aa4cd908fc0"
+chip = "SAS2008"
+vendor = "intel"
+tier = "primary"
+source = "Archive.org Round 1: sas2008.zip"
+
+# ============================================================================
+# BROADCOM-PACKAGED P20.00.07.00 VARIANTS (lrq3000 mirror)
+# Same MPT version as the Lenovo H1110 variants above but different bytes
+# (likely different NVData defaults). Kept under disambiguated names.
+# ============================================================================
+
+[firmware.sas2008-lsi-p20-00-07-00-broadcom-it]
+display = "LSI SAS2008 IT firmware Phase 20.00.07.00 (Broadcom-packaged variant)"
+file = "sas2008-lsi-p20-00-07-00-broadcom.it"
+size = 722708
+sha256 = "9c35132531e515b3aa066ba2940f4c11bc953eb16eba61d7a34620eb290d1cd2"
+chip = "SAS2008"
+mode = "IT"
+phase = "20.00.07.00"
+vendor = "lsi"
+tier = "primary"
+source = "lrq3000/lsi_sas_hba_crossflash_guide (Broadcom 9211-8i Package P20 IR/IT FW/BIOS)"
+
+[firmware.sas2008-lsi-p20-00-07-00-broadcom-ir]
+display = "LSI SAS2008 IR firmware Phase 20.00.07.00 (Broadcom-packaged variant)"
+file = "sas2008-lsi-p20-00-07-00-broadcom.ir"
+size = 988376
+sha256 = "02c10ac2b64c903d60deaed87a5df954df6eb926c5532d81dc4de70471ff8914"
+chip = "SAS2008"
+mode = "IR"
+phase = "20.00.07.00"
+vendor = "lsi"
+tier = "primary"
+source = "lrq3000/lsi_sas_hba_crossflash_guide (Broadcom 9211-8i Package P20 IR/IT FW/BIOS)"
+
+
+# ============================================================================
+# ROUND 5 (2026-05-18): SAS2.5 / SAS3 / SAS4 archive — community mirror
+#
+# 130 firmware blobs spanning 12 chip families (LSI1068E PERC5 through
+# SAS4116W PERC12 H965, August 2025 catalog snapshot). These chips are
+# OUT OF SCOPE for the lsi-flash CLI (which targets SAS2008 silicon
+# only) — included as a community archive for manual flashing via
+# Dell DUP / megacli / storcli / Broadcom's official tooling.
+#
+# All entries below carry tier = "archive" indicating non-lsi-flash-able.
+# ============================================================================
+
+
+[firmware.lsi1068e-dell-perc5-external-a11-mr]
+display = "Dell PERC5 external A11 MegaRAID firmware"
+file = "lsi1068e-dell-perc5-external-a11.mr"
+size = 1441792
+sha256 = "c006afe03a15b188ca6c8a105ec5b9d29d41fe7e2d01a05a5aa44b61e4f3a6aa"
+chip = "LSI1068E"
+mode = "RAID"
+vendor = "dell"
+model = "PERC5"
+variant = "external"
+oem_rev = "A11"
+fw_version = "5.2.2-0076"
+release_date = "November 05, 2011"
+mpt_fw_version = "00.10.70.00-IT"
+tier = "archive"
+flashable_via = []
+source_snapshots = [
+  "PERC5-e__A11__8VM7T__SAS-RAID_Firmware_8VM7T_LN32_5.2.2-0076_A11|payload/FW5461-E.rom|2020-01-07|8VM7T",
+  "PERC5-e__A11__8VM7T__SAS-RAID_Firmware_8VM7T_WN32_5.2.2-0076_A11|payload/FW5461-E.rom|2017-07-02|8VM7T",
+  "PERC5-e__A11__R204810__RAID_FRMW_LX_R204810|payload/FW5461-E.rom|2011-11-08|R204810",
+  "PERC5-e__A11__R204810__RAID_FRMW_WIN_R204810|payload/FW5461-E.rom|2011-11-08|R204810",
+]
+
+[firmware.lsi1078-dell-perc6-e-adapter-952-a12-mr]
+display = "Dell PERC6 e-adapter-952 A12 MegaRAID firmware"
+file = "lsi1078-dell-perc6-e-adapter-952-a12.mr"
+size = 1966080
+sha256 = "f50166d73b3faa00f7b7e9696bfeda02eed576e4686c3f281ba34148d9a36aa4"
+chip = "LSI1078"
+mode = "RAID"
+vendor = "dell"
+model = "PERC6"
+variant = "e-adapter-952"
+oem_rev = "A12"
+fw_version = "6.3.0-0001"
+release_date = "December 01, 2010"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "PERC6-e__A12__R278430__RAID_FRMW_LX_R278430|payload/FW952E.rom|2011-11-08|R278430",
+  "PERC6-e__A12__R278430__RAID_FRMW_WIN_R278430|payload/FW952E.rom|2011-11-08|R278430",
+]
+
+[firmware.lsi1078-dell-perc6-e-adapter-a14-mr]
+display = "Dell PERC6 e-adapter A14 MegaRAID firmware"
+file = "lsi1078-dell-perc6-e-adapter-a14.mr"
+size = 1966080
+sha256 = "ba70f9db156d1e5bcdece606dd9815e70534789665e7fec143db6ba0eeea14dd"
+chip = "LSI1078"
+mode = "RAID"
+vendor = "dell"
+model = "PERC6"
+variant = "e-adapter"
+oem_rev = "A14"
+fw_version = "6.3.1-0003"
+release_date = "November 05, 2011"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "PERC6-e__A14__FK6J2__SAS-RAID_Firmware_FK6J2_LN32_6.3.1-0003_A14|payload/FW1371E.rom|2020-01-07|FK6J2",
+  "PERC6-e__A14__FK6J2__SAS-RAID_Firmware_FK6J2_WN32_6.3.1-0003_A14|payload/FW1371E.rom|2017-07-02|FK6J2",
+]
+
+[firmware.lsi1078-dell-perc6-e-adapter-x00-mr]
+display = "Dell PERC6 e-adapter X00 MegaRAID firmware"
+file = "lsi1078-dell-perc6-e-adapter-x00.mr"
+size = 1966080
+sha256 = "4d0de5ff948afe6f3974bc552f30c5cd94246193e345a5945c8e26182fc1da36"
+chip = "LSI1078"
+mode = "RAID"
+vendor = "dell"
+model = "PERC6"
+variant = "e-adapter"
+oem_rev = "X00"
+fw_version = "6.3.3-0002"
+release_date = "October 31, 2012"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "PERC6-e__A-00__3H5G8__SAS-RAID_Firmware_3H5G8_LN_6.3.3-0002_X00|payload/FW1371E.rom|2020-01-07|3H5G8",
+  "PERC6-e__A-00__3H5G8__SAS-RAID_Firmware_3H5G8_WN32_6.3.3-0002_X00|payload/FW1371E.rom|2017-07-02|3H5G8",
+]
+
+[firmware.lsi1078-dell-perc6-i-adapter-952-a12-mr]
+display = "Dell PERC6 i-adapter-952 A12 MegaRAID firmware"
+file = "lsi1078-dell-perc6-i-adapter-952-a12.mr"
+size = 1966080
+sha256 = "c8026b3083d0b8f4f9f16c0d5e0edd61c5ca61948a4c880177bfd33f2024305f"
+chip = "LSI1078"
+mode = "RAID"
+vendor = "dell"
+model = "PERC6"
+variant = "i-adapter-952"
+oem_rev = "A12"
+fw_version = "6.3.0-0001"
+release_date = "December 01, 2010"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "PERC6-i__A12__R278432__RAID_FRMW_LX_R278432|payload/FW952IA.rom|2011-11-08|R278432",
+  "PERC6-i__A12__R278432__RAID_FRMW_WIN_R278432|payload/FW952IA.rom|2011-11-08|R278432",
+]
+
+[firmware.lsi1078-dell-perc6-i-adapter-x00-mr]
+display = "Dell PERC6 i-adapter X00 MegaRAID firmware"
+file = "lsi1078-dell-perc6-i-adapter-x00.mr"
+size = 1966080
+sha256 = "4142358a0358c26e486309f8294439f9bd6f27db4af4a6fc357e984f1eb16a6e"
+chip = "LSI1078"
+mode = "RAID"
+vendor = "dell"
+model = "PERC6"
+variant = "i-adapter"
+oem_rev = "X00"
+fw_version = "6.3.3-0002"
+release_date = "October 31, 2012"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "PERC6-i__A-00__3P52K__SAS-RAID_Firmware_3P52K_LN_6.3.3-0002_X00|payload/FW1371iA.rom|2020-01-07|3P52K",
+  "PERC6-i__A-00__3P52K__SAS-RAID_Firmware_3P52K_WN32_6.3.3-0002_X00|payload/FW1371iA.rom|2017-07-02|3P52K",
+]
+
+[firmware.lsi1078-dell-perc6-i-blade-1459-a15-mr]
+display = "Dell PERC6 i-blade-1459 A15 MegaRAID firmware"
+file = "lsi1078-dell-perc6-i-blade-1459-a15.mr"
+size = 1966080
+sha256 = "a32aee357eac4cc01f63da2bce88a7abad85660fc6160175bdacebef1ef8a1da"
+chip = "LSI1078"
+mode = "RAID"
+vendor = "dell"
+model = "PERC6"
+variant = "i-blade-1459"
+oem_rev = "A15"
+fw_version = "6.3.2-0001"
+release_date = "December 08, 2011"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "misc-sas-raid__A15__GNM0K__SAS-RAID_Firmware_GNM0K_LN32_6.3.2-0001_A15|payload/FW1459iB.rom|2020-01-07|GNM0K",
+  "misc-sas-raid__A15__GNM0K__SAS-RAID_Firmware_GNM0K_WN32_6.3.2-0001_A15|payload/FW1459iB.rom|2017-07-02|GNM0K",
+]
+
+[firmware.lsi1078-dell-perc6-i-blade-952-a12-mr]
+display = "Dell PERC6 i-blade-952 A12 MegaRAID firmware"
+file = "lsi1078-dell-perc6-i-blade-952-a12.mr"
+size = 1966080
+sha256 = "721378e9838278aa576e8a4950ed01fe48e60594ee238f14864ced94272ed5ec"
+chip = "LSI1078"
+mode = "RAID"
+vendor = "dell"
+model = "PERC6"
+variant = "i-blade-952"
+oem_rev = "A12"
+fw_version = "6.3.0-0001"
+release_date = "December 01, 2010"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "PERC6-i__A12__R278434__RAID_FRMW_LX_R278434|payload/FW952IIB.rom|2011-11-08|R278434",
+  "PERC6-i__A12__R278434__RAID_FRMW_WIN_R278434|payload/FW952IIB.rom|2011-11-08|R278434",
+]
+
+[firmware.lsi1078-dell-perc6-i-blade-a14-mr]
+display = "Dell PERC6 i-blade A14 MegaRAID firmware"
+file = "lsi1078-dell-perc6-i-blade-a14.mr"
+size = 1966080
+sha256 = "daf9c368c9ad4c05f84045a194fb2777cf18ba0b734f693e53e6839434db6adb"
+chip = "LSI1078"
+mode = "RAID"
+vendor = "dell"
+model = "PERC6"
+variant = "i-blade"
+oem_rev = "A14"
+fw_version = "6.3.1-0003"
+release_date = "September 07, 2011"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "PERC6-i__A14__GPDJ9__RAID_FRMW_LX_R313337|payload/FW1371iB.rom|2020-01-07|GPDJ9",
+  "PERC6-i__A14__GPDJ9__RAID_FRMW_WIN_R313337|payload/FW1371iB.rom|2017-07-02|GPDJ9",
+]
+
+[firmware.lsi1078-dell-perc6-i-integrated-952-a12-mr]
+display = "Dell PERC6 i-integrated-952 A12 MegaRAID firmware"
+file = "lsi1078-dell-perc6-i-integrated-952-a12.mr"
+size = 1966080
+sha256 = "cc660c55aa1758ae47cdf3663f6b7fdc8f5a5e94f5a7c4d1995314ff61ae3034"
+chip = "LSI1078"
+mode = "RAID"
+vendor = "dell"
+model = "PERC6"
+variant = "i-integrated-952"
+oem_rev = "A12"
+fw_version = "6.3.0-0001"
+release_date = "December 01, 2010"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "PERC6-i__A12__R278433__RAID_FRMW_LX_R278433|payload/FW952II.rom|2011-11-08|R278433",
+  "PERC6-i__A12__R278433__RAID_FRMW_WIN_R278433|payload/FW952II.rom|2011-11-08|R278433",
+]
+
+[firmware.lsi1078-dell-perc6-i-integrated-a14-mr]
+display = "Dell PERC6 i-integrated A14 MegaRAID firmware"
+file = "lsi1078-dell-perc6-i-integrated-a14.mr"
+size = 1966080
+sha256 = "4793d917f5416248acca8ef30825abc94b889a8205a02c4512faf5cd2fd9614a"
+chip = "LSI1078"
+mode = "RAID"
+vendor = "dell"
+model = "PERC6"
+variant = "i-integrated"
+oem_rev = "A14"
+fw_version = "6.3.1-0003"
+release_date = "November 05, 2011"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "PERC6-i__A14__W83M2__SAS-RAID_Firmware_W83M2_LN32_6.3.1-0003_A14|payload/FW1371iI.rom|2020-01-07|W83M2",
+  "PERC6-i__A14__W83M2__SAS-RAID_Firmware_W83M2_WN32_6.3.1-0003_A14|payload/FW1371iI.rom|2017-07-02|W83M2",
+]
+
+[firmware.lsi1078-dell-perc6-i-integrated-x00-mr]
+display = "Dell PERC6 i-integrated X00 MegaRAID firmware"
+file = "lsi1078-dell-perc6-i-integrated-x00.mr"
+size = 1966080
+sha256 = "4088ca000dbc68b76cfd7824b10c4398576c2572d454b282ce9840c039c68751"
+chip = "LSI1078"
+mode = "RAID"
+vendor = "dell"
+model = "PERC6"
+variant = "i-integrated"
+oem_rev = "X00"
+fw_version = "6.3.3-0002"
+release_date = "October 31, 2012"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "PERC6-i__A-00__F96NR__SAS-RAID_Firmware_F96NR_LN_6.3.3-0002_X00|payload/FW1371iI.rom|2020-01-07|F96NR",
+  "PERC6-i__A-00__F96NR__SAS-RAID_Firmware_F96NR_WN32_6.3.3-0002_X00|payload/FW1371iI.rom|2017-07-02|F96NR",
+]
+
+[firmware.sas2008-dell-s300-a03-mr]
+display = "Dell PERC S300 A03 MegaRAID firmware"
+file = "sas2008-dell-s300-a03.mr"
+size = 265864
+sha256 = "16529f7ec6d9036b4b6bdf6bdab2551ba3a9cc2adcce64e269d0cfa2b37e39fb"
+chip = "SAS2008"
+mode = "RAID"
+vendor = "dell"
+model = "S300"
+variant = "main"
+oem_rev = "A03"
+fw_version = "1.0.1-0021+00193000"
+release_date = "December 14, 2009"
+mpt_fw_version = "00.25.48.00-IE"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "PERCS300__A03__D32K1__RAID_FRMW_LX_R242871|payload/S300.FW|2020-01-07|D32K1",
+  "PERCS300__A03__D32K1__RAID_FRMW_WIN_R242871|payload/S300.FW|2017-07-02|D32K1",
+  "PERCS300__A06__R300048__RAID_FRMW_LX_R300048|payload/S300.FW|2011-11-08|R300048",
+  "PERCS300__A06__R300048__RAID_FRMW_WIN_R300048|payload/S300.FW|2011-11-08|R300048",
+  "PERCS300__A06__RPCKX__SAS-RAID_Firmware_RPCKX_WN32_2.0.0-016600193000_A06|payload/S300.FW|2017-07-02|RPCKX",
+]
+
+[firmware.sas2008-dell-s300-boot-a03-bios]
+display = "Dell PERC S300 boot A03 legacy BIOS / SBR"
+file = "sas2008-dell-s300-boot-a03.bios"
+size = 65536
+sha256 = "c253cf60571bbd76d82f4807cca9bfa1b1a9ef96b38d4b3d799d4fe23bb8d404"
+chip = "SAS2008"
+mode = "RAID"
+vendor = "dell"
+model = "S300"
+variant = "boot"
+oem_rev = "A03"
+fw_version = "1.0.1-0021+00193000"
+release_date = "December 14, 2009"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "PERCS300__A03__D32K1__RAID_FRMW_LX_R242871|payload/S300_1F24.bin|2020-01-07|D32K1",
+  "PERCS300__A03__D32K1__RAID_FRMW_WIN_R242871|payload/S300_1F24.bin|2017-07-02|D32K1",
+]
+
+[firmware.sas2008-dell-s300-boot-a06-bios]
+display = "Dell PERC S300 boot A06 legacy BIOS / SBR"
+file = "sas2008-dell-s300-boot-a06.bios"
+size = 211968
+sha256 = "f14f5f90462f963acb2eeff6f50948950503064e7057abdfd912079523bef147"
+chip = "SAS2008"
+mode = "RAID"
+vendor = "dell"
+model = "S300"
+variant = "boot"
+oem_rev = "A06"
+fw_version = "2.0.0-0166+00193000"
+release_date = "April 08, 2011"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "PERCS300__A06__R300048__RAID_FRMW_LX_R300048|payload/S300_1F24.bin|2011-11-08|R300048",
+  "PERCS300__A06__R300048__RAID_FRMW_WIN_R300048|payload/S300_1F24.bin|2011-11-08|R300048",
+  "PERCS300__A06__RPCKX__SAS-RAID_Firmware_RPCKX_WN32_2.0.0-016600193000_A06|payload/S300_1F24.bin|2017-07-02|RPCKX",
+]
+
+[firmware.sas2108-dell-h700-adapter-a07-mr]
+display = "Dell PERC H700 adapter A07 MegaRAID firmware"
+file = "sas2108-dell-h700-adapter-a07.mr"
+size = 3932160
+sha256 = "43d737003966439ac78895c6766f197f46b5e97f9cc08d2937a1ad8c7efc4de6"
+chip = "SAS2108"
+mode = "RAID"
+vendor = "dell"
+model = "H700"
+variant = "adapter"
+oem_rev = "A07"
+fw_version = "12.10.1-0001"
+release_date = "March 23, 2011"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "H700_Adapter__A07__R287843__RAID_FRMW_LX_R287843|payload/FW1062A.rom|2011-11-08|R287843",
+  "H700_Adapter__A07__R287843__RAID_FRMW_WIN_R287843|payload/FW1062A.rom|2011-11-08|R287843",
+]
+
+[firmware.sas2108-dell-h700-integrated-a07-mr]
+display = "Dell PERC H700 integrated A07 MegaRAID firmware"
+file = "sas2108-dell-h700-integrated-a07.mr"
+size = 3932160
+sha256 = "b1d0d1dadaa4ea3fbab9c80a3cd0ddf514d8a33ab05cac9349cab8227ef9356d"
+chip = "SAS2108"
+mode = "RAID"
+vendor = "dell"
+model = "H700"
+variant = "integrated"
+oem_rev = "A07"
+fw_version = "12.10.1-0001"
+release_date = "March 23, 2011"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "H700_Integrated__A07__R287842__RAID_FRMW_LX_R287842|payload/FW1062I.rom|2011-11-08|R287842",
+  "H700_Integrated__A07__R287842__RAID_FRMW_WIN_R287842|payload/FW1062I.rom|2011-11-08|R287842",
+]
+
+[firmware.sas2108-dell-h700-modular-a07-mr]
+display = "Dell PERC H700 modular A07 MegaRAID firmware"
+file = "sas2108-dell-h700-modular-a07.mr"
+size = 3932160
+sha256 = "49aa0e86186d07d76618a9162b944537aa875a32228aade4b0656d81130d8dd4"
+chip = "SAS2108"
+mode = "RAID"
+vendor = "dell"
+model = "H700"
+variant = "modular"
+oem_rev = "A07"
+fw_version = "12.10.1-0001"
+release_date = "March 23, 2011"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "H700_Modular__A07__R287844__RAID_FRMW_LX_R287844|payload/FW1062M.rom|2011-11-08|R287844",
+  "H700_Modular__A07__R287844__RAID_FRMW_WIN_R287844|payload/FW1062M.rom|2011-11-08|R287844",
+]
+
+[firmware.sas2108-dell-h800-adapter-a07-mr]
+display = "Dell PERC H800 adapter A07 MegaRAID firmware"
+file = "sas2108-dell-h800-adapter-a07.mr"
+size = 3932160
+sha256 = "32cefdef569f71ebf181b557f14c3f41686ac1e096f8d34c5d0a02e344c845c0"
+chip = "SAS2108"
+mode = "RAID"
+vendor = "dell"
+model = "H800"
+variant = "adapter"
+oem_rev = "A07"
+fw_version = "12.10.1-0001"
+release_date = "March 23, 2011"
+tier = "archive"
+flashable_via = ["dellpdiag", "megacli", "storcli"]
+source_snapshots = [
+  "H800_Adapter__A07__R287840__RAID_FRMW_LX_R287840|payload/FW1062E.rom|2011-11-08|R287840",
+  "H800_Adapter__A07__R287840__RAID_FRMW_WIN_R287840|payload/FW1062E.rom|2011-11-08|R287840",
+]
+
+[firmware.sas3-exp-dell-t3-031-exp]
+display = "Dell SAS3 expander sas3-31 A08"
+file = "sas3-exp-dell-t3-031.exp"
+size = 239636
+sha256 = "211c9b223d0044c9e2533567e5d2e5eb7272a635ae2b514bce8e9fe7cc55d8ea"
+chip = "SAS3 expander (T3)"
+mode = "EXP"
+vendor = "dell"
+model = "EXP"
+variant = "sas3-31"
+oem_rev = "A08"
+fw_version = "25.5.3.0004"
+release_date = "June 08, 2017"
+tier = "archive"
+flashable_via = ["expflash", "racadm"]
+source_snapshots = [
+  "H330_Mini__A08__R98MW__SAS-RAID_Firmware_R98MW_WN64_25.5.3.0004_A08|_nested_1/payload/EXP_031.fw|2018-01-06|R98MW",
+  "H730_combo__A10__7TDYV__SAS-RAID_Firmware_7TDYV_WN64_25.5.3.0004_A10|_nested_1/payload/EXP_031.fw|2018-01-06|7TDYV",
+]
+
+[firmware.sas3008-dell-hba330-a03-ba14ae-bios]
+display = "Dell HBA330 sbr A03 legacy BIOS / SBR"
+file = "sas3008-dell-hba330-a03-ba14ae.bios"
+size = 442368
+sha256 = "ba14aec6579847ec326bace70e7c07e54d67ad43248b39fea7d526e00f29e371"
+chip = "SAS3008"
+mode = "BIOS"
+vendor = "dell"
+model = "HBA330"
+variant = "sbr"
+oem_rev = "A03"
+fw_version = "13.17.03.05"
+release_date = "August 11, 2017"
+mpt_bios_version = "@(#)MPT3BIOS-8.31.00.00 (2016.07.21)"
+tier = "archive"
+flashable_via = []
+source_snapshots = [
+  "HBA330__A03__847VG__SAS-Non-RAID_Firmware_847VG_WN32_13.17.03.05_A03_02|payload/mptx64-sas3-sb.rom|2018-01-06|847VG",
+  "HBA330__A03__847VG__SAS-Non-RAID_Firmware_847VG_WN64_13.17.03.05_A03_02|payload/mptx64-sas3-sb.rom|2018-01-06|847VG",
+  "HBA330__A03__V8447__SAS-Non-RAID_Firmware_V8447_WN32_13.17.03.05_A03_02|payload/mptx64-sas3-sb.rom|2018-01-06|V8447",
+  "HBA330__A03__V8447__SAS-Non-RAID_Firmware_V8447_WN64_13.17.03.05_A03_02|payload/mptx64-sas3-sb.rom|2018-01-06|V8447",
+]
+
+[firmware.sas3008-dell-hba330-a03-d0394d-bios]
+display = "Dell HBA330 sbr A03 legacy BIOS / SBR"
+file = "sas3008-dell-hba330-a03-d0394d.bios"
+size = 447488
+sha256 = "d0394dfc8d1f301730ecb6619b84fb897d91f54918569229e70eaed0b62ffe3b"
+chip = "SAS3008"
+mode = "BIOS"
+vendor = "dell"
+model = "HBA330"
+variant = "sbr"
+oem_rev = "A03"
+fw_version = "16.17.00.05"
+release_date = "July 01, 2019"
+mpt_bios_version = "@(#)MPT3BIOS-8.37.00.00 (2018.04.04)"
+tier = "archive"
+flashable_via = []
+source_snapshots = [
+  "HBA330__A03__HMF93__SAS-Non-RAID_Firmware_HMF93_LN_16.17.00.05_A03_01|payload/mptx64-sas3-sb.rom|2020-01-07|HMF93",
+  "HBA330__A03__HMF93__SAS-Non-RAID_Firmware_HMF93_WN64_16.17.00.05_A03_01|payload/mptx64-sas3-sb.rom|2020-01-07|HMF93",
+  "HBA330__A03__HNF09__SAS-Non-RAID_Firmware_HNF09_LN_16.17.00.05_A03_01|payload/mptx64-sas3-sb.rom|2020-01-07|HNF09",
+  "HBA330__A03__HNF09__SAS-Non-RAID_Firmware_HNF09_WN64_16.17.00.05_A03_01|payload/mptx64-sas3-sb.rom|2020-01-07|HNF09",
+  "HBA330__A07__TF1M6__SAS-Non-RAID_Firmware_TF1M6_LN_16.17.00.05_A07_01|payload/mptx64-sas3-sb.rom|2020-01-07|TF1M6",
+  "HBA330__A07__TF1M6__SAS-Non-RAID_Firmware_TF1M6_LN_16.17.00.05_A07_02|payload/mptx64-sas3-sb.rom|2025-08-04|TF1M6",
+  "HBA330__A07__TF1M6__SAS-Non-RAID_Firmware_TF1M6_WN64_16.17.00.05_A07_01|payload/mptx64-sas3-sb.rom|2020-01-07|TF1M6",
+  "HBA330__A07__TF1M6__SAS-Non-RAID_Firmware_TF1M6_WN64_16.17.00.05_A07_02|payload/mptx64-sas3-sb.rom|2025-08-04|TF1M6",
+  "HBA330__A07__YXWY1__SAS-Non-RAID_Firmware_YXWY1_LN_16.17.00.05_A07_01|payload/mptx64-sas3-sb.rom|2020-01-07|YXWY1",
+  "HBA330__A07__YXWY1__SAS-Non-RAID_Firmware_YXWY1_LN_16.17.00.05_A07_02|payload/mptx64-sas3-sb.rom|2025-05-03|YXWY1",
+  "HBA330__A07__YXWY1__SAS-Non-RAID_Firmware_YXWY1_WN64_16.17.00.05_A07_01|payload/mptx64-sas3-sb.rom|2020-01-07|YXWY1",
+  "HBA330__A07__YXWY1__SAS-Non-RAID_Firmware_YXWY1_WN64_16.17.00.05_A07_02|payload/mptx64-sas3-sb.rom|2024-05-11|YXWY1",
+]
+
+[firmware.sas3008-dell-hba330-a04-bios]
+display = "Dell HBA330 sbr A04 legacy BIOS / SBR"
+file = "sas3008-dell-hba330-a04.bios"
+size = 447488
+sha256 = "805addbe157e5bb87d66a84084fd335b3d23c22bc736bf203eebb38c87818266"
+chip = "SAS3008"
+mode = "BIOS"
+vendor = "dell"
+model = "HBA330"
+variant = "sbr"
+oem_rev = "A04"
+fw_version = "16.17.01.00"
+release_date = "May 18, 2020"
+mpt_bios_version = "@(#)MPT3BIOS-8.37.02.00 (2020.03.02)"
+tier = "archive"
+flashable_via = []
+source_snapshots = [
+  "HBA330__A04__0KCFG__SAS-Non-RAID_Firmware_0KCFG_LN_16.17.01.00_A04_01|payload/mptx64-sas3-sb.rom|2022-01-24|0KCFG",
+  "HBA330__A04__0KCFG__SAS-Non-RAID_Firmware_0KCFG_LN_16.17.01.00_A04_02|payload/mptx64-sas3-sb.rom|2025-05-03|0KCFG",
+  "HBA330__A04__0KCFG__SAS-Non-RAID_Firmware_0KCFG_WN64_16.17.01.00_A04_01|payload/mptx64-sas3-sb.rom|2022-01-24|0KCFG",
+  "HBA330__A04__0KCFG__SAS-Non-RAID_Firmware_0KCFG_WN64_16.17.01.00_A04_02|payload/mptx64-sas3-sb.rom|2024-05-11|0KCFG",
+  "HBA330__A04__P2NYX__SAS-Non-RAID_Firmware_P2NYX_LN_16.17.01.00_A04_01|payload/mptx64-sas3-sb.rom|2022-01-24|P2NYX",
+  "HBA330__A04__P2NYX__SAS-Non-RAID_Firmware_P2NYX_LN_16.17.01.00_A04_02|payload/mptx64-sas3-sb.rom|2025-05-03|P2NYX",
+  "HBA330__A04__P2NYX__SAS-Non-RAID_Firmware_P2NYX_WN64_16.17.01.00_A04_01|payload/mptx64-sas3-sb.rom|2022-01-24|P2NYX",
+  "HBA330__A04__P2NYX__SAS-Non-RAID_Firmware_P2NYX_WN64_16.17.01.00_A04_02|payload/mptx64-sas3-sb.rom|2024-05-11|P2NYX",
+  "HBA330__A08__124X2__SAS-Non-RAID_Firmware_124X2_LN_16.17.01.00_A08_03|payload/mptx64-sas3-sb.rom|2022-01-24|124X2",
+  "HBA330__A08__124X2__SAS-Non-RAID_Firmware_124X2_LN_16.17.01.00_A08_04|payload/mptx64-sas3-sb.rom|2025-05-03|124X2",
+  "HBA330__A08__124X2__SAS-Non-RAID_Firmware_124X2_WN64_16.17.01.00_A08_03|payload/mptx64-sas3-sb.rom|2022-01-24|124X2",
+  "HBA330__A08__124X2__SAS-Non-RAID_Firmware_124X2_WN64_16.17.01.00_A08_04|payload/mptx64-sas3-sb.rom|2024-05-11|124X2",
+  "HBA330__A08__NKNVC__SAS-Non-RAID_Firmware_NKNVC_LN_16.17.01.00_A08_02|payload/mptx64-sas3-sb.rom|2022-01-24|NKNVC",
+  "HBA330__A08__NKNVC__SAS-Non-RAID_Firmware_NKNVC_LN_16.17.01.00_A08_03|payload/mptx64-sas3-sb.rom|2025-05-03|NKNVC",
+  "HBA330__A08__NKNVC__SAS-Non-RAID_Firmware_NKNVC_WN64_16.17.01.00_A08_02|payload/mptx64-sas3-sb.rom|2022-01-24|NKNVC",
+  "HBA330__A08__NKNVC__SAS-Non-RAID_Firmware_NKNVC_WN64_16.17.01.00_A08_03|payload/mptx64-sas3-sb.rom|2024-05-11|NKNVC",
+]
+
+[firmware.sas3008-dell-hba330-adapter-a03-ir]
+display = "Dell HBA330 adapter A03 IT-mode firmware"
+file = "sas3008-dell-hba330-adapter-a03.ir"
+size = 1082512
+sha256 = "2a387c0a0ff189593ec00d4d94ce91d1ea1f2652e7e022384ff1e6ff70a28516"
+chip = "SAS3008"
+mode = "IT"
+vendor = "dell"
+model = "HBA330"
+variant = "adapter"
+oem_rev = "A03"
+fw_version = "13.17.03.05"
+release_date = "August 11, 2017"
+mpt_fw_version = "13.15.02.00-IT"
+tier = "archive"
+flashable_via = ["sas3flash", "sas2flash-not-applicable"]
+source_snapshots = [
+  "HBA330__A03__847VG__SAS-Non-RAID_Firmware_847VG_WN32_13.17.03.05_A03_02|payload/SAS_HBA330_ADP_SF.fw|2018-01-06|847VG",
+  "HBA330__A03__847VG__SAS-Non-RAID_Firmware_847VG_WN64_13.17.03.05_A03_02|payload/SAS_HBA330_ADP_SF.fw|2018-01-06|847VG",
+]
+
+[firmware.sas3008-dell-hba330-adapter-a07-ir]
+display = "Dell HBA330 adapter A07 IT-mode firmware"
+file = "sas3008-dell-hba330-adapter-a07.ir"
+size = 1098564
+sha256 = "d07f4362dba7fce11b27cd33858b2752f21452a58f68ce59b5977af445e7cacb"
+chip = "SAS3008"
+mode = "IT"
+vendor = "dell"
+model = "HBA330"
+variant = "adapter"
+oem_rev = "A07"
+fw_version = "16.17.00.05"
+release_date = "July 01, 2019"
+mpt_fw_version = "16.00.08.00-IT"
+tier = "archive"
+flashable_via = ["sas3flash", "sas2flash-not-applicable"]
+source_snapshots = [
+  "HBA330__A07__TF1M6__SAS-Non-RAID_Firmware_TF1M6_LN_16.17.00.05_A07_01|payload/SAS_HBA330_ADP_SF.fw|2020-01-07|TF1M6",
+  "HBA330__A07__TF1M6__SAS-Non-RAID_Firmware_TF1M6_LN_16.17.00.05_A07_02|payload/SAS_HBA330_ADP_SF.fw|2025-08-04|TF1M6",
+  "HBA330__A07__TF1M6__SAS-Non-RAID_Firmware_TF1M6_WN64_16.17.00.05_A07_01|payload/SAS_HBA330_ADP_SF.fw|2020-01-07|TF1M6",
+  "HBA330__A07__TF1M6__SAS-Non-RAID_Firmware_TF1M6_WN64_16.17.00.05_A07_02|payload/SAS_HBA330_ADP_SF.fw|2025-08-04|TF1M6",
+]
+
+[firmware.sas3008-dell-hba330-adapter-a08-ir]
+display = "Dell HBA330 adapter A08 IT-mode firmware"
+file = "sas3008-dell-hba330-adapter-a08.ir"
+size = 1098868
+sha256 = "f7aeb2fc3cdccb8c132d342299fa3e8a8cc86263b6f75a7ac2d76769c575eb60"
+chip = "SAS3008"
+mode = "IT"
+vendor = "dell"
+model = "HBA330"
+variant = "adapter"
+oem_rev = "A08"
+fw_version = "16.17.01.00"
+release_date = "May 18, 2020"
+mpt_fw_version = "16.00.11.00-IT"
+tier = "archive"
+flashable_via = ["sas3flash", "sas2flash-not-applicable"]
+source_snapshots = [
+  "HBA330__A08__NKNVC__SAS-Non-RAID_Firmware_NKNVC_LN_16.17.01.00_A08_02|payload/SAS_HBA330_ADP_SF.fw|2022-01-24|NKNVC",
+  "HBA330__A08__NKNVC__SAS-Non-RAID_Firmware_NKNVC_LN_16.17.01.00_A08_03|payload/SAS_HBA330_ADP_SF.fw|2025-05-03|NKNVC",
+  "HBA330__A08__NKNVC__SAS-Non-RAID_Firmware_NKNVC_WN64_16.17.01.00_A08_02|payload/SAS_HBA330_ADP_SF.fw|2022-01-24|NKNVC",
+  "HBA330__A08__NKNVC__SAS-Non-RAID_Firmware_NKNVC_WN64_16.17.01.00_A08_03|payload/SAS_HBA330_ADP_SF.fw|2024-05-11|NKNVC",
+]
+
+[firmware.sas3008-dell-hba330-mini-a03-ir]
+display = "Dell HBA330 mini A03 IT-mode firmware"
+file = "sas3008-dell-hba330-mini-a03.ir"
+size = 1082512
+sha256 = "56dcd1a65e13e2ca353d1ffb88228c4c265df401ae31d8eec536799e94eb193b"
+chip = "SAS3008"
+mode = "IT"
+vendor = "dell"
+model = "HBA330"
+variant = "mini"
+oem_rev = "A03"
+fw_version = "13.17.03.05"
+release_date = "August 11, 2017"
+mpt_fw_version = "13.15.02.00-IT"
+tier = "archive"
+flashable_via = ["sas3flash", "sas2flash-not-applicable"]
+source_snapshots = [
+  "HBA330__A03__V8447__SAS-Non-RAID_Firmware_V8447_WN32_13.17.03.05_A03_02|payload/SAS_HBA330_MINI_SF.fw|2018-01-06|V8447",
+  "HBA330__A03__V8447__SAS-Non-RAID_Firmware_V8447_WN64_13.17.03.05_A03_02|payload/SAS_HBA330_MINI_SF.fw|2018-01-06|V8447",
+]
+
+[firmware.sas3008-dell-hba330-mini-a07-ir]
+display = "Dell HBA330 mini A07 IT-mode firmware"
+file = "sas3008-dell-hba330-mini-a07.ir"
+size = 1098564
+sha256 = "d28d8ed19bf8c8627738bb6de66923c717a3cfff69325fa2bbbc9d1415ab2d67"
+chip = "SAS3008"
+mode = "IT"
+vendor = "dell"
+model = "HBA330"
+variant = "mini"
+oem_rev = "A07"
+fw_version = "16.17.00.05"
+release_date = "July 01, 2019"
+mpt_fw_version = "16.00.08.00-IT"
+tier = "archive"
+flashable_via = ["sas3flash", "sas2flash-not-applicable"]
+source_snapshots = [
+  "HBA330__A07__YXWY1__SAS-Non-RAID_Firmware_YXWY1_LN_16.17.00.05_A07_01|payload/SAS_HBA330_MINI_SF.fw|2020-01-07|YXWY1",
+  "HBA330__A07__YXWY1__SAS-Non-RAID_Firmware_YXWY1_LN_16.17.00.05_A07_02|payload/SAS_HBA330_MINI_SF.fw|2025-05-03|YXWY1",
+  "HBA330__A07__YXWY1__SAS-Non-RAID_Firmware_YXWY1_WN64_16.17.00.05_A07_01|payload/SAS_HBA330_MINI_SF.fw|2020-01-07|YXWY1",
+  "HBA330__A07__YXWY1__SAS-Non-RAID_Firmware_YXWY1_WN64_16.17.00.05_A07_02|payload/SAS_HBA330_MINI_SF.fw|2024-05-11|YXWY1",
+]
+
+[firmware.sas3008-dell-hba330-mini-a08-ir]
+display = "Dell HBA330 mini A08 IT-mode firmware"
+file = "sas3008-dell-hba330-mini-a08.ir"
+size = 1098868
+sha256 = "50453de1dcd84962bee5d705398144140a65bb284c0fa4d75ab1882d815d5a97"
+chip = "SAS3008"
+mode = "IT"
+vendor = "dell"
+model = "HBA330"
+variant = "mini"
+oem_rev = "A08"
+fw_version = "16.17.01.00"
+release_date = "May 18, 2020"
+mpt_fw_version = "16.00.11.00-IT"
+tier = "archive"
+flashable_via = ["sas3flash", "sas2flash-not-applicable"]
+source_snapshots = [
+  "HBA330__A08__124X2__SAS-Non-RAID_Firmware_124X2_LN_16.17.01.00_A08_03|payload/SAS_HBA330_MINI_SF.fw|2022-01-24|124X2",
+  "HBA330__A08__124X2__SAS-Non-RAID_Firmware_124X2_LN_16.17.01.00_A08_04|payload/SAS_HBA330_MINI_SF.fw|2025-05-03|124X2",
+  "HBA330__A08__124X2__SAS-Non-RAID_Firmware_124X2_WN64_16.17.01.00_A08_03|payload/SAS_HBA330_MINI_SF.fw|2022-01-24|124X2",
+  "HBA330__A08__124X2__SAS-Non-RAID_Firmware_124X2_WN64_16.17.01.00_A08_04|payload/SAS_HBA330_MINI_SF.fw|2024-05-11|124X2",
+]
+
+[firmware.sas3008-dell-hba330-mmz-a03-ir]
+display = "Dell HBA330 mmz A03 IT-mode firmware"
+file = "sas3008-dell-hba330-mmz-a03.ir"
+size = 1098564
+sha256 = "7bb5da7b6de7c79b1773747150a707d44086b5088b1a25c122e348e5bc50ccd8"
+chip = "SAS3008"
+mode = "IT"
+vendor = "dell"
+model = "HBA330"
+variant = "mmz"
+oem_rev = "A03"
+fw_version = "16.17.00.05"
+release_date = "July 01, 2019"
+mpt_fw_version = "16.00.08.00-IT"
+tier = "archive"
+flashable_via = ["sas3flash", "sas2flash-not-applicable"]
+source_snapshots = [
+  "HBA330__A03__HMF93__SAS-Non-RAID_Firmware_HMF93_LN_16.17.00.05_A03_01|payload/sas_hba330_mmz_sf.fw|2020-01-07|HMF93",
+  "HBA330__A03__HMF93__SAS-Non-RAID_Firmware_HMF93_WN64_16.17.00.05_A03_01|payload/sas_hba330_mmz_sf.fw|2020-01-07|HMF93",
+]
+
+[firmware.sas3008-dell-hba330-mmz-a04-ir]
+display = "Dell HBA330 mmz A04 IT-mode firmware"
+file = "sas3008-dell-hba330-mmz-a04.ir"
+size = 1098868
+sha256 = "0ca37711c1504c88240035a9b99ea970e88fe582056d64c6a3e8c612dfade1dd"
+chip = "SAS3008"
+mode = "IT"
+vendor = "dell"
+model = "HBA330"
+variant = "mmz"
+oem_rev = "A04"
+fw_version = "16.17.01.00"
+release_date = "May 18, 2020"
+mpt_fw_version = "16.00.11.00-IT"
+tier = "archive"
+flashable_via = ["sas3flash", "sas2flash-not-applicable"]
+source_snapshots = [
+  "HBA330__A04__P2NYX__SAS-Non-RAID_Firmware_P2NYX_LN_16.17.01.00_A04_01|payload/sas_hba330_mmz_sf.fw|2022-01-24|P2NYX",
+  "HBA330__A04__P2NYX__SAS-Non-RAID_Firmware_P2NYX_LN_16.17.01.00_A04_02|payload/sas_hba330_mmz_sf.fw|2025-05-03|P2NYX",
+  "HBA330__A04__P2NYX__SAS-Non-RAID_Firmware_P2NYX_WN64_16.17.01.00_A04_01|payload/sas_hba330_mmz_sf.fw|2022-01-24|P2NYX",
+  "HBA330__A04__P2NYX__SAS-Non-RAID_Firmware_P2NYX_WN64_16.17.01.00_A04_02|payload/sas_hba330_mmz_sf.fw|2024-05-11|P2NYX",
+]
+
+[firmware.sas3008-dell-hba330-mx-a03-ir]
+display = "Dell HBA330 mx A03 IT-mode firmware"
+file = "sas3008-dell-hba330-mx-a03.ir"
+size = 1098564
+sha256 = "e3f83e836b04dcabe2cc7f947081fdd0cb595e6513e1e18fccabe5aea8f4608e"
+chip = "SAS3008"
+mode = "IT"
+vendor = "dell"
+model = "HBA330"
+variant = "mx"
+oem_rev = "A03"
+fw_version = "16.17.00.05"
+release_date = "July 01, 2019"
+mpt_fw_version = "16.00.08.00-IT"
+tier = "archive"
+flashable_via = ["sas3flash", "sas2flash-not-applicable"]
+source_snapshots = [
+  "HBA330__A03__HNF09__SAS-Non-RAID_Firmware_HNF09_LN_16.17.00.05_A03_01|payload/sas_hba330_mx_sf.fw|2020-01-07|HNF09",
+  "HBA330__A03__HNF09__SAS-Non-RAID_Firmware_HNF09_WN64_16.17.00.05_A03_01|payload/sas_hba330_mx_sf.fw|2020-01-07|HNF09",
+]
+
+[firmware.sas3008-dell-hba330-mx-a04-ir]
+display = "Dell HBA330 mx A04 IT-mode firmware"
+file = "sas3008-dell-hba330-mx-a04.ir"
+size = 1098868
+sha256 = "ef086c425ff0e75cafcc4e0797061012501def3df42b343dd0cae663dd7f8696"
+chip = "SAS3008"
+mode = "IT"
+vendor = "dell"
+model = "HBA330"
+variant = "mx"
+oem_rev = "A04"
+fw_version = "16.17.01.00"
+release_date = "May 18, 2020"
+mpt_fw_version = "16.00.11.00-IT"
+tier = "archive"
+flashable_via = ["sas3flash", "sas2flash-not-applicable"]
+source_snapshots = [
+  "HBA330__A04__0KCFG__SAS-Non-RAID_Firmware_0KCFG_LN_16.17.01.00_A04_01|payload/sas_hba330_mx_sf.fw|2022-01-24|0KCFG",
+  "HBA330__A04__0KCFG__SAS-Non-RAID_Firmware_0KCFG_LN_16.17.01.00_A04_02|payload/sas_hba330_mx_sf.fw|2025-05-03|0KCFG",
+  "HBA330__A04__0KCFG__SAS-Non-RAID_Firmware_0KCFG_WN64_16.17.01.00_A04_01|payload/sas_hba330_mx_sf.fw|2022-01-24|0KCFG",
+  "HBA330__A04__0KCFG__SAS-Non-RAID_Firmware_0KCFG_WN64_16.17.01.00_A04_02|payload/sas_hba330_mx_sf.fw|2024-05-11|0KCFG",
+]
+
+[firmware.sas3108-dell-h330-mini-a07-mr]
+display = "Dell PERC H330 mini A07 MegaRAID firmware"
+file = "sas3108-dell-h330-mini-a07.mr"
+size = 5505024
+sha256 = "b21e5f7a86beef942a6eee458a6a58f2096f9f2f29dffaf1689748b6382d963a"
+chip = "SAS3108"
+mode = "RAID"
+vendor = "dell"
+model = "H330"
+variant = "mini"
+oem_rev = "A07"
+fw_version = "25.5.2.0001"
+release_date = "January 31, 2017"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H330_Mini__A07__03NXN__SAS-RAID_Firmware_03NXN_WN32_25.5.2.0001_A07|payload/FW0001i.rom|2017-07-02|03NXN",
+  "H330_Mini__A07__03NXN__SAS-RAID_Firmware_03NXN_WN64_25.5.2.0001_A07|payload/FW0001i.rom|2017-07-02|03NXN",
+]
+
+[firmware.sas3108-dell-h330-mini-a15-mr]
+display = "Dell PERC H330 mini A15 MegaRAID firmware"
+file = "sas3108-dell-h330-mini-a15.mr"
+size = 5505024
+sha256 = "78433ac85aebc51cc319a9744d627062825e25178b53d76639badcb47229715d"
+chip = "SAS3108"
+mode = "RAID"
+vendor = "dell"
+model = "H330"
+variant = "mini"
+oem_rev = "A15"
+fw_version = "25.5.9.0001"
+release_date = "July 27, 2021"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H330_Mini__A15__NYKX7__SAS-RAID_Firmware_NYKX7_LN_25.5.9.0001_A15|payload/FW0001.rom|2022-01-24|NYKX7",
+  "H330_Mini__A15__NYKX7__SAS-RAID_Firmware_NYKX7_LN_25.5.9.0001_A15_01|payload/FW0001.rom|2025-05-03|NYKX7",
+  "H330_Mini__A15__NYKX7__SAS-RAID_Firmware_NYKX7_WN64_25.5.9.0001_A15|payload/FW0001.rom|2022-01-24|NYKX7",
+  "H330_Mini__A15__NYKX7__SAS-RAID_Firmware_NYKX7_WN64_25.5.9.0001_A15_01|payload/FW0001.rom|2024-05-11|NYKX7",
+]
+
+[firmware.sas3108-dell-h730-combo-a08-mr]
+display = "Dell PERC H730 combo A08 MegaRAID firmware"
+file = "sas3108-dell-h730-combo-a08.mr"
+size = 5767168
+sha256 = "e55170a35b986f25444031738f80607e7432349b6ef7507c6268bc36050747d3"
+chip = "SAS3108"
+mode = "RAID"
+vendor = "dell"
+model = "H730"
+variant = "combo"
+oem_rev = "A08"
+fw_version = "25.5.0.0018"
+release_date = "September 23, 2016"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H730_combo__A08__2H45F__SAS-RAID_Firmware_2H45F_LN_25.5.0.0018_A08|payload/FW18.rom|2020-01-07|2H45F",
+  "H730_combo__A08__2H45F__SAS-RAID_Firmware_2H45F_WN32_25.5.0.0018_A08|payload/FW18.rom|2017-07-02|2H45F",
+  "H730_combo__A08__2H45F__SAS-RAID_Firmware_2H45F_WN64_25.5.0.0018_A08|payload/FW18.rom|2017-07-02|2H45F",
+]
+
+[firmware.sas3108-dell-h730-combo-a09-mr]
+display = "Dell PERC H730 combo A09 MegaRAID firmware"
+file = "sas3108-dell-h730-combo-a09.mr"
+size = 5767168
+sha256 = "a0768abc3afedc1afce7e31c4648b80244162c07bf9f49356d033ad3ab95e60a"
+chip = "SAS3108"
+mode = "RAID"
+vendor = "dell"
+model = "H730"
+variant = "combo"
+oem_rev = "A09"
+fw_version = "25.5.2.0001"
+release_date = "January 31, 2017"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H730_combo__A09__NH55C__SAS-RAID_Firmware_NH55C_WN32_25.5.2.0001_A09|payload/FW0001.rom|2017-07-02|NH55C",
+  "H730_combo__A09__NH55C__SAS-RAID_Firmware_NH55C_WN64_25.5.2.0001_A09|payload/FW0001.rom|2017-07-02|NH55C",
+]
+
+[firmware.sas3108-dell-h730-combo-a17-mr]
+display = "Dell PERC H730 combo A17 MegaRAID firmware"
+file = "sas3108-dell-h730-combo-a17.mr"
+size = 5767168
+sha256 = "2825b86096bc217f68cb47a2b9bfa8baca4b5168b2ba9091a9bf95017b17c5fd"
+chip = "SAS3108"
+mode = "RAID"
+vendor = "dell"
+model = "H730"
+variant = "combo"
+oem_rev = "A17"
+fw_version = "25.5.9.0001"
+release_date = "July 13, 2021"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H730_combo__A17__700GG__SAS-RAID_Firmware_700GG_LN_25.5.9.0001_A17|payload/FW0001.rom|2022-01-24|700GG",
+  "H730_combo__A17__700GG__SAS-RAID_Firmware_700GG_LN_25.5.9.0001_A17_01|payload/FW0001.rom|2025-05-03|700GG",
+  "H730_combo__A17__700GG__SAS-RAID_Firmware_700GG_WN32_25.5.9.0001_A17|payload/FW0001.rom|2022-03-28|700GG",
+  "H730_combo__A17__700GG__SAS-RAID_Firmware_700GG_WN64_25.5.9.0001_A17|payload/FW0001.rom|2022-01-24|700GG",
+  "H730_combo__A17__700GG__SAS-RAID_Firmware_700GG_WN64_25.5.9.0001_A17_01|payload/FW0001.rom|2024-05-11|700GG",
+]
+
+[firmware.sas3408-dell-h345-adapter-a02-mr]
+display = "Dell PERC H345 adapter A02 MegaRAID firmware"
+file = "sas3408-dell-h345-adapter-a02.mr"
+size = 7864320
+sha256 = "2c4fa03f3dc3dde14602a71fc6efcbb38e14aefbe4dd016080925008ac476841"
+chip = "SAS3408"
+mode = "RAID"
+vendor = "dell"
+model = "H345"
+variant = "adapter"
+oem_rev = "A02"
+fw_version = "50.9.3-2949"
+release_date = "August 29, 2019"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H345_unknown__A02__HF6R6__SAS-RAID_Firmware_HF6R6_LN_50.9.3-2949_A02|payload/FW_H345_ADP_nopad_signed.rom|2020-01-07|HF6R6",
+  "H345_unknown__A02__HF6R6__SAS-RAID_Firmware_HF6R6_WN64_50.9.3-2949_A02|payload/FW_H345_ADP_nopad_signed.rom|2020-01-07|HF6R6",
+]
+
+[firmware.sas3408-dell-h345-adapter-a05-mr]
+display = "Dell PERC H345 adapter A05 MegaRAID firmware"
+file = "sas3408-dell-h345-adapter-a05.mr"
+size = 8650752
+sha256 = "b8d95836adcbf153fc5a68b73f7f983152d60b13241c444589e0df1a30294cce"
+chip = "SAS3408"
+mode = "RAID"
+vendor = "dell"
+model = "H345"
+variant = "adapter"
+oem_rev = "A05"
+fw_version = "51.16.0-4076"
+release_date = "September 10, 2021"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H345_unknown__A05__5HV0H__SAS-RAID_Firmware_5HV0H_LN_51.16.0-4076_A05|payload/FW_H345_ADP_nopad_signed.rom|2022-01-24|5HV0H",
+  "H345_unknown__A05__5HV0H__SAS-RAID_Firmware_5HV0H_LN_51.16.0-4076_A05_01|payload/FW_H345_ADP_nopad_signed.rom|2025-05-03|5HV0H",
+  "H345_unknown__A05__5HV0H__SAS-RAID_Firmware_5HV0H_WN64_51.16.0-4076_A05|payload/FW_H345_ADP_nopad_signed.rom|2022-01-24|5HV0H",
+  "H345_unknown__A05__5HV0H__SAS-RAID_Firmware_5HV0H_WN64_51.16.0-4076_A05_01|payload/FW_H345_ADP_nopad_signed.rom|2024-05-11|5HV0H",
+]
+
+[firmware.sas3408-dell-h345-front-a02-mr]
+display = "Dell PERC H345 front A02 MegaRAID firmware"
+file = "sas3408-dell-h345-front-a02.mr"
+size = 7864320
+sha256 = "38dd85f71da98cbc8cb78860dc1d2b9847237ff03444f54607184b0a7aed3844"
+chip = "SAS3408"
+mode = "RAID"
+vendor = "dell"
+model = "H345"
+variant = "front"
+oem_rev = "A02"
+fw_version = "50.9.3-2949"
+release_date = "August 29, 2019"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H345_unknown__A02__HF6R6__SAS-RAID_Firmware_HF6R6_LN_50.9.3-2949_A02|payload/FW_H345_Front_nopad_signed.rom|2020-01-07|HF6R6",
+  "H345_unknown__A02__HF6R6__SAS-RAID_Firmware_HF6R6_WN64_50.9.3-2949_A02|payload/FW_H345_Front_nopad_signed.rom|2020-01-07|HF6R6",
+]
+
+[firmware.sas3408-dell-h345-front-a05-mr]
+display = "Dell PERC H345 front A05 MegaRAID firmware"
+file = "sas3408-dell-h345-front-a05.mr"
+size = 8650752
+sha256 = "32eacf3c02dd6a64c1e4ef1bc5998b4ec26012e81e1047c42e2bd8265a7e3bb5"
+chip = "SAS3408"
+mode = "RAID"
+vendor = "dell"
+model = "H345"
+variant = "front"
+oem_rev = "A05"
+fw_version = "51.16.0-4076"
+release_date = "September 10, 2021"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H345_unknown__A05__5HV0H__SAS-RAID_Firmware_5HV0H_LN_51.16.0-4076_A05|payload/FW_H345_Front_nopad_signed.rom|2022-01-24|5HV0H",
+  "H345_unknown__A05__5HV0H__SAS-RAID_Firmware_5HV0H_LN_51.16.0-4076_A05_01|payload/FW_H345_Front_nopad_signed.rom|2025-05-03|5HV0H",
+  "H345_unknown__A05__5HV0H__SAS-RAID_Firmware_5HV0H_WN64_51.16.0-4076_A05|payload/FW_H345_Front_nopad_signed.rom|2022-01-24|5HV0H",
+  "H345_unknown__A05__5HV0H__SAS-RAID_Firmware_5HV0H_WN64_51.16.0-4076_A05_01|payload/FW_H345_Front_nopad_signed.rom|2024-05-11|5HV0H",
+]
+
+[firmware.sas3408-dell-h745p-mx-a05-mr]
+display = "Dell PERC H745p mx A05 MegaRAID firmware"
+file = "sas3408-dell-h745p-mx-a05.mr"
+size = 7077888
+sha256 = "e367fd7c3dafde483f5ca45605d939eef0e54cad95de19f662a7ff2927d2e6f6"
+chip = "SAS3408"
+mode = "RAID"
+vendor = "dell"
+model = "H745p"
+variant = "mx"
+oem_rev = "A05"
+fw_version = "50.9.3-2949"
+release_date = "October 24, 2019"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H745P_Mx__A05__W1Y31__SAS-RAID_Firmware_W1Y31_LN_50.9.3-2949_A05|payload/FW_H745P_MX_nopad_signed.rom|2020-01-07|W1Y31",
+  "H745P_Mx__A05__W1Y31__SAS-RAID_Firmware_W1Y31_WN64_50.9.3-2949_A05|payload/FW_H745P_MX_nopad_signed.rom|2020-01-07|W1Y31",
+]
+
+[firmware.sas3408-dell-h745p-mx-a08-mr]
+display = "Dell PERC H745p mx A08 MegaRAID firmware"
+file = "sas3408-dell-h745p-mx-a08.mr"
+size = 7864320
+sha256 = "a5fce15f72a218504dcbf942fc800ee3cd91ce3e91c18ddb2ff0aedb2e683af5"
+chip = "SAS3408"
+mode = "RAID"
+vendor = "dell"
+model = "H745p"
+variant = "mx"
+oem_rev = "A08"
+fw_version = "51.16.0-4076"
+release_date = "September 09, 2021"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H745P_Mx__A08__H88D7__SAS-RAID_Firmware_H88D7_LN_51.16.0-4076_A08|payload/FW_H745P_MX_nopad_signed.rom|2022-01-24|H88D7",
+  "H745P_Mx__A08__H88D7__SAS-RAID_Firmware_H88D7_WN64_51.16.0-4076_A08|payload/FW_H745P_MX_nopad_signed.rom|2022-01-24|H88D7",
+]
+
+[firmware.sas3408-dell-h745p-mx-a09-mr]
+display = "Dell PERC H745p mx A09 MegaRAID firmware"
+file = "sas3408-dell-h745p-mx-a09.mr"
+size = 7864320
+sha256 = "63ba5315c3657d3778365be5cf088ab61b7ade747751423b24324938eef5c5fc"
+chip = "SAS3408"
+mode = "RAID"
+vendor = "dell"
+model = "H745p"
+variant = "mx"
+oem_rev = "A09"
+fw_version = "51.16.0-5150"
+release_date = "March 05, 2024"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H745P_Mx__A09__RJRYG__SAS-RAID_Firmware_RJRYG_LN64_51.16.0-5150_A09_02|payload/FW_H745P_MX_nopad_signed.rom|2025-05-03|RJRYG",
+  "H745P_Mx__A09__RJRYG__SAS-RAID_Firmware_RJRYG_WN64_51.16.0-5150_A09_02|payload/FW_H745P_MX_nopad_signed.rom|2024-05-11|RJRYG",
+]
+
+[firmware.sas3508-dell-h740p-adapter-a00-mr]
+display = "Dell PERC H740p adapter A00 MegaRAID firmware"
+file = "sas3508-dell-h740p-adapter-a00.mr"
+size = 7077888
+sha256 = "ad6b4647c2b68d9c4ab50cf316f733c7136d5b6db43c3b2731d5fd9f9626b88e"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H740p"
+variant = "adapter"
+oem_rev = "A00"
+fw_version = "50.9.4-3025"
+release_date = "March 31, 2020"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A00__M7W2J__SAS-RAID_Firmware_M7W2J_WN64_50.9.4-3025_A00|payload/FW_H740P_Adapter_nopad.rom|2020-11-11|M7W2J",
+]
+
+[firmware.sas3508-dell-h740p-adapter-a10-mr]
+display = "Dell PERC H740p adapter A10 MegaRAID firmware"
+file = "sas3508-dell-h740p-adapter-a10.mr"
+size = 7077888
+sha256 = "fc4d4789d0d3f18a5f9ae24132f20064282c15a0e22e4490dcd21361036f2000"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H740p"
+variant = "adapter"
+oem_rev = "A10"
+fw_version = "50.9.3-2949"
+release_date = "October 24, 2019"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A10__JVJNC__SAS-RAID_Firmware_JVJNC_LN_50.9.3-2949_A10|payload/FW_H740P_Adapter_nopad.rom|2020-01-07|JVJNC",
+  "H740P_combo__A10__JVJNC__SAS-RAID_Firmware_JVJNC_WN64_50.9.3-2949_A10|payload/FW_H740P_Adapter_nopad.rom|2020-01-07|JVJNC",
+]
+
+[firmware.sas3508-dell-h740p-adapter-a16-mr]
+display = "Dell PERC H740p adapter A16 MegaRAID firmware"
+file = "sas3508-dell-h740p-adapter-a16.mr"
+size = 7864320
+sha256 = "fb52e2e9f6bf85df7a45a96af8b2384b579401d7e1b4088ee2033999cde47952"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H740p"
+variant = "adapter"
+oem_rev = "A16"
+fw_version = "51.16.0-4076"
+release_date = "September 10, 2021"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_LN_51.16.0-4076_A16|payload/FW_H740P_Adapter_nopad.rom|2022-01-24|F3J22",
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_LN_51.16.0-4076_A16_01|payload/FW_H740P_Adapter_nopad.rom|2025-05-03|F3J22",
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_WN64_51.16.0-4076_A16|payload/FW_H740P_Adapter_nopad.rom|2022-01-24|F3J22",
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_WN64_51.16.0-4076_A16_01|payload/FW_H740P_Adapter_nopad.rom|2024-05-11|F3J22",
+]
+
+[firmware.sas3508-dell-h740p-adapter-a17-mr]
+display = "Dell PERC H740p adapter A17 MegaRAID firmware"
+file = "sas3508-dell-h740p-adapter-a17.mr"
+size = 7864320
+sha256 = "47820aa0ffdc72877ecbb783e0270086a62d361b45f815d707e8452efc415054"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H740p"
+variant = "adapter"
+oem_rev = "A17"
+fw_version = "51.16.0-5150"
+release_date = "October 26, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A17__96M5G__SAS-RAID_Firmware_96M5G_LN64_51.16.0-5150_A17|payload/FW_H740P_Adapter_nopad.rom|2025-05-03|96M5G",
+  "H740P_combo__A17__96M5G__SAS-RAID_Firmware_96M5G_WN64_51.16.0-5150_A17|payload/FW_H740P_Adapter_nopad.rom|2024-05-11|96M5G",
+]
+
+[firmware.sas3508-dell-h740p-mini-a00-mr]
+display = "Dell PERC H740p mini A00 MegaRAID firmware"
+file = "sas3508-dell-h740p-mini-a00.mr"
+size = 7077888
+sha256 = "69dc7b80f32da0b75039bd9233657c3c6d033c84fee3b36c3aab353457317d3a"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H740p"
+variant = "mini"
+oem_rev = "A00"
+fw_version = "50.9.4-3025"
+release_date = "March 31, 2020"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A00__M7W2J__SAS-RAID_Firmware_M7W2J_WN64_50.9.4-3025_A00|payload/FW_H740P_Mini_nopad.rom|2020-11-11|M7W2J",
+]
+
+[firmware.sas3508-dell-h740p-mini-a10-mr]
+display = "Dell PERC H740p mini A10 MegaRAID firmware"
+file = "sas3508-dell-h740p-mini-a10.mr"
+size = 7077888
+sha256 = "4ab170556f64f345908125ac98cf890a4fdee9b401e640f29f981409b13a49df"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H740p"
+variant = "mini"
+oem_rev = "A10"
+fw_version = "50.9.3-2949"
+release_date = "October 24, 2019"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A10__JVJNC__SAS-RAID_Firmware_JVJNC_LN_50.9.3-2949_A10|payload/FW_H740P_Mini_nopad.rom|2020-01-07|JVJNC",
+  "H740P_combo__A10__JVJNC__SAS-RAID_Firmware_JVJNC_WN64_50.9.3-2949_A10|payload/FW_H740P_Mini_nopad.rom|2020-01-07|JVJNC",
+]
+
+[firmware.sas3508-dell-h740p-mini-a16-mr]
+display = "Dell PERC H740p mini A16 MegaRAID firmware"
+file = "sas3508-dell-h740p-mini-a16.mr"
+size = 7864320
+sha256 = "285e6aa117aac3bcc818bea1994a636f524aa7c1fe2dc3eab45d82b01ce04173"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H740p"
+variant = "mini"
+oem_rev = "A16"
+fw_version = "51.16.0-4076"
+release_date = "September 10, 2021"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_LN_51.16.0-4076_A16|payload/FW_H740P_Mini_nopad.rom|2022-01-24|F3J22",
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_LN_51.16.0-4076_A16_01|payload/FW_H740P_Mini_nopad.rom|2025-05-03|F3J22",
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_WN64_51.16.0-4076_A16|payload/FW_H740P_Mini_nopad.rom|2022-01-24|F3J22",
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_WN64_51.16.0-4076_A16_01|payload/FW_H740P_Mini_nopad.rom|2024-05-11|F3J22",
+]
+
+[firmware.sas3508-dell-h740p-mini-a17-mr]
+display = "Dell PERC H740p mini A17 MegaRAID firmware"
+file = "sas3508-dell-h740p-mini-a17.mr"
+size = 7864320
+sha256 = "6c3d70fe5ae3d34bab47d46f3eac636bb1c24c8da3a0166734db64d1831c32d4"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H740p"
+variant = "mini"
+oem_rev = "A17"
+fw_version = "51.16.0-5150"
+release_date = "October 26, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A17__96M5G__SAS-RAID_Firmware_96M5G_LN64_51.16.0-5150_A17|payload/FW_H740P_Mini_nopad.rom|2025-05-03|96M5G",
+  "H740P_combo__A17__96M5G__SAS-RAID_Firmware_96M5G_WN64_51.16.0-5150_A17|payload/FW_H740P_Mini_nopad.rom|2024-05-11|96M5G",
+]
+
+[firmware.sas3508-dell-h745-adapter-a00-mr]
+display = "Dell PERC H745 adapter A00 MegaRAID firmware"
+file = "sas3508-dell-h745-adapter-a00.mr"
+size = 7077888
+sha256 = "83090ad20e66fb6542faa2afd52a1d52854341446ad16ae2d1bbbc000925134a"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H745"
+variant = "adapter"
+oem_rev = "A00"
+fw_version = "50.9.4-3025"
+release_date = "March 31, 2020"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A00__M7W2J__SAS-RAID_Firmware_M7W2J_WN64_50.9.4-3025_A00|payload/FW_H745_ADP_nopad_signed.rom|2020-11-11|M7W2J",
+]
+
+[firmware.sas3508-dell-h745-adapter-a10-mr]
+display = "Dell PERC H745 adapter A10 MegaRAID firmware"
+file = "sas3508-dell-h745-adapter-a10.mr"
+size = 7077888
+sha256 = "899ab15a1f19eee75250d25dece0632f9328cda729ccbe0fd6a733e5964c6597"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H745"
+variant = "adapter"
+oem_rev = "A10"
+fw_version = "50.9.3-2949"
+release_date = "October 24, 2019"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A10__JVJNC__SAS-RAID_Firmware_JVJNC_LN_50.9.3-2949_A10|payload/FW_H745_ADP_nopad_signed.rom|2020-01-07|JVJNC",
+  "H740P_combo__A10__JVJNC__SAS-RAID_Firmware_JVJNC_WN64_50.9.3-2949_A10|payload/FW_H745_ADP_nopad_signed.rom|2020-01-07|JVJNC",
+]
+
+[firmware.sas3508-dell-h745-adapter-a16-mr]
+display = "Dell PERC H745 adapter A16 MegaRAID firmware"
+file = "sas3508-dell-h745-adapter-a16.mr"
+size = 7864320
+sha256 = "ff59e3b622e3f5ff5f5eb0fdaa637bb1c5c378f2b96eff23eb1f3154d3cebf3a"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H745"
+variant = "adapter"
+oem_rev = "A16"
+fw_version = "51.16.0-4076"
+release_date = "September 10, 2021"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_LN_51.16.0-4076_A16|payload/FW_H745_ADP_nopad_signed.rom|2022-01-24|F3J22",
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_LN_51.16.0-4076_A16_01|payload/FW_H745_ADP_nopad_signed.rom|2025-05-03|F3J22",
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_WN64_51.16.0-4076_A16|payload/FW_H745_ADP_nopad_signed.rom|2022-01-24|F3J22",
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_WN64_51.16.0-4076_A16_01|payload/FW_H745_ADP_nopad_signed.rom|2024-05-11|F3J22",
+]
+
+[firmware.sas3508-dell-h745-adapter-a17-mr]
+display = "Dell PERC H745 adapter A17 MegaRAID firmware"
+file = "sas3508-dell-h745-adapter-a17.mr"
+size = 7864320
+sha256 = "25502552e7f136f3b3d154bca390e2cba40aa4753d35f334b07a7c85933747c8"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H745"
+variant = "adapter"
+oem_rev = "A17"
+fw_version = "51.16.0-5150"
+release_date = "October 26, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A17__96M5G__SAS-RAID_Firmware_96M5G_LN64_51.16.0-5150_A17|payload/FW_H745_ADP_nopad_signed.rom|2025-05-03|96M5G",
+  "H740P_combo__A17__96M5G__SAS-RAID_Firmware_96M5G_WN64_51.16.0-5150_A17|payload/FW_H745_ADP_nopad_signed.rom|2024-05-11|96M5G",
+]
+
+[firmware.sas3508-dell-h745-front-a00-mr]
+display = "Dell PERC H745 front A00 MegaRAID firmware"
+file = "sas3508-dell-h745-front-a00.mr"
+size = 7077888
+sha256 = "c2f825325d5ae783c786a2b8d7ac9b3c952774021b7be0c69c57399ab04df245"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H745"
+variant = "front"
+oem_rev = "A00"
+fw_version = "50.9.4-3025"
+release_date = "March 31, 2020"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A00__M7W2J__SAS-RAID_Firmware_M7W2J_WN64_50.9.4-3025_A00|payload/FW_H745_Front_nopad_signed.rom|2020-11-11|M7W2J",
+]
+
+[firmware.sas3508-dell-h745-front-a10-mr]
+display = "Dell PERC H745 front A10 MegaRAID firmware"
+file = "sas3508-dell-h745-front-a10.mr"
+size = 7077888
+sha256 = "4e3a2c2fd02c693acba064ed7678f1f3a2b84cbd6d06b4b7c579c33273cd5633"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H745"
+variant = "front"
+oem_rev = "A10"
+fw_version = "50.9.3-2949"
+release_date = "October 24, 2019"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A10__JVJNC__SAS-RAID_Firmware_JVJNC_LN_50.9.3-2949_A10|payload/FW_H745_Front_nopad_signed.rom|2020-01-07|JVJNC",
+  "H740P_combo__A10__JVJNC__SAS-RAID_Firmware_JVJNC_WN64_50.9.3-2949_A10|payload/FW_H745_Front_nopad_signed.rom|2020-01-07|JVJNC",
+]
+
+[firmware.sas3508-dell-h745-front-a16-mr]
+display = "Dell PERC H745 front A16 MegaRAID firmware"
+file = "sas3508-dell-h745-front-a16.mr"
+size = 7864320
+sha256 = "947e1d9c365b4fcda176a7fdeb2482d051c072708c0186bca8943d21ac649c3d"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H745"
+variant = "front"
+oem_rev = "A16"
+fw_version = "51.16.0-4076"
+release_date = "September 10, 2021"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_LN_51.16.0-4076_A16|payload/FW_H745_Front_nopad_signed.rom|2022-01-24|F3J22",
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_LN_51.16.0-4076_A16_01|payload/FW_H745_Front_nopad_signed.rom|2025-05-03|F3J22",
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_WN64_51.16.0-4076_A16|payload/FW_H745_Front_nopad_signed.rom|2022-01-24|F3J22",
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_WN64_51.16.0-4076_A16_01|payload/FW_H745_Front_nopad_signed.rom|2024-05-11|F3J22",
+]
+
+[firmware.sas3508-dell-h745-front-a17-mr]
+display = "Dell PERC H745 front A17 MegaRAID firmware"
+file = "sas3508-dell-h745-front-a17.mr"
+size = 7864320
+sha256 = "2892700b64811a0a1b0b256b7dc96072033e19c4408cfb0a3e8e1e5a6d0be1e7"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H745"
+variant = "front"
+oem_rev = "A17"
+fw_version = "51.16.0-5150"
+release_date = "October 26, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A17__96M5G__SAS-RAID_Firmware_96M5G_LN64_51.16.0-5150_A17|payload/FW_H745_Front_nopad_signed.rom|2025-05-03|96M5G",
+  "H740P_combo__A17__96M5G__SAS-RAID_Firmware_96M5G_WN64_51.16.0-5150_A17|payload/FW_H745_Front_nopad_signed.rom|2024-05-11|96M5G",
+]
+
+[firmware.sas3508-dell-h840-adapter-a00-mr]
+display = "Dell PERC H840 adapter A00 MegaRAID firmware"
+file = "sas3508-dell-h840-adapter-a00.mr"
+size = 7077888
+sha256 = "a755432f387eb84e837d6c3fa837d5fe67c75bbfa4911127bd70eeb8b5f03b55"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H840"
+variant = "adapter"
+oem_rev = "A00"
+fw_version = "50.9.4-3025"
+release_date = "March 31, 2020"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A00__M7W2J__SAS-RAID_Firmware_M7W2J_WN64_50.9.4-3025_A00|payload/FW_H840_Adapter_nopad.rom|2020-11-11|M7W2J",
+]
+
+[firmware.sas3508-dell-h840-adapter-a10-mr]
+display = "Dell PERC H840 adapter A10 MegaRAID firmware"
+file = "sas3508-dell-h840-adapter-a10.mr"
+size = 7077888
+sha256 = "daef44f1d6827d558e26fecc41609fc89f497ba0672fda72fd8ebaa420f8b111"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H840"
+variant = "adapter"
+oem_rev = "A10"
+fw_version = "50.9.3-2949"
+release_date = "October 24, 2019"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A10__JVJNC__SAS-RAID_Firmware_JVJNC_LN_50.9.3-2949_A10|payload/FW_H840_Adapter_nopad.rom|2020-01-07|JVJNC",
+  "H740P_combo__A10__JVJNC__SAS-RAID_Firmware_JVJNC_WN64_50.9.3-2949_A10|payload/FW_H840_Adapter_nopad.rom|2020-01-07|JVJNC",
+]
+
+[firmware.sas3508-dell-h840-adapter-a16-mr]
+display = "Dell PERC H840 adapter A16 MegaRAID firmware"
+file = "sas3508-dell-h840-adapter-a16.mr"
+size = 7864320
+sha256 = "d1e3784aebcebad9db2d832c50c113932ff59a9ece0275219e3cc52d974e4aaa"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H840"
+variant = "adapter"
+oem_rev = "A16"
+fw_version = "51.16.0-4076"
+release_date = "September 10, 2021"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_LN_51.16.0-4076_A16|payload/FW_H840_Adapter_nopad.rom|2022-01-24|F3J22",
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_LN_51.16.0-4076_A16_01|payload/FW_H840_Adapter_nopad.rom|2025-05-03|F3J22",
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_WN64_51.16.0-4076_A16|payload/FW_H840_Adapter_nopad.rom|2022-01-24|F3J22",
+  "H740P_combo__A16__F3J22__SAS-RAID_Firmware_F3J22_WN64_51.16.0-4076_A16_01|payload/FW_H840_Adapter_nopad.rom|2024-05-11|F3J22",
+]
+
+[firmware.sas3508-dell-h840-adapter-a17-mr]
+display = "Dell PERC H840 adapter A17 MegaRAID firmware"
+file = "sas3508-dell-h840-adapter-a17.mr"
+size = 7864320
+sha256 = "aec1adb4ebd7909a612242b94dcef87c0f34c28573fb891a376a2386d2c69506"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H840"
+variant = "adapter"
+oem_rev = "A17"
+fw_version = "51.16.0-4795"
+release_date = "May 30, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H840_unknown__A17__4447J__SAS-RAID_Firmware_4447J_LN64_51.16.0-4795_A17_01|payload/FW_H840_Adapter_nopad.rom|2025-05-03|4447J",
+  "H840_unknown__A17__4447J__SAS-RAID_Firmware_4447J_WN64_51.16.0-4795_A17_01|payload/FW_H840_Adapter_nopad.rom|2024-05-11|4447J",
+]
+
+[firmware.sas3508-dell-h840-adapter-a18-mr]
+display = "Dell PERC H840 adapter A18 MegaRAID firmware"
+file = "sas3508-dell-h840-adapter-a18.mr"
+size = 7864320
+sha256 = "dbcab97ba747f8650ec81fd2c913f7479c3803efb60802f61d3457d7499bb337"
+chip = "SAS3508"
+mode = "RAID"
+vendor = "dell"
+model = "H840"
+variant = "adapter"
+oem_rev = "A18"
+fw_version = "51.16.0-5148"
+release_date = "October 26, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H840_unknown__A18__M9DDF__SAS-RAID_Firmware_M9DDF_LN64_51.16.0-5148_A18|payload/FW_H840_Adapter_nopad.rom|2025-05-03|M9DDF",
+  "H840_unknown__A18__M9DDF__SAS-RAID_Firmware_M9DDF_WN64_51.16.0-5148_A18|payload/FW_H840_Adapter_nopad.rom|2024-05-11|M9DDF",
+]
+
+[firmware.sas3816-dell-hba345-adapter-a04-ir]
+display = "Dell HBA345 adapter A04 IT-mode firmware"
+file = "sas3816-dell-hba345-adapter-a04.ir"
+size = 2071608
+sha256 = "c6c646bd57e870eb27375897bec8b55db857f3a1ba24e0722c8d9f37256ce772"
+chip = "SAS3816"
+mode = "IT"
+vendor = "dell"
+model = "HBA345"
+variant = "adapter"
+oem_rev = "A04"
+fw_version = "24.15.10.00"
+release_date = "March 06, 2024"
+tier = "archive"
+flashable_via = ["storcli", "sas3flash"]
+source_snapshots = [
+  "HBA345__A04__FV16K__SAS-Non-RAID_Firmware_FV16K_LN64_24.15.10.00_A04_01|payload/FW_HBA345_Adapter.bin|2025-05-03|FV16K",
+  "HBA345__A04__FV16K__SAS-Non-RAID_Firmware_FV16K_WN64_24.15.10.00_A04_01|payload/FW_HBA345_Adapter.bin|2024-05-11|FV16K",
+]
+
+[firmware.sas3816-dell-hba345-adapter-a05-ir]
+display = "Dell HBA345 adapter A05 IT-mode firmware"
+file = "sas3816-dell-hba345-adapter-a05.ir"
+size = 2071768
+sha256 = "4d2d1318c914576480ca79922f14a236e8adc66935eba42cbebf9d692d2e3f92"
+chip = "SAS3816"
+mode = "IT"
+vendor = "dell"
+model = "HBA345"
+variant = "adapter"
+oem_rev = "A05"
+fw_version = "24.15.14.00"
+release_date = "September 19, 2023"
+tier = "archive"
+flashable_via = ["storcli", "sas3flash"]
+source_snapshots = [
+  "HBA345__A05__5M5M6__SAS-Non-RAID_Firmware_5M5M6_LN64_24.15.14.00_A05|payload/FW_HBA345_Adapter.bin|2025-05-03|5M5M6",
+  "HBA345__A05__5M5M6__SAS-Non-RAID_Firmware_5M5M6_WN64_24.15.14.00_A05|payload/FW_HBA345_Adapter.bin|2024-05-11|5M5M6",
+]
+
+[firmware.sas3816-dell-hba345-front-a04-ir]
+display = "Dell HBA345 front A04 IT-mode firmware"
+file = "sas3816-dell-hba345-front-a04.ir"
+size = 2071608
+sha256 = "afe203434f19a9607f2364df4269c284cf0715127bbbd908c658313169e37631"
+chip = "SAS3816"
+mode = "IT"
+vendor = "dell"
+model = "HBA345"
+variant = "front"
+oem_rev = "A04"
+fw_version = "24.15.10.00"
+release_date = "March 06, 2024"
+tier = "archive"
+flashable_via = ["storcli", "sas3flash"]
+source_snapshots = [
+  "HBA345__A04__FV16K__SAS-Non-RAID_Firmware_FV16K_LN64_24.15.10.00_A04_01|payload/FW_HBA345_Front.bin|2025-05-03|FV16K",
+  "HBA345__A04__FV16K__SAS-Non-RAID_Firmware_FV16K_WN64_24.15.10.00_A04_01|payload/FW_HBA345_Front.bin|2024-05-11|FV16K",
+]
+
+[firmware.sas3816-dell-hba345-front-a05-ir]
+display = "Dell HBA345 front A05 IT-mode firmware"
+file = "sas3816-dell-hba345-front-a05.ir"
+size = 2071768
+sha256 = "8326cc434584af7fe56c20a9b7225426f0234891812d5a142044982b54c11aa7"
+chip = "SAS3816"
+mode = "IT"
+vendor = "dell"
+model = "HBA345"
+variant = "front"
+oem_rev = "A05"
+fw_version = "24.15.14.00"
+release_date = "September 19, 2023"
+tier = "archive"
+flashable_via = ["storcli", "sas3flash"]
+source_snapshots = [
+  "HBA345__A05__5M5M6__SAS-Non-RAID_Firmware_5M5M6_LN64_24.15.14.00_A05|payload/FW_HBA345_Front.bin|2025-05-03|5M5M6",
+  "HBA345__A05__5M5M6__SAS-Non-RAID_Firmware_5M5M6_WN64_24.15.14.00_A05|payload/FW_HBA345_Front.bin|2024-05-11|5M5M6",
+]
+
+[firmware.sas3816-dell-hba350i-mx-a02-ir]
+display = "Dell HBA350i mx A02 IT-mode firmware"
+file = "sas3816-dell-hba350i-mx-a02.ir"
+size = 2084536
+sha256 = "783a8038dd340cf5b468a75e0cb12d08aa49455f0eca7166b5d825d94404343f"
+chip = "SAS3816"
+mode = "IT"
+vendor = "dell"
+model = "HBA350i"
+variant = "mx"
+oem_rev = "A02"
+fw_version = "15.15.15.00"
+release_date = "May 18, 2021"
+tier = "archive"
+flashable_via = ["storcli", "sas3flash"]
+source_snapshots = [
+  "HBA355__A02__H4DD1__SAS-Non-RAID_Firmware_H4DD1_WN64_15.15.15.00_A02_02|payload/FW_HBA350i_MX_HS.bin|2022-01-24|H4DD1",
+]
+
+[firmware.sas3816-dell-hba355i-adapter-a02-ir]
+display = "Dell HBA355i adapter A02 IT-mode firmware"
+file = "sas3816-dell-hba355i-adapter-a02.ir"
+size = 2087040
+sha256 = "c28bbec43cbf9175d881a691977be80b4786ffd49f5a471a4168ac265cd1e2fd"
+chip = "SAS3816"
+mode = "IT"
+vendor = "dell"
+model = "HBA355i"
+variant = "adapter"
+oem_rev = "A02"
+fw_version = "15.15.15.00"
+release_date = "May 18, 2021"
+tier = "archive"
+flashable_via = ["storcli", "sas3flash"]
+source_snapshots = [
+  "HBA355__A02__H4DD1__SAS-Non-RAID_Firmware_H4DD1_WN64_15.15.15.00_A02_02|payload/FW_HBA355i_Adapter_HS.bin|2022-01-24|H4DD1",
+]
+
+[firmware.sas3816-dell-hba355i-front-a02-ir]
+display = "Dell HBA355i front A02 IT-mode firmware"
+file = "sas3816-dell-hba355i-front-a02.ir"
+size = 2087040
+sha256 = "5dd2ef3a1d3f3bf3eda42e939bd581a643190a2db7c4971d6cb8cc29844dfd34"
+chip = "SAS3816"
+mode = "IT"
+vendor = "dell"
+model = "HBA355i"
+variant = "front"
+oem_rev = "A02"
+fw_version = "15.15.15.00"
+release_date = "May 18, 2021"
+tier = "archive"
+flashable_via = ["storcli", "sas3flash"]
+source_snapshots = [
+  "HBA355__A02__H4DD1__SAS-Non-RAID_Firmware_H4DD1_WN64_15.15.15.00_A02_02|payload/FW_HBA355i_Front_HS.bin|2022-01-24|H4DD1",
+]
+
+[firmware.sas3916-dell-h350-adapter-a02-mr]
+display = "Dell PERC H350 adapter A02 MegaRAID firmware"
+file = "sas3916-dell-h350-adapter-a02.mr"
+size = 7995392
+sha256 = "6863caeb2463b1f8d77c018e26d924ff13c982c6cbaa7b86271b9925d5eb6d69"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H350"
+variant = "adapter"
+oem_rev = "A02"
+fw_version = "52.21.0-4606"
+release_date = "November 14, 2022"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H350_unknown__A02__73NY3__SAS-RAID_Firmware_73NY3_LN64_52.21.0-4606_A02_01|payload/FW_H350_Adapter_HS_NOPAD.rom|2022-12-09|73NY3",
+  "H350_unknown__A02__73NY3__SAS-RAID_Firmware_73NY3_WN64_52.21.0-4606_A02_01|payload/FW_H350_Adapter_HS_NOPAD.rom|2022-12-09|73NY3",
+]
+
+[firmware.sas3916-dell-h350-adapter-a03-mr]
+display = "Dell PERC H350 adapter A03 MegaRAID firmware"
+file = "sas3916-dell-h350-adapter-a03.mr"
+size = 7995392
+sha256 = "d314a24f07d327d6814bd457e87ea90fb647b3da31205819d3d27b1cfc3c823e"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H350"
+variant = "adapter"
+oem_rev = "A03"
+fw_version = "52.26.0-5179"
+release_date = "November 07, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H350_unknown__A03__MYJJF__SAS-RAID_Firmware_MYJJF_LN64_52.26.0-5179_A03|payload/FW_H350_Adapter_HS_NOPAD.rom|2025-05-03|MYJJF",
+  "H350_unknown__A03__MYJJF__SAS-RAID_Firmware_MYJJF_WN64_52.26.0-5179_A03|payload/FW_H350_Adapter_HS_NOPAD.rom|2024-05-11|MYJJF",
+]
+
+[firmware.sas3916-dell-h350-adapter-a04-mr]
+display = "Dell PERC H350 adapter A04 MegaRAID firmware"
+file = "sas3916-dell-h350-adapter-a04.mr"
+size = 7995392
+sha256 = "c427cd5f79639bae59dc986d9462379557ec8e7f8b1bf7ae63c0c1f9196a95fa"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H350"
+variant = "adapter"
+oem_rev = "A04"
+fw_version = "52.30.0-6115"
+release_date = "June 09, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H350_unknown__A04__6FFHN__SAS-RAID_Firmware_6FFHN_LN64_52.30.0-6115_A04|payload/FW_H350_Adapter_HS_NOPAD.rom|2025-08-04|6FFHN",
+  "H350_unknown__A04__6FFHN__SAS-RAID_Firmware_6FFHN_WN64_52.30.0-6115_A04|payload/FW_H350_Adapter_HS_NOPAD.rom|2025-08-04|6FFHN",
+]
+
+[firmware.sas3916-dell-h350-mini-a02-mr]
+display = "Dell PERC H350 mini A02 MegaRAID firmware"
+file = "sas3916-dell-h350-mini-a02.mr"
+size = 7995392
+sha256 = "15d9cdec2a661abaabead6fc1a8ab3852f73de481f290bedf4f16680efe5c2c4"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H350"
+variant = "mini"
+oem_rev = "A02"
+fw_version = "52.21.0-4606"
+release_date = "November 14, 2022"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H350_unknown__A02__73NY3__SAS-RAID_Firmware_73NY3_LN64_52.21.0-4606_A02_01|payload/FW_H350_Mini_HS_NOPAD.rom|2022-12-09|73NY3",
+  "H350_unknown__A02__73NY3__SAS-RAID_Firmware_73NY3_WN64_52.21.0-4606_A02_01|payload/FW_H350_Mini_HS_NOPAD.rom|2022-12-09|73NY3",
+]
+
+[firmware.sas3916-dell-h350-mini-a03-mr]
+display = "Dell PERC H350 mini A03 MegaRAID firmware"
+file = "sas3916-dell-h350-mini-a03.mr"
+size = 7995392
+sha256 = "a9b4cf8236796a5b467b796892fd3cdfc245aa7a003bcdb5bb4736ddde02218d"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H350"
+variant = "mini"
+oem_rev = "A03"
+fw_version = "52.26.0-5179"
+release_date = "November 07, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H350_unknown__A03__MYJJF__SAS-RAID_Firmware_MYJJF_LN64_52.26.0-5179_A03|payload/FW_H350_Mini_HS_NOPAD.rom|2025-05-03|MYJJF",
+  "H350_unknown__A03__MYJJF__SAS-RAID_Firmware_MYJJF_WN64_52.26.0-5179_A03|payload/FW_H350_Mini_HS_NOPAD.rom|2024-05-11|MYJJF",
+]
+
+[firmware.sas3916-dell-h350-mini-lp-a02-mr]
+display = "Dell PERC H350 mini-lp A02 MegaRAID firmware"
+file = "sas3916-dell-h350-mini-lp-a02.mr"
+size = 7995392
+sha256 = "ec2a350892b815100492fb1fa632efc8aa1370c129a1252db78f4860601c5553"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H350"
+variant = "mini-lp"
+oem_rev = "A02"
+fw_version = "52.21.0-4606"
+release_date = "November 14, 2022"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H350_unknown__A02__73NY3__SAS-RAID_Firmware_73NY3_LN64_52.21.0-4606_A02_01|payload/FW_H350_Mini_LP_HS_NOPAD.rom|2022-12-09|73NY3",
+  "H350_unknown__A02__73NY3__SAS-RAID_Firmware_73NY3_WN64_52.21.0-4606_A02_01|payload/FW_H350_Mini_LP_HS_NOPAD.rom|2022-12-09|73NY3",
+]
+
+[firmware.sas3916-dell-h350-mini-lp-a03-mr]
+display = "Dell PERC H350 mini-lp A03 MegaRAID firmware"
+file = "sas3916-dell-h350-mini-lp-a03.mr"
+size = 7995392
+sha256 = "1b203edc7b7adaa1d55b41403e4094b90f3061220ecc806a34a145d5aa151760"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H350"
+variant = "mini-lp"
+oem_rev = "A03"
+fw_version = "52.26.0-5179"
+release_date = "November 07, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H350_unknown__A03__MYJJF__SAS-RAID_Firmware_MYJJF_LN64_52.26.0-5179_A03|payload/FW_H350_Mini_LP_HS_NOPAD.rom|2025-05-03|MYJJF",
+  "H350_unknown__A03__MYJJF__SAS-RAID_Firmware_MYJJF_WN64_52.26.0-5179_A03|payload/FW_H350_Mini_LP_HS_NOPAD.rom|2024-05-11|MYJJF",
+]
+
+[firmware.sas3916-dell-h350-mm-a04-mr]
+display = "Dell PERC H350 mm A04 MegaRAID firmware"
+file = "sas3916-dell-h350-mm-a04.mr"
+size = 7995392
+sha256 = "742d654c505e05411ffa11de653d50964ab4e861afd24bcc12f26ba9b30d6679"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H350"
+variant = "mm"
+oem_rev = "A04"
+fw_version = "52.30.0-6115"
+release_date = "June 09, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H350_unknown__A04__6FFHN__SAS-RAID_Firmware_6FFHN_LN64_52.30.0-6115_A04|payload/FW_H350_MM_HS_NOPAD.rom|2025-08-04|6FFHN",
+  "H350_unknown__A04__6FFHN__SAS-RAID_Firmware_6FFHN_WN64_52.30.0-6115_A04|payload/FW_H350_MM_HS_NOPAD.rom|2025-08-04|6FFHN",
+]
+
+[firmware.sas3916-dell-h350-mm-lp-a04-mr]
+display = "Dell PERC H350 mm-lp A04 MegaRAID firmware"
+file = "sas3916-dell-h350-mm-lp-a04.mr"
+size = 7995392
+sha256 = "f457ce9d7462f4207b1a545c00c075f47b942073344004d0db71c980ee37f90e"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H350"
+variant = "mm-lp"
+oem_rev = "A04"
+fw_version = "52.30.0-6115"
+release_date = "June 09, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H350_unknown__A04__6FFHN__SAS-RAID_Firmware_6FFHN_LN64_52.30.0-6115_A04|payload/FW_H350_MM_LP_HS_NOPAD.rom|2025-08-04|6FFHN",
+  "H350_unknown__A04__6FFHN__SAS-RAID_Firmware_6FFHN_WN64_52.30.0-6115_A04|payload/FW_H350_MM_LP_HS_NOPAD.rom|2025-08-04|6FFHN",
+]
+
+[firmware.sas3916-dell-h355-adapter-a02-mr]
+display = "Dell PERC H355 adapter A02 MegaRAID firmware"
+file = "sas3916-dell-h355-adapter-a02.mr"
+size = 7995392
+sha256 = "d4302724f7ec5893e12feddb6fadec21ba5b7ae7cc4aa800524f7c9f4859b407"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H355"
+variant = "adapter"
+oem_rev = "A02"
+fw_version = "52.21.0-4606"
+release_date = "November 28, 2022"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H355_unknown__A02__N3MP5__SAS-RAID_Firmware_N3MP5_LN64_52.21.0-4606_A02|payload/FW_H355_Adapter_HS_NOPAD.rom|2022-12-09|N3MP5",
+  "H355_unknown__A02__N3MP5__SAS-RAID_Firmware_N3MP5_LN64_52.21.0-4606_A02_01|payload/FW_H355_Adapter_HS_NOPAD.rom|2025-05-03|N3MP5",
+  "H355_unknown__A02__N3MP5__SAS-RAID_Firmware_N3MP5_WN64_52.21.0-4606_A02|payload/FW_H355_Adapter_HS_NOPAD.rom|2022-12-09|N3MP5",
+  "H355_unknown__A02__N3MP5__SAS-RAID_Firmware_N3MP5_WN64_52.21.0-4606_A02_01|payload/FW_H355_Adapter_HS_NOPAD.rom|2024-05-11|N3MP5",
+]
+
+[firmware.sas3916-dell-h355-adapter-a03-mr]
+display = "Dell PERC H355 adapter A03 MegaRAID firmware"
+file = "sas3916-dell-h355-adapter-a03.mr"
+size = 7995392
+sha256 = "2123b09663f624445eb9904b9151b99980acfb279fcb95e1e52d1e31658d392f"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H355"
+variant = "adapter"
+oem_rev = "A03"
+fw_version = "52.26.0-5179"
+release_date = "November 07, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H355_unknown__A03__RRR7N__SAS-RAID_Firmware_RRR7N_LN64_52.26.0-5179_A03|payload/FW_H355_Adapter_HS_NOPAD.rom|2025-05-03|RRR7N",
+  "H355_unknown__A03__RRR7N__SAS-RAID_Firmware_RRR7N_WN64_52.26.0-5179_A03|payload/FW_H355_Adapter_HS_NOPAD.rom|2024-05-11|RRR7N",
+]
+
+[firmware.sas3916-dell-h355-adapter-a04-mr]
+display = "Dell PERC H355 adapter A04 MegaRAID firmware"
+file = "sas3916-dell-h355-adapter-a04.mr"
+size = 7995392
+sha256 = "c080e133e680c6b7e8f83c4673c37ed514e95726afd7a729ee67763ffc82ca59"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H355"
+variant = "adapter"
+oem_rev = "A04"
+fw_version = "52.30.0-6115"
+release_date = "June 09, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H355_unknown__A04__PXRX0__SAS-RAID_Firmware_PXRX0_LN64_52.30.0-6115_A04|payload/FW_H355_Adapter_HS_NOPAD.rom|2025-08-04|PXRX0",
+  "H355_unknown__A04__PXRX0__SAS-RAID_Firmware_PXRX0_WN64_52.30.0-6115_A04|payload/FW_H355_Adapter_HS_NOPAD.rom|2025-08-04|PXRX0",
+]
+
+[firmware.sas3916-dell-h355-front-a02-mr]
+display = "Dell PERC H355 front A02 MegaRAID firmware"
+file = "sas3916-dell-h355-front-a02.mr"
+size = 7995392
+sha256 = "013c2081071ea59eac9ce45e6dda762b664dbb653d84b1d704eb07f72841e1f9"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H355"
+variant = "front"
+oem_rev = "A02"
+fw_version = "52.21.0-4606"
+release_date = "November 28, 2022"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H355_unknown__A02__N3MP5__SAS-RAID_Firmware_N3MP5_LN64_52.21.0-4606_A02|payload/FW_H355_Front_HS_NOPAD.rom|2022-12-09|N3MP5",
+  "H355_unknown__A02__N3MP5__SAS-RAID_Firmware_N3MP5_LN64_52.21.0-4606_A02_01|payload/FW_H355_Front_HS_NOPAD.rom|2025-05-03|N3MP5",
+  "H355_unknown__A02__N3MP5__SAS-RAID_Firmware_N3MP5_WN64_52.21.0-4606_A02|payload/FW_H355_Front_HS_NOPAD.rom|2022-12-09|N3MP5",
+  "H355_unknown__A02__N3MP5__SAS-RAID_Firmware_N3MP5_WN64_52.21.0-4606_A02_01|payload/FW_H355_Front_HS_NOPAD.rom|2024-05-11|N3MP5",
+]
+
+[firmware.sas3916-dell-h355-front-a03-mr]
+display = "Dell PERC H355 front A03 MegaRAID firmware"
+file = "sas3916-dell-h355-front-a03.mr"
+size = 7995392
+sha256 = "8211f7bc28e62301aa623e5f7df699011f78264fd80189c761bf1de98e9e31e7"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H355"
+variant = "front"
+oem_rev = "A03"
+fw_version = "52.26.0-5179"
+release_date = "November 07, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H355_unknown__A03__RRR7N__SAS-RAID_Firmware_RRR7N_LN64_52.26.0-5179_A03|payload/FW_H355_Front_HS_NOPAD.rom|2025-05-03|RRR7N",
+  "H355_unknown__A03__RRR7N__SAS-RAID_Firmware_RRR7N_WN64_52.26.0-5179_A03|payload/FW_H355_Front_HS_NOPAD.rom|2024-05-11|RRR7N",
+]
+
+[firmware.sas3916-dell-h355-front-a04-mr]
+display = "Dell PERC H355 front A04 MegaRAID firmware"
+file = "sas3916-dell-h355-front-a04.mr"
+size = 7995392
+sha256 = "94b8400a30d04b5d02bbaa268e54dfd1c025654811f21f5f7d665fb4ad914874"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H355"
+variant = "front"
+oem_rev = "A04"
+fw_version = "52.30.0-6115"
+release_date = "June 09, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H355_unknown__A04__PXRX0__SAS-RAID_Firmware_PXRX0_LN64_52.30.0-6115_A04|payload/FW_H355_Front_HS_NOPAD.rom|2025-08-04|PXRX0",
+  "H355_unknown__A04__PXRX0__SAS-RAID_Firmware_PXRX0_WN64_52.30.0-6115_A04|payload/FW_H355_Front_HS_NOPAD.rom|2025-08-04|PXRX0",
+]
+
+[firmware.sas3916-dell-h750-adapter-a03-mr]
+display = "Dell PERC H750 adapter A03 MegaRAID firmware"
+file = "sas3916-dell-h750-adapter-a03.mr"
+size = 8519680
+sha256 = "96c26a46f7525e6f40b440d94482f04191059d175db5f60bb860ad4dc93803b1"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H750"
+variant = "adapter"
+oem_rev = "A03"
+fw_version = "52.21.1-5149"
+release_date = "October 06, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H750_unknown__A03__PVGGP__SAS-RAID_Firmware_PVGGP_LN64_52.21.1-5149_A03|payload/FW_H750_Adapter_HS_NOPAD.rom|2025-05-03|PVGGP",
+  "H750_unknown__A03__PVGGP__SAS-RAID_Firmware_PVGGP_WN64_52.21.1-5149_A03|payload/FW_H750_Adapter_HS_NOPAD.rom|2024-05-11|PVGGP",
+]
+
+[firmware.sas3916-dell-h750-adapter-a04-mr]
+display = "Dell PERC H750 adapter A04 MegaRAID firmware"
+file = "sas3916-dell-h750-adapter-a04.mr"
+size = 8519680
+sha256 = "99109455a7459fa6ece7fb2cf22a816e7304d8db19f65b29728b2d5b8c8702d1"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H750"
+variant = "adapter"
+oem_rev = "A04"
+fw_version = "52.26.0-5179"
+release_date = "November 07, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H750_unknown__A04__NCXX4__SAS-RAID_Firmware_NCXX4_LN64_52.26.0-5179_A04|payload/FW_H750_Adapter_HS_NOPAD.rom|2025-05-03|NCXX4",
+  "H750_unknown__A04__NCXX4__SAS-RAID_Firmware_NCXX4_WN64_52.26.0-5179_A04|payload/FW_H750_Adapter_HS_NOPAD.rom|2024-05-11|NCXX4",
+]
+
+[firmware.sas3916-dell-h750-adapter-a05-mr]
+display = "Dell PERC H750 adapter A05 MegaRAID firmware"
+file = "sas3916-dell-h750-adapter-a05.mr"
+size = 8519680
+sha256 = "553a97d29cd912855246b41aa3c6eea30c540294cac8b69bd4e2b32c718e79c8"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H750"
+variant = "adapter"
+oem_rev = "A05"
+fw_version = "52.30.0-6115"
+release_date = "June 09, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H750_unknown__A05__8RV1M__SAS-RAID_Firmware_8RV1M_LN64_52.30.0-6115_A05|payload/FW_H750_Adapter_HS_NOPAD.rom|2025-08-04|8RV1M",
+  "H750_unknown__A05__8RV1M__SAS-RAID_Firmware_8RV1M_WN64_52.30.0-6115_A05|payload/FW_H750_Adapter_HS_NOPAD.rom|2025-08-04|8RV1M",
+]
+
+[firmware.sas3916-dell-h755-adapter-a07-mr]
+display = "Dell PERC H755 adapter A07 MegaRAID firmware"
+file = "sas3916-dell-h755-adapter-a07.mr"
+size = 8519680
+sha256 = "533740b50a4a13b5da6a3b67c2932dbce36c5a2829affc395d64a045a0fef62f"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H755"
+variant = "adapter"
+oem_rev = "A07"
+fw_version = "52.21.0-4606"
+release_date = "November 09, 2022"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H755_unknown__A07__2K2W2__SAS-RAID_Firmware_2K2W2_LN64_52.21.0-4606_A07|payload/FW_H755_Adapter_HS_NOPAD.rom|2025-05-03|2K2W2",
+  "H755_unknown__A07__2K2W2__SAS-RAID_Firmware_2K2W2_WN64_52.21.0-4606_A07|payload/FW_H755_Adapter_HS_NOPAD.rom|2022-11-23|2K2W2",
+]
+
+[firmware.sas3916-dell-h755-adapter-a08-mr]
+display = "Dell PERC H755 adapter A08 MegaRAID firmware"
+file = "sas3916-dell-h755-adapter-a08.mr"
+size = 8519680
+sha256 = "354bc7d047c6f0cca921ed5022752c0e8d036d101c88aa913c34faca1e222658"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H755"
+variant = "adapter"
+oem_rev = "A08"
+fw_version = "52.21.1-5149"
+release_date = "October 05, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H755_unknown__A08__Y990W__SAS-RAID_Firmware_Y990W_LN64_52.21.1-5149_A08|payload/FW_H755_Adapter_HS_NOPAD.rom|2025-05-03|Y990W",
+  "H755_unknown__A08__Y990W__SAS-RAID_Firmware_Y990W_WN64_52.21.1-5149_A08|payload/FW_H755_Adapter_HS_NOPAD.rom|2024-05-11|Y990W",
+]
+
+[firmware.sas3916-dell-h755-adapter-a09-mr]
+display = "Dell PERC H755 adapter A09 MegaRAID firmware"
+file = "sas3916-dell-h755-adapter-a09.mr"
+size = 8519680
+sha256 = "e2d48e932a313548cf91e576050909c1baa2381597c6b0b4747d0e461b896352"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H755"
+variant = "adapter"
+oem_rev = "A09"
+fw_version = "52.26.0-5179"
+release_date = "November 08, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H755_unknown__A09__R2N55__SAS-RAID_Firmware_R2N55_LN64_52.26.0-5179_A09_03|payload/FW_H755_Adapter_HS_NOPAD.rom|2025-05-03|R2N55",
+  "H755_unknown__A09__R2N55__SAS-RAID_Firmware_R2N55_WN64_52.26.0-5179_A09|payload/FW_H755_Adapter_HS_NOPAD.rom|2024-05-11|R2N55",
+  "H755_unknown__A09__R2N55__SAS-RAID_Firmware_R2N55_WN64_52.26.0-5179_A09_03|payload/FW_H755_Adapter_HS_NOPAD.rom|2025-05-01|R2N55",
+]
+
+[firmware.sas3916-dell-h755-adapter-a10-mr]
+display = "Dell PERC H755 adapter A10 MegaRAID firmware"
+file = "sas3916-dell-h755-adapter-a10.mr"
+size = 8519680
+sha256 = "14403996c9c017751880597c2f2518b8aa611ae8cb5703d019aa92f094e9f8b5"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H755"
+variant = "adapter"
+oem_rev = "A10"
+fw_version = "52.30.0-6115"
+release_date = "June 12, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H755_unknown__A10__8020K__SAS-RAID_Firmware_8020K_LN64_52.30.0-6115_A10|payload/FW_H755_Adapter_HS_NOPAD.rom|2025-08-04|8020K",
+  "H755_unknown__A10__8020K__SAS-RAID_Firmware_8020K_WN64_52.30.0-6115_A10|payload/FW_H755_Adapter_HS_NOPAD.rom|2025-08-04|8020K",
+]
+
+[firmware.sas3916-dell-h755-front-a07-mr]
+display = "Dell PERC H755 front A07 MegaRAID firmware"
+file = "sas3916-dell-h755-front-a07.mr"
+size = 8519680
+sha256 = "c408b29b518f1804b4246120831639a3d49e8414360c5d5c4dea17021111e0fe"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H755"
+variant = "front"
+oem_rev = "A07"
+fw_version = "52.21.0-4606"
+release_date = "November 09, 2022"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H755_unknown__A07__2K2W2__SAS-RAID_Firmware_2K2W2_LN64_52.21.0-4606_A07|payload/FW_H755_FrontPERC_HS_NOPAD.rom|2025-05-03|2K2W2",
+  "H755_unknown__A07__2K2W2__SAS-RAID_Firmware_2K2W2_WN64_52.21.0-4606_A07|payload/FW_H755_FrontPERC_HS_NOPAD.rom|2022-11-23|2K2W2",
+]
+
+[firmware.sas3916-dell-h755-front-a08-mr]
+display = "Dell PERC H755 front A08 MegaRAID firmware"
+file = "sas3916-dell-h755-front-a08.mr"
+size = 8519680
+sha256 = "4929e232ab43437d502795f3d4f6b427899fb2d8cc05276411873a9d6b5bee24"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H755"
+variant = "front"
+oem_rev = "A08"
+fw_version = "52.21.1-5149"
+release_date = "October 05, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H755_unknown__A08__Y990W__SAS-RAID_Firmware_Y990W_LN64_52.21.1-5149_A08|payload/FW_H755_FrontPERC_HS_NOPAD.rom|2025-05-03|Y990W",
+  "H755_unknown__A08__Y990W__SAS-RAID_Firmware_Y990W_WN64_52.21.1-5149_A08|payload/FW_H755_FrontPERC_HS_NOPAD.rom|2024-05-11|Y990W",
+]
+
+[firmware.sas3916-dell-h755-front-a09-mr]
+display = "Dell PERC H755 front A09 MegaRAID firmware"
+file = "sas3916-dell-h755-front-a09.mr"
+size = 8519680
+sha256 = "21e4660f9bc1da60ee233b12fd384f5e03e0523a81b935ae92d85ef64b7f3fe4"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H755"
+variant = "front"
+oem_rev = "A09"
+fw_version = "52.26.0-5179"
+release_date = "November 08, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H755_unknown__A09__R2N55__SAS-RAID_Firmware_R2N55_LN64_52.26.0-5179_A09_03|payload/FW_H755_FrontPERC_HS_NOPAD.rom|2025-05-03|R2N55",
+  "H755_unknown__A09__R2N55__SAS-RAID_Firmware_R2N55_WN64_52.26.0-5179_A09|payload/FW_H755_FrontPERC_HS_NOPAD.rom|2024-05-11|R2N55",
+  "H755_unknown__A09__R2N55__SAS-RAID_Firmware_R2N55_WN64_52.26.0-5179_A09_03|payload/FW_H755_FrontPERC_HS_NOPAD.rom|2025-05-01|R2N55",
+]
+
+[firmware.sas3916-dell-h755-front-a10-mr]
+display = "Dell PERC H755 front A10 MegaRAID firmware"
+file = "sas3916-dell-h755-front-a10.mr"
+size = 8519680
+sha256 = "c50cccdcfe10023992a6ce1bf0df98c22109be08205177615719a0c9568f73f0"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H755"
+variant = "front"
+oem_rev = "A10"
+fw_version = "52.30.0-6115"
+release_date = "June 12, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H755_unknown__A10__8020K__SAS-RAID_Firmware_8020K_LN64_52.30.0-6115_A10|payload/FW_H755_FrontPERC_HS_NOPAD.rom|2025-08-04|8020K",
+  "H755_unknown__A10__8020K__SAS-RAID_Firmware_8020K_WN64_52.30.0-6115_A10|payload/FW_H755_FrontPERC_HS_NOPAD.rom|2025-08-04|8020K",
+]
+
+[firmware.sas3916-dell-h755-mx-a07-mr]
+display = "Dell PERC H755 mx A07 MegaRAID firmware"
+file = "sas3916-dell-h755-mx-a07.mr"
+size = 8519680
+sha256 = "d5479b11cd70c2d0bf24870eefac8647c10a4580388fbe42b74e859e8ae87e03"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H755"
+variant = "mx"
+oem_rev = "A07"
+fw_version = "52.21.0-4606"
+release_date = "November 09, 2022"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H755_unknown__A07__2K2W2__SAS-RAID_Firmware_2K2W2_LN64_52.21.0-4606_A07|payload/FW_H755MX_PERC_HS_NOPAD.rom|2025-05-03|2K2W2",
+  "H755_unknown__A07__2K2W2__SAS-RAID_Firmware_2K2W2_WN64_52.21.0-4606_A07|payload/FW_H755MX_PERC_HS_NOPAD.rom|2022-11-23|2K2W2",
+]
+
+[firmware.sas3916-dell-h755-mx-a08-mr]
+display = "Dell PERC H755 mx A08 MegaRAID firmware"
+file = "sas3916-dell-h755-mx-a08.mr"
+size = 8519680
+sha256 = "fe15d6a6b3df241291106af9f73184b92c24f3d982f82e541eaba67dffc51f7b"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H755"
+variant = "mx"
+oem_rev = "A08"
+fw_version = "52.21.1-5149"
+release_date = "October 05, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H755_unknown__A08__Y990W__SAS-RAID_Firmware_Y990W_LN64_52.21.1-5149_A08|payload/FW_H755MX_PERC_HS_NOPAD.rom|2025-05-03|Y990W",
+  "H755_unknown__A08__Y990W__SAS-RAID_Firmware_Y990W_WN64_52.21.1-5149_A08|payload/FW_H755MX_PERC_HS_NOPAD.rom|2024-05-11|Y990W",
+]
+
+[firmware.sas3916-dell-h755-mx-a09-mr]
+display = "Dell PERC H755 mx A09 MegaRAID firmware"
+file = "sas3916-dell-h755-mx-a09.mr"
+size = 8519680
+sha256 = "eb3c44cd596a20e0db5046278454070380e25c18111033f786c96fa38a7e8fb9"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H755"
+variant = "mx"
+oem_rev = "A09"
+fw_version = "52.26.0-5179"
+release_date = "November 08, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H755_unknown__A09__R2N55__SAS-RAID_Firmware_R2N55_LN64_52.26.0-5179_A09_03|payload/FW_H755MX_PERC_HS_NOPAD.rom|2025-05-03|R2N55",
+  "H755_unknown__A09__R2N55__SAS-RAID_Firmware_R2N55_WN64_52.26.0-5179_A09|payload/FW_H755MX_PERC_HS_NOPAD.rom|2024-05-11|R2N55",
+  "H755_unknown__A09__R2N55__SAS-RAID_Firmware_R2N55_WN64_52.26.0-5179_A09_03|payload/FW_H755MX_PERC_HS_NOPAD.rom|2025-05-01|R2N55",
+]
+
+[firmware.sas3916-dell-h755-mx-a10-mr]
+display = "Dell PERC H755 mx A10 MegaRAID firmware"
+file = "sas3916-dell-h755-mx-a10.mr"
+size = 8519680
+sha256 = "953343449eb53b73e287de0bdd81b8cd7cd87383d8986a88848e363e6bc3e84a"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H755"
+variant = "mx"
+oem_rev = "A10"
+fw_version = "52.30.0-6115"
+release_date = "June 12, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H755_unknown__A10__8020K__SAS-RAID_Firmware_8020K_LN64_52.30.0-6115_A10|payload/FW_H755MX_PERC_HS_NOPAD.rom|2025-08-04|8020K",
+  "H755_unknown__A10__8020K__SAS-RAID_Firmware_8020K_WN64_52.30.0-6115_A10|payload/FW_H755MX_PERC_HS_NOPAD.rom|2025-08-04|8020K",
+]
+
+[firmware.sas3916-dell-h755n-front-a07-mr]
+display = "Dell PERC H755n front A07 MegaRAID firmware"
+file = "sas3916-dell-h755n-front-a07.mr"
+size = 8519680
+sha256 = "d98d40355979feaf72414d0d0988ef75e1fad973e5e89e7d3057f21e2b07c1cf"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H755n"
+variant = "front"
+oem_rev = "A07"
+fw_version = "52.21.0-4606"
+release_date = "November 09, 2022"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H755_unknown__A07__2K2W2__SAS-RAID_Firmware_2K2W2_LN64_52.21.0-4606_A07|payload/FW_H755N_FrontPERC_HS_NOPAD.rom|2025-05-03|2K2W2",
+  "H755_unknown__A07__2K2W2__SAS-RAID_Firmware_2K2W2_WN64_52.21.0-4606_A07|payload/FW_H755N_FrontPERC_HS_NOPAD.rom|2022-11-23|2K2W2",
+]
+
+[firmware.sas3916-dell-h755n-front-a08-mr]
+display = "Dell PERC H755n front A08 MegaRAID firmware"
+file = "sas3916-dell-h755n-front-a08.mr"
+size = 8519680
+sha256 = "a4acde41a99e7e0da9cad5d91fb2eb4eeae5b60d44fe83cf728cdad58923a17f"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H755n"
+variant = "front"
+oem_rev = "A08"
+fw_version = "52.21.1-5149"
+release_date = "October 05, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H755_unknown__A08__Y990W__SAS-RAID_Firmware_Y990W_LN64_52.21.1-5149_A08|payload/FW_H755N_FrontPERC_HS_NOPAD.rom|2025-05-03|Y990W",
+  "H755_unknown__A08__Y990W__SAS-RAID_Firmware_Y990W_WN64_52.21.1-5149_A08|payload/FW_H755N_FrontPERC_HS_NOPAD.rom|2024-05-11|Y990W",
+]
+
+[firmware.sas3916-dell-h755n-front-a09-mr]
+display = "Dell PERC H755n front A09 MegaRAID firmware"
+file = "sas3916-dell-h755n-front-a09.mr"
+size = 8519680
+sha256 = "87839b9bf00a577cbce7bc1bfca73138f14372809bfb735c28b044db000e3c9c"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H755n"
+variant = "front"
+oem_rev = "A09"
+fw_version = "52.26.0-5179"
+release_date = "November 08, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H755_unknown__A09__R2N55__SAS-RAID_Firmware_R2N55_LN64_52.26.0-5179_A09_03|payload/FW_H755N_FrontPERC_HS_NOPAD.rom|2025-05-03|R2N55",
+  "H755_unknown__A09__R2N55__SAS-RAID_Firmware_R2N55_WN64_52.26.0-5179_A09|payload/FW_H755N_FrontPERC_HS_NOPAD.rom|2024-05-11|R2N55",
+  "H755_unknown__A09__R2N55__SAS-RAID_Firmware_R2N55_WN64_52.26.0-5179_A09_03|payload/FW_H755N_FrontPERC_HS_NOPAD.rom|2025-05-01|R2N55",
+]
+
+[firmware.sas3916-dell-h755n-front-a10-mr]
+display = "Dell PERC H755n front A10 MegaRAID firmware"
+file = "sas3916-dell-h755n-front-a10.mr"
+size = 8519680
+sha256 = "65fb5c06dabdbc207eb8e0c2c46480a8360e2c4a8c1d39f8b3e0bfd52b54df03"
+chip = "SAS3916"
+mode = "RAID"
+vendor = "dell"
+model = "H755n"
+variant = "front"
+oem_rev = "A10"
+fw_version = "52.30.0-6115"
+release_date = "June 12, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H755_unknown__A10__8020K__SAS-RAID_Firmware_8020K_LN64_52.30.0-6115_A10|payload/FW_H755N_FrontPERC_HS_NOPAD.rom|2025-08-04|8020K",
+  "H755_unknown__A10__8020K__SAS-RAID_Firmware_8020K_WN64_52.30.0-6115_A10|payload/FW_H755N_FrontPERC_HS_NOPAD.rom|2025-08-04|8020K",
+]
+
+[firmware.sas4116w-dell-h365-adapter-a01-mr]
+display = "Dell PERC H365 adapter A01 MegaRAID firmware"
+file = "sas4116w-dell-h365-adapter-a01.mr"
+size = 9082093
+sha256 = "76424cf476bd01e6f8e5d44c39a42c63ec61c301c601f5829eb6c88ee24c8b74"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H365"
+variant = "adapter"
+oem_rev = "A01"
+fw_version = "8.11.0.0.15-25"
+release_date = "April 17, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H365_i__A01__CN95G__SAS-RAID_Firmware_CN95G_LN64_8.11.0.0.15-25_A01|payload/FW_H365_ADP_full_signed.rom|2025-05-03|CN95G",
+  "H365_i__A01__CN95G__SAS-RAID_Firmware_CN95G_WN64_8.11.0.0.15-25_A01|payload/FW_H365_ADP_full_signed.rom|2025-05-01|CN95G",
+]
+
+[firmware.sas4116w-dell-h365-adapter-a02-mr]
+display = "Dell PERC H365 adapter A02 MegaRAID firmware"
+file = "sas4116w-dell-h365-adapter-a02.mr"
+size = 9082093
+sha256 = "62c8a14f2ba23f49acc0829a1f7a0966755988171c8a2c60fba17779eceb4f15"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H365"
+variant = "adapter"
+oem_rev = "A02"
+fw_version = "8.11.2.0.15-26"
+release_date = "June 10, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H365_i__A02__9K3WG__SAS-RAID_Firmware_9K3WG_LN64_8.11.2.0.15-26_A02_01|payload/FW_H365_ADP_full_signed.rom|2025-08-04|9K3WG",
+  "H365_i__A02__9K3WG__SAS-RAID_Firmware_9K3WG_WN64_8.11.2.0.15-26_A02_01|payload/FW_H365_ADP_full_signed.rom|2025-08-04|9K3WG",
+]
+
+[firmware.sas4116w-dell-h365-frontdc-a01-mr]
+display = "Dell PERC H365 frontdc A01 MegaRAID firmware"
+file = "sas4116w-dell-h365-frontdc-a01.mr"
+size = 9082093
+sha256 = "d910422f045b5c1a316b2117f58d871b92ef43e18219dbc38ea9e7e0d9b9ba82"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H365"
+variant = "frontdc"
+oem_rev = "A01"
+fw_version = "8.11.0.0.15-25"
+release_date = "April 17, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H365_i__A01__D8K5K__SAS-RAID_Firmware_D8K5K_LN64_8.11.0.0.15-25_A01|payload/FW_H365_FrontDC_full_signed.rom|2025-05-03|D8K5K",
+  "H365_i__A01__D8K5K__SAS-RAID_Firmware_D8K5K_WN64_8.11.0.0.15-25_A01|payload/FW_H365_FrontDC_full_signed.rom|2025-05-01|D8K5K",
+]
+
+[firmware.sas4116w-dell-h365-frontdc-a02-mr]
+display = "Dell PERC H365 frontdc A02 MegaRAID firmware"
+file = "sas4116w-dell-h365-frontdc-a02.mr"
+size = 9082093
+sha256 = "e54f368ca774550eb4f62ba9083a5fb41951673c9eabaf8d5fd9e597f086fa92"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H365"
+variant = "frontdc"
+oem_rev = "A02"
+fw_version = "8.11.2.0.15-26"
+release_date = "June 10, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H365_i__A02__M3PGV__SAS-RAID_Firmware_M3PGV_LN64_8.11.2.0.15-26_A02_01|payload/FW_H365_FrontDC_full_signed.rom|2025-08-04|M3PGV",
+  "H365_i__A02__M3PGV__SAS-RAID_Firmware_M3PGV_WN64_8.11.2.0.15-26_A02_01|payload/FW_H365_FrontDC_full_signed.rom|2025-08-04|M3PGV",
+]
+
+[firmware.sas4116w-dell-h965-adapter-a03-mr]
+display = "Dell PERC H965 adapter A03 MegaRAID firmware"
+file = "sas4116w-dell-h965-adapter-a03.mr"
+size = 9138799
+sha256 = "2e711be81efe673e58aa5a6fa770763b416161242984d5db598606958fc5b530"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H965"
+variant = "adapter"
+oem_rev = "A03"
+fw_version = "8.4.0.0.18-29"
+release_date = "October 13, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H965_i__A03__93K10__SAS-RAID_Firmware_93K10_WN64_8.4.0.0.18-29_A03|payload/FW_H965_ADP_full_signed.rom|2024-05-11|93K10",
+]
+
+[firmware.sas4116w-dell-h965-adapter-a04-mr]
+display = "Dell PERC H965 adapter A04 MegaRAID firmware"
+file = "sas4116w-dell-h965-adapter-a04.mr"
+size = 8926487
+sha256 = "ae20fa6ed50a503a7fdb8c2a94871581c115acf8a55df51ca6ca320bb3af74fc"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H965"
+variant = "adapter"
+oem_rev = "A04"
+fw_version = "8.8.0.0.18-26"
+release_date = "June 20, 2024"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H965_i__A04__YGV5R__SAS-RAID_Firmware_YGV5R_LN64_8.8.0.0.18-26_A04|payload/FW_H965_ADP_full_signed.rom|2025-05-03|YGV5R",
+  "H965_i__A04__YGV5R__SAS-RAID_Firmware_YGV5R_WN64_8.8.0.0.18-26_A04|payload/FW_H965_ADP_full_signed.rom|2025-05-01|YGV5R",
+]
+
+[firmware.sas4116w-dell-h965-adapter-a08-mr]
+display = "Dell PERC H965 adapter A08 MegaRAID firmware"
+file = "sas4116w-dell-h965-adapter-a08.mr"
+size = 9131287
+sha256 = "ff2985b7bf273de5c7636da927a14e8a7fa81bd0f754a824f6bde8938907268f"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H965"
+variant = "adapter"
+oem_rev = "A08"
+fw_version = "8.11.0.0.18-22"
+release_date = "March 21, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H965_i__A08__JH8VX__SAS-RAID_Firmware_JH8VX_LN64_8.11.0.0.18-22_A08_01|payload/FW_H965_ADP_full_signed.rom|2025-05-03|JH8VX",
+  "H965_i__A08__JH8VX__SAS-RAID_Firmware_JH8VX_WN64_8.11.0.0.18-22_A08_01|payload/FW_H965_ADP_full_signed.rom|2025-05-01|JH8VX",
+]
+
+[firmware.sas4116w-dell-h965-adapter-a09-mr]
+display = "Dell PERC H965 adapter A09 MegaRAID firmware"
+file = "sas4116w-dell-h965-adapter-a09.mr"
+size = 9131287
+sha256 = "ccd665e8269b986011d82cb9362ab0a117118fcfea61b3d0829eef2be4810387"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H965"
+variant = "adapter"
+oem_rev = "A09"
+fw_version = "8.11.0.0.18-25"
+release_date = "April 17, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H965_i__A09__5HP7Y__SAS-RAID_Firmware_5HP7Y_LN64_8.11.0.0.18-25_A09|payload/FW_H965_ADP_full_signed.rom|2025-05-03|5HP7Y",
+  "H965_i__A09__5HP7Y__SAS-RAID_Firmware_5HP7Y_WN64_8.11.0.0.18-25_A09|payload/FW_H965_ADP_full_signed.rom|2025-05-01|5HP7Y",
+]
+
+[firmware.sas4116w-dell-h965-adapter-a10-mr]
+display = "Dell PERC H965 adapter A10 MegaRAID firmware"
+file = "sas4116w-dell-h965-adapter-a10.mr"
+size = 9131287
+sha256 = "20a198a182e6624148bd67295e98c1bb0eacc5be87f505e4867d20cb032ffa9e"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H965"
+variant = "adapter"
+oem_rev = "A10"
+fw_version = "8.11.2.0.18-26"
+release_date = "June 10, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H965_i__A10__6X6YD__SAS-RAID_Firmware_6X6YD_LN64_8.11.2.0.18-26_A10_01|payload/FW_H965_ADP_full_signed.rom|2025-08-04|6X6YD",
+  "H965_i__A10__6X6YD__SAS-RAID_Firmware_6X6YD_WN64_8.11.2.0.18-26_A10_01|payload/FW_H965_ADP_full_signed.rom|2025-08-04|6X6YD",
+]
+
+[firmware.sas4116w-dell-h965-front-a03-mr]
+display = "Dell PERC H965 front A03 MegaRAID firmware"
+file = "sas4116w-dell-h965-front-a03.mr"
+size = 9138799
+sha256 = "65fdd89113c93cca22b5f472c274aca1aab32c8f62a951d43b69e5af15db981a"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H965"
+variant = "front"
+oem_rev = "A03"
+fw_version = "8.4.0.0.18-29"
+release_date = "October 13, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H965_i__A03__93K10__SAS-RAID_Firmware_93K10_WN64_8.4.0.0.18-29_A03|payload/FW_H965_Front_full_signed.rom|2024-05-11|93K10",
+]
+
+[firmware.sas4116w-dell-h965-front-a04-mr]
+display = "Dell PERC H965 front A04 MegaRAID firmware"
+file = "sas4116w-dell-h965-front-a04.mr"
+size = 8926487
+sha256 = "6a79ee18db9856d7190b80bfc75bc8479d393960d0045b7d83fed759f2c1a509"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H965"
+variant = "front"
+oem_rev = "A04"
+fw_version = "8.8.0.0.18-26"
+release_date = "June 20, 2024"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H965_i__A04__YGV5R__SAS-RAID_Firmware_YGV5R_LN64_8.8.0.0.18-26_A04|payload/FW_H965_Front_full_signed.rom|2025-05-03|YGV5R",
+  "H965_i__A04__YGV5R__SAS-RAID_Firmware_YGV5R_WN64_8.8.0.0.18-26_A04|payload/FW_H965_Front_full_signed.rom|2025-05-01|YGV5R",
+]
+
+[firmware.sas4116w-dell-h965-front-a09-mr]
+display = "Dell PERC H965 front A09 MegaRAID firmware"
+file = "sas4116w-dell-h965-front-a09.mr"
+size = 9131287
+sha256 = "b13dae434bb8613387efee3ee07a30481737f32890bfa31a2a002a0b5715a78b"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H965"
+variant = "front"
+oem_rev = "A09"
+fw_version = "8.11.0.0.18-25"
+release_date = "April 16, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H965_i__A09__9246X__SAS-RAID_Firmware_9246X_LN64_8.11.0.0.18-25_A09|payload/FW_H965_Front_full_signed.rom|2025-05-03|9246X",
+  "H965_i__A09__9246X__SAS-RAID_Firmware_9246X_WN64_8.11.0.0.18-25_A09|payload/FW_H965_Front_full_signed.rom|2025-05-01|9246X",
+]
+
+[firmware.sas4116w-dell-h965-front-a10-mr]
+display = "Dell PERC H965 front A10 MegaRAID firmware"
+file = "sas4116w-dell-h965-front-a10.mr"
+size = 9131287
+sha256 = "c520d48dea856649e085bdbd44ba436bfad4978c312df0a3f9f3c8919225ecc2"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H965"
+variant = "front"
+oem_rev = "A10"
+fw_version = "8.11.2.0.18-26"
+release_date = "June 10, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H965_i__A10__T0HM2__SAS-RAID_Firmware_T0HM2_LN64_8.11.2.0.18-26_A10|payload/FW_H965_Front_full_signed.rom|2025-08-04|T0HM2",
+  "H965_i__A10__T0HM2__SAS-RAID_Firmware_T0HM2_WN64_8.11.2.0.18-26_A10|payload/FW_H965_Front_full_signed.rom|2025-08-04|T0HM2",
+]
+
+[firmware.sas4116w-dell-h965-frontdc-a04-mr]
+display = "Dell PERC H965 frontdc A04 MegaRAID firmware"
+file = "sas4116w-dell-h965-frontdc-a04.mr"
+size = 9131287
+sha256 = "b74d44a473a349f0888bf826c922d25e5efdca919a8ffe233ba57dca9f61cd4b"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H965"
+variant = "frontdc"
+oem_rev = "A04"
+fw_version = "8.11.0.0.18-25"
+release_date = "April 17, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H965_i__A04__FR7V4__SAS-RAID_Firmware_FR7V4_LN64_8.11.0.0.18-25_A04|payload/FW_H965_FrontDC_full_signed.rom|2025-05-03|FR7V4",
+  "H965_i__A04__FR7V4__SAS-RAID_Firmware_FR7V4_WN64_8.11.0.0.18-25_A04|payload/FW_H965_FrontDC_full_signed.rom|2025-05-01|FR7V4",
+]
+
+[firmware.sas4116w-dell-h965-frontdc-a05-mr]
+display = "Dell PERC H965 frontdc A05 MegaRAID firmware"
+file = "sas4116w-dell-h965-frontdc-a05.mr"
+size = 9131287
+sha256 = "32bf605336119c872d171753bf28d27215f63b4f75ec1ab9f30a0dc32ed51521"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H965"
+variant = "frontdc"
+oem_rev = "A05"
+fw_version = "8.11.2.0.18-26"
+release_date = "June 10, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H965_i__A05__6DKPK__SAS-RAID_Firmware_6DKPK_LN64_8.11.2.0.18-26_A05_01|payload/FW_H965_FrontDC_full_signed.rom|2025-08-04|6DKPK",
+  "H965_i__A05__6DKPK__SAS-RAID_Firmware_6DKPK_WN64_8.11.2.0.18-26_A05_01|payload/FW_H965_FrontDC_full_signed.rom|2025-08-04|6DKPK",
+]
+
+[firmware.sas4116w-dell-h965-mx-a03-mr]
+display = "Dell PERC H965 mx A03 MegaRAID firmware"
+file = "sas4116w-dell-h965-mx-a03.mr"
+size = 9138799
+sha256 = "b4ebfd8c6ef1f0c6f8b1b129ae6f70cb833b2aa3b5436f839fc41eb255538e32"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H965"
+variant = "mx"
+oem_rev = "A03"
+fw_version = "8.4.0.0.18-29"
+release_date = "October 13, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H965_i__A03__6PDTY__MX760c_SAS-RAID_Firmware_6PDTY_WN64_8.4.0.0.18-29_A03|payload/FW_H965_MX_full_signed.rom|2024-05-11|6PDTY",
+]
+
+[firmware.sas4116w-dell-h965-mx-a08-mr]
+display = "Dell PERC H965 mx A08 MegaRAID firmware"
+file = "sas4116w-dell-h965-mx-a08.mr"
+size = 9131287
+sha256 = "d3b8149c8688c4a93e7207752df1e176df424d1b70d95c184f4a6814a6629db6"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H965"
+variant = "mx"
+oem_rev = "A08"
+fw_version = "8.11.0.0.18-25"
+release_date = "April 17, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H965_Mx__A08__7P41G__MX760c_SAS-RAID_Firmware_7P41G_LN64_8.11.0.0.18-25_A08|payload/FW_H965_MX_full_signed.rom|2025-05-03|7P41G",
+  "H965_Mx__A08__7P41G__MX760c_SAS-RAID_Firmware_7P41G_WN64_8.11.0.0.18-25_A08|payload/FW_H965_MX_full_signed.rom|2025-05-01|7P41G",
+]
+
+[firmware.sas4116w-dell-h965-mx-a09-mr]
+display = "Dell PERC H965 mx A09 MegaRAID firmware"
+file = "sas4116w-dell-h965-mx-a09.mr"
+size = 9131287
+sha256 = "69fb9e3c0b06bf214a4a10cefbe5530275e1433ab4cfa532e0662b1b5d08701f"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H965"
+variant = "mx"
+oem_rev = "A09"
+fw_version = "8.11.2.0.18-26"
+release_date = "June 10, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H965_Mx__A09__NJR2R__MX760c_SAS-RAID_Firmware_NJR2R_LN64_8.11.2.0.18-26_A09_01|payload/FW_H965_MX_full_signed.rom|2025-08-04|NJR2R",
+  "H965_Mx__A09__NJR2R__MX760c_SAS-RAID_Firmware_NJR2R_WN64_8.11.2.0.18-26_A09_01|payload/FW_H965_MX_full_signed.rom|2025-08-04|NJR2R",
+]
+
+[firmware.sas4116w-dell-h965e-adapter-a01-mr]
+display = "Dell PERC H965e adapter A01 MegaRAID firmware"
+file = "sas4116w-dell-h965e-adapter-a01.mr"
+size = 9138802
+sha256 = "f913653ff491e8e3f4e7ac6d6e0f73f5b9269ca308b5ce4d4e35cf76944cbef6"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H965e"
+variant = "adapter"
+oem_rev = "A01"
+fw_version = "8.4.10.0.18-5"
+release_date = "October 13, 2023"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H965_e__A01__2DVNW__SAS-RAID_Firmware_2DVNW_WN64_8.4.10.0.18-5_A01|payload/FW_H965E_ADP_full_signed.rom|2024-05-11|2DVNW",
+]
+
+[firmware.sas4116w-dell-h965e-adapter-a06-mr]
+display = "Dell PERC H965e adapter A06 MegaRAID firmware"
+file = "sas4116w-dell-h965e-adapter-a06.mr"
+size = 9131287
+sha256 = "d0a124731e5c3930ee75c9ae8c157afe1e2f7332bc11bf58fb9b29464d49735f"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H965e"
+variant = "adapter"
+oem_rev = "A06"
+fw_version = "8.11.0.0.18-25"
+release_date = "April 17, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H965_e__A06__3NWT5__SAS-RAID_Firmware_3NWT5_LN64_8.11.0.0.18-25_A06|payload/FW_H965E_ADP_full_signed.rom|2025-05-03|3NWT5",
+  "H965_e__A06__3NWT5__SAS-RAID_Firmware_3NWT5_WN64_8.11.0.0.18-25_A06|payload/FW_H965E_ADP_full_signed.rom|2025-05-01|3NWT5",
+]
+
+[firmware.sas4116w-dell-h965e-adapter-a07-mr]
+display = "Dell PERC H965e adapter A07 MegaRAID firmware"
+file = "sas4116w-dell-h965e-adapter-a07.mr"
+size = 9131287
+sha256 = "120b57dc575c8c1c9292e1df55f14ce27ac17099c0015ca6681fdd5bae51ef5f"
+chip = "SAS4116W"
+mode = "RAID"
+vendor = "dell"
+model = "H965e"
+variant = "adapter"
+oem_rev = "A07"
+fw_version = "8.11.2.0.18-26"
+release_date = "June 10, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "H965_e__A07__9X34Y__SAS-RAID_Firmware_9X34Y_LN64_8.11.2.0.18-26_A07_01|payload/FW_H965E_ADP_full_signed.rom|2025-08-04|9X34Y",
+  "H965_e__A07__9X34Y__SAS-RAID_Firmware_9X34Y_WN64_8.11.2.0.18-26_A07_01|payload/FW_H965E_ADP_full_signed.rom|2025-08-04|9X34Y",
+]
+
+[firmware.sas4116w-dell-hba465e-adapter-a03-ir]
+display = "Dell HBA465e adapter A03 IT-mode firmware"
+file = "sas4116w-dell-hba465e-adapter-a03.ir"
+size = 9082093
+sha256 = "4373ac97ca52479b882b95a1ba2c1fd2e49d8e8ea4a51ea0a8e1a7dd8d6e172c"
+chip = "SAS4116W"
+mode = "IT"
+vendor = "dell"
+model = "HBA465e"
+variant = "adapter"
+oem_rev = "A03"
+fw_version = "8.11.0.0.15-25"
+release_date = "April 17, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "HBA465e__A03__VR37P__SAS-Non-RAID_Firmware_VR37P_LN64_8.11.0.0.15-25_A03|payload/HBA465e_ADP_fw_pkg_signed.rom|2025-05-03|VR37P",
+  "HBA465e__A03__VR37P__SAS-Non-RAID_Firmware_VR37P_WN64_8.11.0.0.15-25_A03|payload/HBA465e_ADP_fw_pkg_signed.rom|2025-05-01|VR37P",
+]
+
+[firmware.sas4116w-dell-hba465e-adapter-a04-ir]
+display = "Dell HBA465e adapter A04 IT-mode firmware"
+file = "sas4116w-dell-hba465e-adapter-a04.ir"
+size = 9082093
+sha256 = "65c6bddb8ac1cfb1c05699f88b1e53be0a237ecf6a6ee6e922b05e58dba78a2e"
+chip = "SAS4116W"
+mode = "IT"
+vendor = "dell"
+model = "HBA465e"
+variant = "adapter"
+oem_rev = "A04"
+fw_version = "8.11.2.0.15-26"
+release_date = "June 10, 2025"
+tier = "archive"
+flashable_via = ["storcli", "perccli", "dellpdiag"]
+source_snapshots = [
+  "HBA465e__A04__PX4YM__SAS-Non-RAID_Firmware_PX4YM_LN64_8.11.2.0.15-26_A04_01|payload/HBA465e_ADP_fw_pkg_signed.rom|2025-08-04|PX4YM",
+  "HBA465e__A04__PX4YM__SAS-Non-RAID_Firmware_PX4YM_WN64_8.11.2.0.15-26_A04_01|payload/HBA465e_ADP_fw_pkg_signed.rom|2025-08-04|PX4YM",
+]
+
+# ============================================================================
+# ROUND 8 (2026-05-18 morning) — community-sourced finds
+#
+# 6 unique sha256s recovered from:
+# - dl.dell.com/FOLDER01087501M/1/9211fw.exe (Dell-mirrored stock LSI bundle)
+# - github.com/phi0x/lsi-9211-8i-firmware-upgrade (community cross-flash kit)
+# ============================================================================
+
+[firmware.sas2008-lsi-p15-00-00-00-dell-ir]
+display = "LSI SAS2008 IR firmware Phase 15.00.00.00 (Dell-mirrored variant)"
+file = "sas2008-lsi-p15-00-00-00-dell.ir"
+size = 974092
+sha256 = "f0358203fb1ba49c555d6d95c900843d0c3a6db185c6240e610c7152d92d46a6"
+chip = "SAS2008"
+mode = "IR"
+phase = "15.00.00.00"
+vendor = "lsi"
+tier = "alternative"
+source = "Dell CDN dl.dell.com/FOLDER01087501M/1/9211fw.exe (Dell hosted this LSI 9211-8i Phase 15 bundle; differs from stock-LSI P15 IR by NVData defaults)"
+
+[firmware.sas2008-lsi-p15-bios]
+display = "LSI SAS2008 legacy BIOS option-ROM Phase 15"
+file = "sas2008-lsi-p15.bios"
+size = 200192
+sha256 = "535fd8941ecb8012d8d12157d2d58be709a2328c31597f2d8944bd3874e6e8aa"
+chip = "SAS2008"
+mode = "BIOS"
+phase = "15"
+vendor = "lsi"
+tier = "primary"
+source = "Dell CDN dl.dell.com/FOLDER01087501M/1/9211fw.exe (closes prior P15 BIOS gap; repo had P15 UEFI but no P15 BIOS)"
+
+[firmware.sas2008-dell-h310-imr-0084]
+display = "Dell PERC H310 IMR composite build 0084"
+file = "sas2008-dell-h310-imr-0084.imr"
+size = 4456448
+sha256 = "9a0c83d6345a8b41910a33afb3ca8e4cd0b6b5ae0141933b727f61ff024416c7"
+chip = "SAS2008"
+mode = "IMR"
+vendor = "dell"
+model = "H310"
+tier = "alternative"
+source = "phi0x/lsi-9211-8i-firmware-upgrade community cross-flash bootdisk (Dell H310 IMR personality, build 0084 — used to revert chip to MegaRAID stack)"
+
+[firmware.sas2008-ibm-m1015-imr-0101]
+display = "IBM ServeRAID M1015 IMR composite build 0101"
+file = "sas2008-ibm-m1015-imr-0101.imr"
+size = 4456448
+sha256 = "776a5be1e5c29b28e4c53c8f621be993ba192aa31ec23fc321aa8faeb406c290"
+chip = "SAS2008"
+mode = "IMR"
+vendor = "ibm"
+model = "M1015"
+tier = "alternative"
+source = "phi0x/lsi-9211-8i-firmware-upgrade community cross-flash bootdisk (IBM-rebranded IMR personality build 0101 — M1015 factory-restore variant, distinct from sas2008-ibm-m1015.ir which is the IT/IR personality)"
+
+[firmware.sas2008-lsi-imr-0119]
+display = "LSI SAS2008 IMR composite build 0119 (stock reference)"
+file = "sas2008-lsi-imr-0119.imr"
+size = 4456448
+sha256 = "4b90d67d6c381d1a54a6e16d7285ff9a8854d2fe81ed8ef18b7881c4df499b0a"
+chip = "SAS2008"
+mode = "IMR"
+vendor = "lsi"
+tier = "alternative"
+source = "phi0x/lsi-9211-8i-firmware-upgrade community cross-flash bootdisk (stock LSI IMR personality build 0119 — vanilla MegaRAID-stack reference firmware)"
+
+[firmware.sas2008-ibm-uefi-7-18-04-03]
+display = "IBM SAS2008 UEFI BSD HII driver 7.18.04.03 variant"
+file = "sas2008-ibm-uefi-7-18-04-03.uefi"
+size = 223232
+sha256 = "f2f0e2f4acca80ddcd3b89dca6762389a9e222c1dd0f2bd32a0885c9579bdb59"
+chip = "SAS2008"
+mode = "UEFI"
+vendor = "ibm"
+tier = "alternative"
+source = "phi0x/lsi-9211-8i-firmware-upgrade community cross-flash bootdisk (IBM-specific UEFI driver variant — version 7.18.04.03)"
