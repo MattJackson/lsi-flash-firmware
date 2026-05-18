@@ -1,0 +1,101 @@
+# SAS2008 card identity database — TIER 2 (un-byte-confirmed)
+#
+# Identities in this file are forum-rumored or community-cited but NOT
+# supported by a sample SBR, byte-diff RE, real-hardware lspci, or canonical
+# pci.ids entry. The lsi-flash CLI does NOT embed this file at build time —
+# it ships strict-only.
+#
+# To use these identities, copy this file (or specific entries) to:
+#   ~/.config/lsi-flash/card-database.toml
+#
+# Then `lsi-flash sbr modify` will surface them with an [unverified] marker.
+#
+# Promotion path: when a Tier-2 entry is byte-confirmed via sample SBR,
+# byte-diff RE, real-hardware lspci, or canonical pci.ids, move the row into
+# `card-database.toml` and update its `confirmed_via` field with the cite.
+
+schema_version = 1
+last_updated = "2026-05-18"
+tier = "rumored"
+
+# ----------------------------------------------------------------------------
+# Cards likely indistinguishable from stock LSI by PCI ID
+# (passthrough OEMs that ship with LSI default SubsysVID:PID = 1000:3020)
+# ----------------------------------------------------------------------------
+
+[card.asus-pike-2008-it]
+display = "Asus PIKE 2008 (IT/HBA variant) — likely uses LSI default IDs"
+vid = 0x1000
+did = 0x0072
+subsys_vid = 0x1000      # forum consensus: "acts like M1015" with stock LSI IDs
+subsys_pid = 0x3020      # rumored — same as stock LSI 9211-8i
+chip_family = "SAS2008"
+default_personality = "IT"
+sas_oui = 0x500605b0
+interface_byte = 0x00
+quirks = []
+confirmed_via = "RUMORED — community consensus (ServeTheHome, Unraid forums) that PIKE 2008 IT variant passes through LSI default IDs; no Asus-specific SubsysVID found in pci.ids or driver INFs"
+notes = "Likely indistinguishable from LSI 9211-8i via PCI ID alone. Detect via stock-LSI match; user override recommended if user knows their card is a PIKE."
+
+[card.asus-pike-2008-imr]
+display = "Asus PIKE 2008/IMR — likely uses LSI MegaRAID 9220-8i default IDs"
+vid = 0x1000
+did = 0x0073
+subsys_vid = 0x1000      # forum consensus
+subsys_pid = 0x92a0      # rumored — LSI MegaRAID 9220-8i default
+chip_family = "SAS2008"
+default_personality = "IMR"
+sas_oui = 0x500605b0
+interface_byte = 0x10
+quirks = ["imr-composite"]
+confirmed_via = "RUMORED — community consensus that PIKE 2008/IMR is LSI MegaRAID 9220-8i passthrough; no Asus-specific entry in pci.ids"
+notes = "Provides hardware RAID 0/1/1E/10 in IMR firmware. Likely indistinguishable from LSI MegaRAID 9220-8i via PCI ID."
+
+[card.supermicro-aoc-usas2-l8e]
+display = "Supermicro AOC-USAS2-L8e — likely uses LSI default IDs"
+vid = 0x1000
+did = 0x0072
+subsys_vid = 0x1000
+subsys_pid = 0x3020
+chip_family = "SAS2008"
+default_personality = "IT"
+sas_oui = 0x500605b0
+interface_byte = 0x00
+quirks = []
+confirmed_via = "RUMORED — community consensus that L8e ships in IT mode pre-flashed with stock LSI IDs (uses mpt_sas driver, not megaraid). No Supermicro-specific entry in pci.ids for this card model."
+notes = "Likely indistinguishable from LSI 9211-8i by PCI ID."
+
+[card.supermicro-aoc-usas2-l8i]
+display = "Supermicro AOC-USAS2-L8i — variant; PCI ID unconfirmed"
+vid = 0x1000
+did = 0x0073
+subsys_vid = 0x15d9      # speculative — may match SMC2008-iMR (which IS in strict)
+subsys_pid = 0x0400
+chip_family = "SAS2008"
+default_personality = "IMR"
+sas_oui = 0x500605b0
+interface_byte = 0x10
+quirks = ["imr-composite"]
+confirmed_via = "SPECULATIVE — L8i IR variant may match the strict SMC2008-iMR entry (15D9:0400). Distinct lspci capture for L8i not yet sourced."
+notes = "May be the same PCI identity as the strict-tier SMC2008-iMR. Verify via lspci on actual L8i hardware before relying on this entry."
+
+# ----------------------------------------------------------------------------
+# Out-of-scope chip families recorded for "fail loudly" detection
+# (NOT for cross-flash; for detect to refuse politely)
+# ----------------------------------------------------------------------------
+
+[card.lenovo-serveraid-h1110]
+display = "Lenovo ServeRAID H1110 (SAS2004 chip — OUT OF SCOPE)"
+vid = 0x1000
+did = 0x0070            # SAS2004, NOT SAS2008
+subsys_vid = 0x1014
+subsys_pid = 0x040e
+chip_family = "Unknown"  # not SAS2008
+default_personality = "IR"
+sas_oui = 0x500605b0
+interface_byte = 0x00
+quirks = []
+confirmed_via = "Lenovo Press product guide tips0831 + canonical pci.ids"
+notes = "OUT OF SCOPE — this is a SAS2004 chip (DEV 0x0070), not SAS2008. Recorded so detect verb can refuse politely instead of silently misidentifying."
+
+# (More entries pending future agent research output.)
