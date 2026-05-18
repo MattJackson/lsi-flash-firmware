@@ -674,17 +674,10 @@ vendor = "dell"
 tier = "primary"
 source = "Dell support / Wayback Dell catalog (extracted via 7z): x64sas2.rom"
 
-[firmware.sas2008-ibm-m1015-ir]
-display = "IBM ServeRAID M1015 OEM IR firmware (restoration image)"
-file = "sas2008-ibm-m1015.ir"
-size = 256
-sha256 = "969188abcdf33c315ad5febf35a185418491d8634b4619793c684b6bd0e0f097"
-chip = "SAS2008"
-mode = "IR"
-phase = "unknown"
-vendor = "ibm"
-tier = "legacy"
-source = "Archive.org Round 1: sas2008.zip"
+# Note: prior [firmware.sas2008-ibm-m1015-ir] entry was removed 2026-05-18 — the
+# file sas2008-ibm-m1015.ir was actually a 256-byte SBR, not firmware (size 256
+# is far too small for an IR firmware blob). The file has been renamed to
+# sas2008-ibm-m1015-imr-variant-b.sbr and re-classified under the [sbr.*] block.
 
 [firmware.sas2008-lsi-None-uefi-efi]
 display = "LSI SAS2008 UEFI BSD HII driver Phase  (x64 efi)"
@@ -1888,15 +1881,15 @@ source = "Broadcom docs.broadcom.com doc-id 12350519 (9211_8i_P7_Firmware_BIOS_U
 # SBR TEMPLATES
 # ============================================================================
 
-[sbr.sas2008-dell-h200-a11-sbr]
-display = "SBR template: Dell H200 A11"
-file = "sas2008-dell-h200-a11.sbr"
+[sbr.sas2008-fujitsu-d2607-a11-sbr]
+display = "SBR template: Fujitsu D2607 A11"
+file = "sas2008-fujitsu-d2607-a11.sbr"
 size = 256
 sha256 = "705e878902c8d3d8143929f6fc1d87908391bb1aa666539d927a62ef4af236b0"
 chip = "SAS2008"
-vendor = "dell"
+vendor = "fujitsu"
 tier = "primary"
-source = "Wayback Machine LSI vendor CDN: SBR-A11.bin"
+source = "Wayback Machine LSI vendor CDN: SBR-A11.bin. Note: file was previously misnamed sas2008-dell-h200-a11.sbr but bytes 0x14-0x17 = 34 17 77 11 encode 1734:1177 (Fujitsu D2607). Confirmed 2026-05-18 via xxd; matches lrq3000 SBR-A11.bin in lsi_sas_hba_crossflash_guide upstream archive."
 
 [sbr.sas2008-dell-h310-full-modded-sbr]
 display = "SBR template: Dell H310 Full Modded"
@@ -1918,15 +1911,15 @@ vendor = "dell"
 tier = "primary"
 source = "Wayback Machine LSI vendor CDN: H310-Mini-Modded.sbr"
 
-[sbr.sas2008-dell-h310-stock-sbr]
-display = "SBR template: Dell H310 Stock"
-file = "sas2008-dell-h310-stock.sbr"
+[sbr.sas2008-dell-h310-mini-mono-sbr]
+display = "SBR template: Dell H310 Mini Monolithics"
+file = "sas2008-dell-h310-mini-mono.sbr"
 size = 256
 sha256 = "35206a877441685e641404329336d7e4de34cdcd8f4994f8b0896354e14bca05"
 chip = "SAS2008"
 vendor = "dell"
 tier = "primary"
-source = "Wayback Machine LSI vendor CDN: H310-Stock.sbr"
+source = "Wayback Machine LSI vendor CDN: H310-Stock.sbr (was named 'stock' but bytes 0x14-0x17 = 28 10 51 1f encode SubsysPID 0x1F51 = PERC H310 Mini Monolithics per canonical pci.ids; not a generic H310 stock — renamed 2026-05-18 to reflect actual card identity)."
 
 [sbr.sas2008-empty-sbr]
 display = "SBR template: Empty"
@@ -1948,25 +1941,35 @@ vendor = "ibm"
 tier = "primary"
 source = "Archive.org deep-dive: m5110-firmware.zip"
 
-[sbr.sas2008-intel-imr-sbr]
-display = "SBR template: Intel Imr"
-file = "sas2008-intel-imr.sbr"
+[sbr.sas2008-ibm-m1015-imr-sbr]
+display = "SBR template: IBM ServeRAID M1015 IMR"
+file = "sas2008-ibm-m1015-imr.sbr"
 size = 256
 sha256 = "b4cae276c99ec4179b343439d1941e7fffebecb57f5c9199b175ae16c24b97dc"
 chip = "SAS2008"
-vendor = "intel"
+vendor = "ibm"
 tier = "primary"
-source = "Archive.org Round 1: sas2008.zip"
+source = "Archive.org Round 1: sas2008.zip (was named sas2008-intel-imr.sbr but bytes 0x14-0x17 = 14 10 b1 03 encode 1014:03B1 = IBM ServeRAID M1015 per canonical pci.ids; not Intel — renamed 2026-05-18). HwConfig byte 0x12 = 0x07; distinct from sas2008-ibm-m1015-imr-variant-b.sbr (HwConfig = 0x04)."
 
-[sbr.sas2008-intel-rs2wc080-ir-sbr]
-display = "SBR template: Intel Rs2Wc080 Ir"
-file = "sas2008-intel-rs2wc080-ir.sbr"
+[sbr.sas2008-ibm-m1015-imr-variant-b-sbr]
+display = "SBR template: IBM ServeRAID M1015 IMR (HwConfig variant)"
+file = "sas2008-ibm-m1015-imr-variant-b.sbr"
+size = 256
+sha256 = "969188abcdf33c315ad5febf35a185418491d8634b4619793c684b6bd0e0f097"
+chip = "SAS2008"
+vendor = "ibm"
+tier = "primary"
+source = "Archive.org Round 1: sas2008.zip (was named sas2008-ibm-m1015.ir with misleading .ir extension; actually a 256-byte SBR, NOT firmware. Bytes 0x14-0x17 = 14 10 b1 03 encode 1014:03B1 IBM M1015. Differs from sas2008-ibm-m1015-imr.sbr at HwConfig byte 0x12 = 0x04 vs 0x07 and corresponding checksum at 0x4B — renamed 2026-05-18 to reflect actual format)."
+
+[sbr.sas2008-lsi-cleared-sbr]
+display = "SBR template: LSI cleared (default chip identity)"
+file = "sas2008-lsi-cleared.sbr"
 size = 256
 sha256 = "1e4b316a3829bfd0f5c728a76ca162d3ddd09c822d29e19d4cd52aa4cd908fc0"
 chip = "SAS2008"
-vendor = "intel"
+vendor = "lsi"
 tier = "primary"
-source = "Archive.org Round 1: sas2008.zip"
+source = "Archive.org Round 1: sas2008.zip (was named sas2008-intel-rs2wc080-ir.sbr but bytes 0x14-0x17 = 00 10 72 00 encode SubsysVID/PID 1000:0072 = LSI defaults, not Intel RS2WC080 (8086:9240). The file is effectively a cleared/blank SBR; renamed 2026-05-18 — drop Intel attribution until a real Intel SBR is sourced)."
 
 # ============================================================================
 # BROADCOM-PACKAGED P20.00.07.00 VARIANTS (lrq3000 mirror)
@@ -4741,7 +4744,7 @@ mode = "IMR"
 vendor = "ibm"
 model = "M1015"
 tier = "alternative"
-source = "phi0x/lsi-9211-8i-firmware-upgrade community cross-flash bootdisk (IBM-rebranded IMR personality build 0101 — M1015 factory-restore variant, distinct from sas2008-ibm-m1015.ir which is the IT/IR personality)"
+source = "phi0x/lsi-9211-8i-firmware-upgrade community cross-flash bootdisk (IBM-rebranded IMR personality build 0101 — M1015 factory-restore variant, distinct from sas2008-ibm-m1015-imr-variant-b.sbr which is a 256-byte SBR — formerly misnamed sas2008-ibm-m1015.ir — not firmware)"
 
 [firmware.sas2008-lsi-imr-0119]
 display = "LSI SAS2008 IMR composite build 0119 (stock reference)"
