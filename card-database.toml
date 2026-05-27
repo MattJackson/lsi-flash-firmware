@@ -67,7 +67,13 @@ chip_family = "SAS2008"
 default_personality = "IT"
 sas_oui = 0x500605b0
 interface_byte = 0x00
-compatible_firmware = []
+compatible_firmware = [
+  "sas2008-lsi-p20-00-07-00-it",
+  "sas2008-lsi-p20-00-07-00-ir",
+  "sas2008-lsi-p19-00-00-00-it",
+  "sas2008-lsi-p13-00-66-00-it",
+  "sas2008-lsi-p07-00-00-00-it",
+]
 quirks = []
 confirmed_via = "canonical pci.ids (pci-ids.ucw.cz/v2.2/pci.ids)"
 notes = "Sibling of 9211-8i; same chip silicon. Less common in homelab."
@@ -86,7 +92,10 @@ chip_family = "SAS2008"
 default_personality = "IT"
 sas_oui = 0x500605b0
 interface_byte = 0x00
-compatible_firmware = []
+compatible_firmware = [
+  "sas2008-dell-6gbps-a04-ir",
+  "sas2008-dell-6gbps-a11-ir",
+]
 quirks = ["dell-tamper-check"]
 form_factor = "PCIe full-height (non-PERC; standalone HBA)"
 confirmed_via = "lsirec-marcan/sample_sbr/sbr_dell_h200e_itir.cfg:8-9 (file labeled 'h200e' but actually this 6Gbps HBA per canonical pci.ids) + pci.ids"
@@ -125,7 +134,12 @@ chip_family = "SAS2008"
 default_personality = "IR"
 sas_oui = 0x500605b0
 interface_byte = 0x00
-compatible_firmware = []
+compatible_firmware = [
+  "sas2008-dell-h200i-a03-ir",
+  "sas2008-dell-h200i-a04-ir",
+  "sas2008-dell-h200i-a05-ir",
+  "sas2008-dell-h200i-a10-ir",
+]
 quirks = ["dell-tamper-check"]
 form_factor = "Server-board-embedded (R220, R710, etc.)"
 confirmed_via = "canonical pci.ids"
@@ -141,7 +155,12 @@ chip_family = "SAS2008"
 default_personality = "IR"
 sas_oui = 0x500605b0
 interface_byte = 0x00
-compatible_firmware = []
+compatible_firmware = [
+  "sas2008-dell-h200m-a00-ir",
+  "sas2008-dell-h200m-a04-ir",
+  "sas2008-dell-h200m-a08-ir",
+  "sas2008-dell-h200m-a09-ir",
+]
 quirks = ["dell-tamper-check"]
 form_factor = "Blade mezzanine (M610, M710, etc.)"
 confirmed_via = "canonical pci.ids"
@@ -157,7 +176,12 @@ chip_family = "SAS2008"
 default_personality = "IR"
 sas_oui = 0x500605b0
 interface_byte = 0x00
-compatible_firmware = []
+compatible_firmware = [
+  "sas2008-dell-h200e-a02-ir",
+  "sas2008-dell-h200e-a03-ir",
+  "sas2008-dell-h200e-a07-ir",
+  "sas2008-dell-h200e-a08-ir",
+]
 quirks = ["dell-tamper-check"]
 confirmed_via = "canonical pci.ids"
 
@@ -190,7 +214,14 @@ chip_family = "SAS2008"
 default_personality = "IMR"
 sas_oui = 0x500605b0
 interface_byte = 0x0c
-compatible_firmware = []
+compatible_firmware = [
+  "sas2008-dell-h310-a00-imr",
+  "sas2008-dell-h310-a02-imr",
+  "sas2008-dell-h310-a05-imr",
+  "sas2008-dell-h310-a06-imr",
+  "sas2008-dell-h310-a09-imr",
+  "sas2008-dell-h310-a11-imr",
+]
 quirks = ["dell-tamper-check", "imr-composite"]
 confirmed_via = "canonical pci.ids"
 
@@ -204,7 +235,14 @@ chip_family = "SAS2008"
 default_personality = "IMR"
 sas_oui = 0x500605b0
 interface_byte = 0x0c
-compatible_firmware = []
+compatible_firmware = [
+  "sas2008-dell-h310-a00-imr",
+  "sas2008-dell-h310-a02-imr",
+  "sas2008-dell-h310-a05-imr",
+  "sas2008-dell-h310-a06-imr",
+  "sas2008-dell-h310-a09-imr",
+  "sas2008-dell-h310-a11-imr",
+]
 quirks = ["dell-tamper-check", "imr-composite"]
 confirmed_via = "canonical pci.ids"
 
@@ -218,7 +256,14 @@ chip_family = "SAS2008"
 default_personality = "IMR"
 sas_oui = 0x500605b0
 interface_byte = 0x0c
-compatible_firmware = []
+compatible_firmware = [
+  "sas2008-dell-h310mb-a04-imr",
+  "sas2008-dell-h310mb-a05-imr",
+  "sas2008-dell-h310mb-a06-imr",
+  "sas2008-dell-h310mb-a07-imr",
+  "sas2008-dell-h310mb-a08-imr",
+  "sas2008-dell-h310mb-a10-imr",
+]
 quirks = ["dell-tamper-check", "imr-composite"]
 form_factor = "Blade mezzanine"
 confirmed_via = "canonical pci.ids"
@@ -233,7 +278,9 @@ chip_family = "SAS2008"
 default_personality = "IMR"
 sas_oui = 0x500605b0
 interface_byte = 0x0c
-compatible_firmware = []
+compatible_firmware = [
+  "sas2008-dell-h310mm-a11-imr",
+]
 quirks = ["dell-tamper-check", "imr-composite", "dell-h310-mini-mono-idrac-lock"]
 form_factor = "iDRAC-shared storage slot (R320, R420, etc.)"
 confirmed_via = "firmware repo sas2008-dell-h310-mini-mono.sbr (bytes 0x14-0x17 = 28 10 51 1f) + canonical pci.ids"
@@ -249,7 +296,14 @@ chip_family = "SAS2008"
 default_personality = "IMR"
 sas_oui = 0x500605b0
 interface_byte = 0x0c
-compatible_firmware = []
+compatible_firmware = [
+  "sas2008-dell-h310-a00-imr",
+  "sas2008-dell-h310-a02-imr",
+  "sas2008-dell-h310-a05-imr",
+  "sas2008-dell-h310-a06-imr",
+  "sas2008-dell-h310-a09-imr",
+  "sas2008-dell-h310-a11-imr",
+]
 quirks = ["dell-tamper-check", "imr-composite"]
 confirmed_via = "canonical pci.ids"
 
@@ -263,7 +317,14 @@ chip_family = "SAS2008"
 default_personality = "IMR"
 sas_oui = 0x500605b0
 interface_byte = 0x0c
-compatible_firmware = []
+compatible_firmware = [
+  "sas2008-dell-h310-a00-imr",
+  "sas2008-dell-h310-a02-imr",
+  "sas2008-dell-h310-a05-imr",
+  "sas2008-dell-h310-a06-imr",
+  "sas2008-dell-h310-a09-imr",
+  "sas2008-dell-h310-a11-imr",
+]
 quirks = ["dell-tamper-check", "imr-composite"]
 confirmed_via = "canonical pci.ids"
 
@@ -277,7 +338,14 @@ chip_family = "SAS2008"
 default_personality = "IMR"
 sas_oui = 0x500605b0
 interface_byte = 0x0c
-compatible_firmware = []
+compatible_firmware = [
+  "sas2008-dell-h310-a00-imr",
+  "sas2008-dell-h310-a02-imr",
+  "sas2008-dell-h310-a05-imr",
+  "sas2008-dell-h310-a06-imr",
+  "sas2008-dell-h310-a09-imr",
+  "sas2008-dell-h310-a11-imr",
+]
 quirks = ["dell-tamper-check", "imr-composite"]
 form_factor = "PCIe half-height, 2× SFF-8087 internal"
 confirmed_via = "firmware repo sas2008-dell-h310-full-modded.sbr (bytes 0x14-0x17 = 28 10 78 1f) + canonical pci.ids"
@@ -296,9 +364,9 @@ chip_family = "SAS2008"
 default_personality = "IMR"
 sas_oui = 0x500605b0
 interface_byte = 0x10
-factory_firmware = "sas2008-ibm-m1015-imr"
+factory_firmware = "sas2008-ibm-m1015-imr-0101"
 compatible_firmware = [
-  "sas2008-ibm-m1015-imr",
+  "sas2008-ibm-m1015-imr-0101",
 ]
 quirks = ["imr-composite"]
 form_factor = "PCIe half-height, 2× SFF-8087 internal"
@@ -315,7 +383,11 @@ chip_family = "SAS2008"
 default_personality = "IMR"
 sas_oui = 0x500605b0
 interface_byte = 0x10
-compatible_firmware = []
+compatible_firmware = [
+  "sas2008-ibm-m1015-imr-0101",
+  "sas2008-lsi-p20-00-07-00-it",
+  "sas2008-lsi-p20-00-07-00-ir",
+]
 quirks = ["imr-composite"]
 form_factor = "PCIe half-height, 2× SFF-8087 internal"
 confirmed_via = "IBM driver INF (DriverMax 4442185, 1219023) + canonical pci.ids"
@@ -331,7 +403,10 @@ chip_family = "SAS2008"
 default_personality = "IT"
 sas_oui = 0x500605b0
 interface_byte = 0x00
-compatible_firmware = []
+compatible_firmware = [
+  "sas2008-lsi-p20-00-07-00-it",
+  "sas2008-lsi-p20-00-07-00-ir",
+]
 quirks = []
 form_factor = "4× SAS internal + 4× SAS external"
 confirmed_via = "canonical pci.ids"
@@ -373,6 +448,7 @@ chip_family = "SAS2008"
 default_personality = "IMR"
 sas_oui = 0x500605b0
 interface_byte = 0x10
+# OPEN: no matching firmware in manifest — investigate manually; Cisco UCSC OEM'd LSI likely crossflashable to sas2008-lsi-p20-00-07-it/ir
 compatible_firmware = []
 quirks = ["imr-composite"]
 confirmed_via = "Cisco driver INF (DriverMax 1720838) + canonical pci.ids"
@@ -388,6 +464,7 @@ chip_family = "SAS2008"
 default_personality = "IMR"
 sas_oui = 0x500605b0
 interface_byte = 0x10
+# OPEN: no matching firmware in manifest — investigate manually; Cisco UCSC OEM'd LSI likely crossflashable to sas2008-lsi-p20-00-07-it/ir
 compatible_firmware = []
 quirks = ["imr-composite"]
 confirmed_via = "canonical pci.ids"
@@ -406,6 +483,7 @@ chip_family = "SAS2008"
 default_personality = "IMR"
 sas_oui = 0x500605b0
 interface_byte = 0x10
+# OPEN: no matching firmware in manifest — investigate manually; Intel OEM'd LSI likely crossflashable to sas2008-lsi-p20-00-07-it/ir
 compatible_firmware = []
 quirks = ["imr-composite"]
 form_factor = "PCIe half-height, 2× SFF-8087 internal"
@@ -421,6 +499,7 @@ chip_family = "SAS2008"
 default_personality = "IT"
 sas_oui = 0x500605b0
 interface_byte = 0x00
+# OPEN: no matching firmware in manifest — investigate manually; Intel OEM'd LSI likely crossflashable to sas2008-lsi-p20-00-07-it/ir
 compatible_firmware = []
 quirks = []
 confirmed_via = "canonical pci.ids"
@@ -435,6 +514,7 @@ chip_family = "SAS2008"
 default_personality = "IMR"
 sas_oui = 0x500605b0
 interface_byte = 0x10
+# OPEN: no matching firmware in manifest — investigate manually; Intel OEM'd LSI likely crossflashable to sas2008-lsi-p20-00-07-it/ir
 compatible_firmware = []
 quirks = ["imr-composite"]
 confirmed_via = "canonical pci.ids"
@@ -453,6 +533,7 @@ chip_family = "SAS2008"
 default_personality = "IMR"
 sas_oui = 0x500605b0
 interface_byte = 0x10
+# OPEN: no matching firmware in manifest — investigate manually; Supermicro OEM'd LSI likely crossflashable to sas2008-lsi-p20-00-07-it/ir
 compatible_firmware = []
 quirks = ["imr-composite"]
 confirmed_via = "canonical pci.ids"
@@ -472,6 +553,7 @@ chip_family = "SAS2008"
 default_personality = "IMR"
 sas_oui = 0x500605b0
 interface_byte = 0x10
+# OPEN: no matching firmware in manifest — investigate manually; Lenovo OEM'd LSI likely crossflashable to sas2008-lsi-p20-00-07-it/ir
 compatible_firmware = []
 quirks = ["imr-composite"]
 confirmed_via = "canonical pci.ids"
