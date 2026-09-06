@@ -1,5 +1,7 @@
 # lsi-flash-firmware
 
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-ea4aaa?logo=github-sponsors)](https://github.com/sponsors/MattJackson)
+
 Firmware mirror for the [lsi-flash](https://github.com/MattJackson/lsi-flash) tool.
 160 unique firmware blobs covering LSI SAS2008 silicon — every public LSI Phase
 release (P4 → P20.00.07.00 across IT/IR/BIOS/UEFI personalities) plus
